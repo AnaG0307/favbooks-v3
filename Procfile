@@ -1,1 +1,1 @@
-web: gunicorn favbooks-v3.wsgi
+web: gunicorn favbooks_v3.wsgi
