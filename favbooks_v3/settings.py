@@ -14,7 +14,7 @@ from pathlib import Path
 import os
 import dj_database_url
 
-development = os.environ.get('DEVELOPMENT', False)
+# development = os.environ.get('DEVELOPMENT', False)
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-v9tj!ok-mmy&&pb8va4fqgv#_-4sgjpib_4))vgh+gr1w=y91(')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = development
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', os.environ.get('HEROKU_HOSTNAME'),]
 
@@ -78,17 +78,16 @@ WSGI_APPLICATION = 'favbooks_v3.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if development:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
-else:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+}
 
 
 # Password validation
