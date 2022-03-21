@@ -2,7 +2,7 @@
 
 ![App page screenshot](...)
 
-[View the app in Heroku here](https://favbooks-v3.herokuapp.com/)
+[View the app in Heroku here]()
 
 ## **Table of Contents**
 
