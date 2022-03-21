@@ -1,108 +1,156 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **FavBOOKS**
 
-Welcome AnaG0307,
+![App page screenshot](...)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+[View the app in Heroku here](https://favbooks-v3.herokuapp.com/)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## **Table of Contents**
 
-## Gitpod Reminders
+1. [About](#About)
+2. [User Stories](#User-Stories)
+3. [Features](#Features)
+4. [Data Model](#Data-Model)
+5. [Testing](#Testing)
+6. [Technologies Used](#Technologies-Used)
+7. [Deployment](#Deployment)
+8. [Credits](#Credits)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+## **About**
 
-Another blue button should appear to click: _Open Browser_.
+(Add site description)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: _Make Public_,
+## **User Stories**
 
-Another blue button should appear to click: _Open Browser_.
+| User Story ID  | As a/an  | I want to be able to...  | So that I can... |
+|---|---|---|---|
+| Viewing Products & Navigation |
+| 1  | Site User | view a list of products | see what products I can purchase. |
+| 2  |  | see the details of a specific product | make a more informed decision before a purchase about the price, rating. |
+| 3  |  | see the details of a subscription | make a more informed decision before purchasing a subscription. |
+| 4  |  | quickly identify the different sections of the site (book genres,  events, etc.) | navigate through the areas of my interest and discover new ones. |
+| 5  |  | easily view what is on my cart | check all I need to purchase is correct. |
+| 6  |  | easily view the total amount on my cart | check I am not spending too much. |
+| Registration and User Accounts |
+| 7  | User/Shopper | register for an account | get a profile for the site and view my profile. |
+| 8  |  | login and logout | acces my personal information. |
+| 9  |  | recover my password if forgotten | recover access to my account. |
+| 10  |  | receive a registration confirmation email | verify my registration to the site was successfull. |
+| 11  |  | be able to personalise my user profile | modify my personal information when necessary. |
+| 12  |  | be able to access my user profile information | view my profile and what information is stored. |
+| Searching and Sort Products |
+| 13  | User/Shopper | sort the list of available products | easily identify best rated, best priced and categorycally sorted products. |
+| 14  |  | sort a specific category of products | Find the best-priced, best-rated product in a specific category or sort the products in that category by author. |
+| 15  |  | sort multiple categories of products at the same time | find the best-priced, best-rated product accross categories, such as "fantasy" or "Teen&Young Age". |
+| 16  |  | search a product by name or description | find a specific product I would like to purchase |
+| 17  |  | see my search results and how many products are matching | quickly decide wheter the product I want is available. |
+| Checkout |
+| 18  | Shopper | easily access my purchase history | be aware of my past purchases. |
+| 19  |  | easily select the type and quantity of a product when purchasing it | be sure I make no mistakes about the quantity and type of book (paperback/hardcover). |
+| 20  |  | be able to register/unregister for a monthly subscription | receive or stop receiving books every month. |
+| Admin & Management (CRUD) |
+| 21  | Admin User | Add new products (books&subscriptions) | offer new incoming products to my customers. |
+| 22  |  | modify product details (books&subscriptions) | update the product details.  |
+| 23  |  | delete products (books&subscriptions) | update the site when a product is not for selling anymore. |
+| About the Site |
+| 24  |  Site User | I am aware of the site Privacy Policy (GDPR compliant) | trust the site. |
+| 25  |  | I see pop up messages when I make an action to confirm transactions and changes throughout my activity | rest assured my transactions have been successfull. |
+| 26  |  | I can access the site's social media profiles | follow them if I want and stay up to date. |
+| Popup Messages |
+| 27  | Store owner/Admin | see a pop up message after submitting my purchase  | know if my transaction is been successfull or not.  |
+| 28  |  | see a pop up message when adding/deleting products to my bag | be aware if my product was succesfully added or not to my cart. |
+| 29  |  | see a pop up message when logging in/out of the site | be aware if I have logged in/out successfully or not. |
+| 30  |  | see a pop up message when I subscribe/unsubscribe from a monthly subscription | be aware the action was successfull or not. |
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+## **Features**
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#### **Existing Features**
+- **Navigation Bar:** (available through all the pages on the site)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
-------
+- **Footer:** (available through all the pages on the site)
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+-**Home Page:**
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- **Login/Logout/Register:**
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- **Add Recipe:**
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+- **My Recipes:**
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+- **Admin Site:**
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+#### **Future Features**
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### **Wireframes**
+Below are the initial wireframes for the site for both desktop screens and smaller devices:
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+**Desktop screens**
 
-------
+![Desktop](...)
 
-## FAQ about the uptime script
+**Smaller screens**
 
-**Why have you added this script?**
+![Mobile](...)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+## **Data Model**
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
 
-**Can I opt out?**
+## **Testing**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
+#### **Remaining Bugs**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
 
----
 
-Happy coding!
+#### **Validator Testing**
+
+- Used [PEP8online.com](http://pep8online.com/) to validate Python code.
+- User [W3C](https://validator.w3.org/#validate_by_input) to validate HTML and CSS code
+
+
+##### **Remaining errors**
+
+
+## **Technologies Used**
+
+- [Gitpod](https://gitpod.io/)
+- [Github](https://github.com/)
+- [Unsplash](https://unsplash.com/)
+- [Lucidchart](https://www.lucidchart.com/pages/)
+- [Fontawesome](https://fontawesome.com/start)
+- [Django](https://www.djangoproject.com/)
+- [Heroku](https://id.heroku.com/)
+- [Balsamiq](https://balsamiq.cloud/)
+- [PEP8online.com](http://pep8online.com/)
+- [W3C](https://validator.w3.org/#validate_by_input)
+- [Stackoverflow](https://stackoverflow.com/)
+- [Bootstrap](https://getbootstrap.com/)
+
+
+
+## **Deployment**
+
+
+
+## **Credits**
+
+
+[Back to Top ⇧](#FavBOOKS) 
