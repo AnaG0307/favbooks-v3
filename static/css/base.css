@@ -1,0 +1,29 @@
+html, body {
+    height: 100%;
+    background-color: #6F1D1B;
+}
+
+body {
+    background: url('media/homepage-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    color: #555;
+    font-family: 'Montserrat';
+    background-color: #6F1D1B;
+}
+
+
+/* Home page */
+
+.content {
+    flex: 1 0 auto;
+  }
+
+.footer {
+    flex-shrink: 0;
+} 
+
+.bg-nav {
+    background-color: #6F1D1B;
+}
