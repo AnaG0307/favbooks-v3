@@ -14,6 +14,7 @@
 
     {% block corecss %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
@@ -33,7 +34,7 @@
     <title>FavBooks {% block extra_title%} {% endblock %}</title>
   </head>
   <body>
-      <div class="container-fluid fixed-top content">
+      <div class="container-fluid fixed-top content bg-nav">
         <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
           <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
             <a href="{% url 'home' %}">
@@ -59,7 +60,7 @@
               <li class="list-inline-item dropdown">
                   <a href="#" class="text-black nav-link" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="text-center">
-                      <div><i class="fas fa-user fa-lg"></i></div>
+                      <div><i class="fas fa-book fa-lg"></i></div>
                       <p class="my-0">My Account</p>
                     </div>
                   </a>
@@ -79,7 +80,7 @@
               <li class="list-inline-item">
                 <a href="" class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link">
                   <div class="text-center">
-                    <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                    <div><i class="fas fa-cart-plus fa-lg"></i></div>
                     <p class="my-0">
                       {% if grand_total %}
                         ${{ grand_total|floatformat:2 }}
@@ -147,7 +148,7 @@
     {% endblock %}
 
     <footer>
-      <div class="container-fluid footer">
+      <div class="container-fluid footer bg-nav">
         <div class="row my-auto">
           <div class="col">
             <p>Subscribe to our Newsletter</p>
