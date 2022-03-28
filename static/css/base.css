@@ -11,17 +11,10 @@ body {
     font-family: 'Montserrat';
 }
 
-
-/* Home page */
-
 .content {
-    flex: 1 0 auto;
-  }
+    min-height: calc(100vh - 70px);
+}
 
 .footer {
-    flex-shrink: 0;
-} 
-
-/* .bg-nav {
-    background-color: #6F1D1B;
-} */
+    height: 50px;
+}
