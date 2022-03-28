@@ -3,13 +3,9 @@ html, body {
 }
 
 body {
-    background: url('media/homepage-image.jpg') no-repeat center center fixed;
+    background: url('/media/homepage-image.jpg') no-repeat center center fixed;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    color: #555;
-    font-family: 'Montserrat';
-}
+  }
 
 .content {
     min-height: calc(100vh - 70px);
@@ -18,3 +14,8 @@ body {
 .footer {
     height: 50px;
 }
+
+.bg-main {
+    background-color: #B52E2C;
+}
+

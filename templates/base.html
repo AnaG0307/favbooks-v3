@@ -45,19 +45,27 @@
 
   <!-- Navigation bar -->
   <div class="content">
-    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-main shadow-lg">
+      <div class="container-fluid mx-4 my-4">
         <a class="navbar-brand" href="{% url 'home' %}">FavBOOKS</a>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+        <form class="d-flex my-3 mx-5" method="GET" action="">
+          <div class="input-group w-100">
+            <input type="text" class="form-control border rounded-0" name="q" placeholder="Search book...">
+            <div class="input-group-append">
+              <button class="form-control btn border rounded-0 btn-dark" type="submit">
+                <span class="icon">
+                  <i class="fas fa-search"></i>
+                </span>
+              </button>
+            </div>
+          </div>
         </form>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav mx-5">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
@@ -115,7 +123,7 @@
             <li class="nav-item">
               <a class="nav-link" href="">
                 <div class="text-center">
-                  <div><i class="fas fa-cart-plus fa-lg text-black"></i></div>
+                  <div><i class="fas fa-cart-plus fa-lg text-black fa-lg"></i></div>
                   <p class="my-0 text-black">
                     {% if grand_total %}
                     ${{ grand_total|floatformat:2 }}
@@ -139,14 +147,12 @@
     {% block page_header %}
 
     {% endblock %}
-    <main>
       {% block content %}
 
       {% endblock %}
-    </main>
   </div>
   <!-- FOOTER -->
-  <footer class="footer">
+  <footer class="footer bg-main shadow-lg">
     <div class="container-fluid">
       <div class="row my-auto">
         <div class="col">
@@ -156,7 +162,7 @@
           <p>Social Media</p>
         </div>
       </div>
-      <div class="row">
+      <div class="row bg-main">
         <div class="footer-copyright text-center py-3">
           <p class="m-0 text-center text-dark">Made by Ana Genover (for educational purposes only) © 2021 Copyright</p>
         </div>
