@@ -17,5 +17,9 @@ body {
 }
 
 .bg-main {
-    background-color: #B52E2C;
+    background-color: #6F1D1B;
+}
+
+.text-white {
+    color: aliceblue !important;
 }
