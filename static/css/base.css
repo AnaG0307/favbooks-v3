@@ -1,36 +1,5 @@
-html, body {
-    height: 100%;
-}
+/* Navigation bar and Footer */
 
-body {
-    background: url('/media/homepage-image.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #555;
-  }
-
-/* from Bulma: a CSS library similar to Bootstrap. Here it's used to maintain 
-the icons used centered and maintain the size unless we change it manually */
-/* 
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
-} */
-
-.content {
-    min-height: calc(100vh - 70px);
-}
-
-.footer {
-    height: 100px;
-}
-
-.bg-main {
-    background-color: #6F1D1B;
-}
-
-.text-white {
-    color: aliceblue !important;
+.text-black {
+    color: black !important;
 }
