@@ -1,0 +1,102 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-success">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                <a class="navbar-brand" href="#">FavBOOKS</a>
+            </div>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end">
+                <form class="d-flex">
+                    <input class="form-control" type="search" placeholder="Search..."
+                        aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="form-control btn btn-dark border" type="submit">
+                            <span class="icon">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </button>
+                    </div>
+                </form>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-black" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Fiction
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">All Fiction</a></li>
+                        <li><a class="dropdown-item" href="#">General Fiction</a></li>
+                        <li><a class="dropdown-item" href="#">Classic Fiction</a></li>
+                        <li><a class="dropdown-item" href="#">Crime & Thrillers</a></li>
+                        <li><a class="dropdown-item" href="#">Science Fiction</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-black" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Non-Fiction
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">All Non-Fiction</a></li>
+                        <li><a class="dropdown-item" href="#">Architecture</a></li>
+                        <li><a class="dropdown-item" href="#">Biography</a></li>
+                        <li><a class="dropdown-item" href="#">Food & Drink</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-black" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Children
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">All Children</a></li>
+                        <li><a class="dropdown-item" href="#">Baby & Toddler</a></li>
+                        <li><a class="dropdown-item" href="#">Teen & Young Age</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-black" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        My Account
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {% if request.user.is_authenticated %}
+                        {% if request.user.is_superuser %}
+                        <li><a href="" class="dropdown-item">Books Management</a></li>
+                        <li><a href="" class="dropdown-item">Subscription Management</a></li>
+                        {% endif %}
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a href="" class="dropdown-item">My Profile</a></li>
+                        <li><a href="" class="dropdown-item">My Subscriptions</a></li>
+                        <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
+                        {% else %}
+                        <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
+                        <li><a href="{% url 'account_login' %}" class="dropdown-item">Sign In</a></li>
+                        {% endif %}
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="text-center text-black">
+                            <div><i class="fas fa-cart-plus fa-lg"></i></div>
+                            <p class="my-0">
+                                {% if grand_total %}
+                                ${{ grand_total|floatformat:2 }}
+                                {% else %}
+                                $0.00
+                                {% endif %}
+                            </p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
