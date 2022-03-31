@@ -1,15 +1,20 @@
 html {
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
-    background: url(/media/homepage-image.jpg) no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
     font-family: 'Red Hat Mono';
+    padding-top: 164px;
 }
 
-/* Navigation bar and Footer */
+/* ------------------ Navigation Bar, Page and Footer */
+
+.index-bg {
+    background: url('/media/homepage-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+}
 
 .text-white {
     color: #C8C8C8 !important;
@@ -29,4 +34,11 @@ body {
 
 .copyright {
     font-size: x-small;
+}
+
+
+/* ------------------ Allauth Forms */
+
+.allauth-form-inner-content {
+    margin-top: 1.5rem;
 }

@@ -138,17 +138,18 @@
             </div>
         </div>
     </header>
-    <!-- Message Box -->
-    {% if messages %}
-    <div class=""></div>
-    {% endif %}
+    <main>
+        <!-- Message Box -->
+        {% if messages %}
+        <div class=""></div>
+        {% endif %}
 
-    {% block page_header %}
-    {% endblock %}
+        {% block page_header %}
+        {% endblock %}
 
-    {% block content %}
-    {% endblock %}
-
+        {% block content %}
+        {% endblock %}
+    </main>
     <footer>
         <!-- Footer -->
         {% include 'includes/footer.html' %}
