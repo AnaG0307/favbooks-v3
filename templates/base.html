@@ -15,14 +15,17 @@
 
     {% block corecss %}
     <!-- Bootstrat -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- Link to CSS file -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Red+Hat+Mono&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Red+Hat+Mono&display=swap"
+        rel="stylesheet">
     {% endblock %}
 
     {% block extra_css %}
@@ -42,7 +45,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
     {% endblock %}
 
     {% block extra_js %}
@@ -54,7 +59,145 @@
 <body>
     <header>
         <!-- Navigation Bar -->
-        {% include 'includes/nav.html' %}
+        <header class="container-fluid fixed-top bg-success">
+
+            <div id="topnav" class="row">
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                    <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                        <h2>favBOOKS</h2>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                    <form method="GET" action="">
+                        <div class="input-group w-100">
+                            <input type="text" name="q" placeholder="Search your new favourite book..."
+                                class="form-control border">
+                            <div class="input-group-append">
+                                <button class="form-control btn btn-dark border" type="submit">
+                                    <span class="icon">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                        <li class="list-inline-item">
+                            <a href="" class="text-black nav-link">
+                                <div class="text-center">
+                                    <p class="my-0">Subscriptions</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-inline-item dropdown">
+                            <a href="" class="nav-link text-black" id="user-options" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <p class="my-0">My Account</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                <a href="" class="dropdown-item">Books Management</a>
+                                <a href="" class="dropdown-item">Subscription Management</a>
+                                {% endif %}
+                                <hr class="dropdown-divider">
+                                <a href="" class="dropdown-item">My Profile</a>
+                                <a href="" class="dropdown-item">My Subscriptions</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                {% else %}
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">Sign In</a>
+                                {% endif %}
+                            </div>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="" class="text-black nav-link">
+                                <div class="text-center">
+                                    <div><i class="fas fa-cart-plus fa-lg"></i></div>
+                                    <p class="my-0">
+                                        {% if grand_total %}
+                                        ${{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                        $0.00
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row text-center justify-content-center">
+                <div class="my-auto py-1 py-lg-0 text-center">
+                    <ul class="list-inline list-unstyled text-center my-0">
+                        <li class="list-inline-item dropdown">
+                            <a href="" class="nav-link text-black" id="user-options" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <p class="my-0">Fiction</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="user-options">
+                                <a class="dropdown-item" href="">All Fiction</a>
+                                <a class="dropdown-item" href="#">General Fiction</a>
+                                <a class="dropdown-item" href="#">Classic Fiction</a>
+                                <a class="dropdown-item" href="#">Crime & Thrillers</a>
+                                <a class="dropdown-item" href="#">Science Fiction</a>
+                            </div>
+                        </li>
+                        <li class="list-inline-item dropdown">
+                            <a href="" class="nav-link text-black" id="user-options" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <p class="my-0">Non-Fiction</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="user-options">
+                                <a class="dropdown-item" href="#">All Non-Fiction</a>
+                                <a class="dropdown-item" href="#">Architecture</a>
+                                <a class="dropdown-item" href="#">Biography</a>
+                                <a class="dropdown-item" href="#">Food & Drink</a>
+                            </div>
+                        </li>
+                        <li class="list-inline-item dropdown">
+                            <a href="" class="nav-link text-black" id="user-options" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <p class="my-0">Children</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="user-options">
+                                <a class="dropdown-item" href="#">All Children</a>
+                                <a class="dropdown-item" href="#">Baby & Toddler</a>
+                                <a class="dropdown-item" href="#">Teen & Young Age</a>
+                            </div>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="" class="text-black nav-link">
+                                <div class="text-center">
+                                    <p class="my-0">Events</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <nav class="navbar navbar-expand-lg navbar-light w-100">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                        aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    {% include 'includes/main-nav.html' %}
+                    {% include 'includes/mob-top-head.html' %}
+
+                </nav>
+            </div>
+        </header>
     </header>
     <!-- Message Box -->
     {% if messages %}
