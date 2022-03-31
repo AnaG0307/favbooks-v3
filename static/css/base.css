@@ -11,6 +11,18 @@ body {
 
 /* Navigation bar and Footer */
 
-.text-black {
-    color: black !important;
+.text-white {
+    color: #C8C8C8 !important;
+}
+
+.main-bg {
+    background-color: #6F1D1B;
+}
+
+.nav-bg {
+    background-color: #631918;
+}
+
+.copyright {
+    font-size: x-small;
 }

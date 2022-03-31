@@ -58,8 +58,8 @@
 
 <body>
     <!-- Navigation Bar -->
-    <header class="container-fluid fixed-top bg-success">
-        <div id="topnav" class="row d-none d-lg-block">
+    <header class="container-fluid fixed-top main-bg">
+        <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h2>favBOOKS</h2>
@@ -83,7 +83,7 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
-                        <a href="" class="nav-link text-black" id="user-options" data-toggle="dropdown"
+                        <a href="" class="nav-link text-white" id="user-options" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <p class="my-0">My Account</p>
@@ -106,7 +106,7 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a href="" class="text-black nav-link">
+                        <a href="" class="text-white nav-link">
                             <div class="text-center">
                                 <div><i class="fas fa-cart-plus fa-lg"></i></div>
                                 <p class="my-0">
@@ -116,68 +116,6 @@
                                     $0.00
                                     {% endif %}
                                 </p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="row text-center justify-content-center d-none d-lg-block">
-            <div class="my-auto py-1 py-lg-0 text-center">
-                <ul class="list-inline list-unstyled text-center my-0">
-                    <li class="list-inline-item dropdown">
-                        <a href="" class="nav-link text-black" id="user-options" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <p class="my-0">Fiction</p>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="user-options">
-                            <a class="dropdown-item" href="">All Fiction</a>
-                            <a class="dropdown-item" href="#">General Fiction</a>
-                            <a class="dropdown-item" href="#">Classic Fiction</a>
-                            <a class="dropdown-item" href="#">Crime & Thrillers</a>
-                            <a class="dropdown-item" href="#">Science Fiction</a>
-                        </div>
-                    </li>
-                    <li class="list-inline-item dropdown">
-                        <a href="" class="nav-link text-black" id="user-options" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <p class="my-0">Non-Fiction</p>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="user-options">
-                            <a class="dropdown-item" href="#">All Non-Fiction</a>
-                            <a class="dropdown-item" href="#">Architecture</a>
-                            <a class="dropdown-item" href="#">Biography</a>
-                            <a class="dropdown-item" href="#">Food & Drink</a>
-                        </div>
-                    </li>
-                    <li class="list-inline-item dropdown">
-                        <a href="" class="nav-link text-black" id="user-options" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <p class="my-0">Children</p>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="user-options">
-                            <a class="dropdown-item" href="#">All Children</a>
-                            <a class="dropdown-item" href="#">Baby & Toddler</a>
-                            <a class="dropdown-item" href="#">Teen & Young Age</a>
-                        </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="" class="text-black nav-link">
-                            <div class="text-center">
-                                <p class="my-0">Events</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="" class="text-black nav-link">
-                            <div class="text-center">
-                                <p class="my-0">Subscriptions</p>
                             </div>
                         </a>
                     </li>
