@@ -13,6 +13,18 @@ class Category(models.Model):
     def get_friendly_name(self):
         return self.book_friendly_category
 
+class Sub_Category(models.Model):
+    book_sub_category = models.CharField(max_length=254)
+    book_friendly_sub_category = models.CharField(
+        max_length=254, null=True, blank=True
+        )
+
+    def __str__(self):
+        return self.book_sub_category
+
+    def get_friendly_name(self):
+        return self.book_friendly_sub_category
+
 
 class Type(models.Model):
     book_type = models.CharField(max_length=254)
@@ -30,6 +42,9 @@ class Type(models.Model):
 class Book(models.Model):
     book_category = models.ForeignKey(
         'Category', null=True, blank=True, on_delete=models.SET_NULL
+        )
+    book_sub_category = models.ForeignKey(
+        'Sub_Category', null=True, blank=True, on_delete=models.SET_NULL
         )
     book_type = models.ForeignKey(
         'Type', null=True, blank=True, on_delete=models.SET_NULL
