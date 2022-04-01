@@ -1,0 +1,73 @@
+[{
+    "pk": 1,
+    "model": "books.sub_category",
+    "fields": {
+        "book_sub_category": "general_fiction",
+        "book_friendly_sub_category": "General Fiction"
+    }
+},
+{
+    "pk": 2,
+    "model": "books.sub_category",
+    "fields": {
+        "book_sub_category": "classic_fiction",
+        "book_friendly_sub_category": "Classic Fiction"
+    }
+},
+{
+    "pk": 3,
+    "model": "books.sub_category",
+    "fields": {
+        "book_sub_category": "crime_thrillers",
+        "book_friendly_sub_category": "Crime & Thrillers"
+    }
+},
+{
+    "pk": 4,
+    "model": "books.sub_category",
+    "fields": {
+        "book_sub_category": "science_fiction",
+        "book_friendly_sub_category": "Science Fiction"
+    }
+},
+{
+    "pk": 5,
+    "model": "books.sub_category",
+    "fields": {
+        "book_sub_category": "architecture",
+        "book_friendly_sub_category": "Architecture"
+    }
+},
+{
+    "pk": 6,
+    "model": "books.sub_category",
+    "fields": {
+        "book_sub_category": "biography",
+        "book_friendly_sub_category": "Biography"
+    }
+},
+{
+    "pk": 7,
+    "model": "books.sub_category",
+    "fields": {
+        "book_sub_category": "food_drink",
+        "book_friendly_sub_category": "Food & Drink"
+    }
+},
+{
+    "pk": 8,
+    "model": "books.sub_category",
+    "fields": {
+        "book_sub_category": "baby_toddler",
+        "book_friendly_sub_category": "Baby & Toddler"
+    }
+},
+{
+    "pk": 9,
+    "model": "books.sub_category",
+    "fields": {
+        "book_sub_category": "teen_young_age",
+        "book_friendly_sub_category": "Teen & Young Age"
+    }
+}
+]

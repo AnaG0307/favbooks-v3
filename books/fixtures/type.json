@@ -1,0 +1,25 @@
+[{
+    "pk": 1,
+    "model": "books.type",
+    "fields": {
+        "book_type": "hard_cover",
+        "book_friendly_type": "Hardcover"
+    }
+},
+{
+    "pk": 2,
+    "model": "books.type",
+    "fields": {
+        "book_type": "paper_back",
+        "book_friendly_type": "Paperback"
+    }
+},
+{
+    "pk": 3,
+    "model": "books.type",
+    "fields": {
+        "book_type": "electronic",
+        "book_friendly_type": "Electronic"
+    }
+}
+]
