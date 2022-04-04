@@ -60,8 +60,14 @@ class Book(models.Model):
     book_sub_category = models.ForeignKey(
         'Sub_Category', null=True, blank=True, on_delete=models.SET_NULL
         )
-    book_type = models.ForeignKey(
-        'Type', null=True, blank=True, on_delete=models.SET_NULL
+    book_type1 = models.ForeignKey(
+        'Type', null=True, blank=True, on_delete=models.SET_NULL, related_name='type1'
+        )
+    book_type2 = models.ForeignKey(
+        'Type', null=True, blank=True, on_delete=models.SET_NULL, related_name='type2'
+        )
+    book_type3 = models.ForeignKey(
+        'Type', null=True, blank=True, on_delete=models.SET_NULL, related_name='type3'
         )
     sku = models.CharField(max_length=254, null=True, blank=True)
     title = models.CharField(max_length=254)

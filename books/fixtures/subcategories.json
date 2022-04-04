@@ -34,16 +34,16 @@
     "pk": 5,
     "model": "books.sub_category",
     "fields": {
-        "book_sub_category": "architecture",
-        "book_friendly_sub_category": "Architecture"
+        "book_sub_category": "crafts_hobbies",
+        "book_friendly_sub_category": "Crafts & Hobbies"
     }
 },
 {
     "pk": 6,
     "model": "books.sub_category",
     "fields": {
-        "book_sub_category": "biography",
-        "book_friendly_sub_category": "Biography"
+        "book_sub_category": "sports",
+        "book_friendly_sub_category": "Sports"
     }
 },
 {

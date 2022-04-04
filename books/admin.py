@@ -13,7 +13,9 @@ class BookAdmin(admin.ModelAdmin):
         'title',
         'book_category',
         'book_sub_category',
-        'book_type',
+        'book_type1',
+        'book_type2',
+        'book_type3',
         'cover',
     )
 
