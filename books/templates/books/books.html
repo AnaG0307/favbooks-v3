@@ -22,14 +22,14 @@
             <div class="row">
                 {% for book in books %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 my-3">
-                    <div class="card h-100">
-                        {% if books.cover %}
+                    <div class="card h-100 my-auto">
+                        {% if book.cover %}
                         <a href="">
-                            <img src="{{ book.cover_url.url }}" alt="{{ book.title }}" class="card-img-top img-fluid">
+                            <img src="{{ book.cover.url }}" alt="{{ book.title }}" class="card-img-top img-fluid">
                         </a>
                         {% else %}
                         <a href="">
-                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ book.title }}"
+                            <img src="{{ MEDIA_URL }} noimage.png" alt="{{ book.title }}"
                                 class="card-img-top img-fluid img-thumbnail">
                         </a>
                         {% endif %}

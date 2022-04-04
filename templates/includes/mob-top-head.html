@@ -5,7 +5,7 @@
             <p class="my-0">Search</p>
         </div>
     </a>
-    <div class="dropdown-menu border-0 w-100 p-3 my-0 main-bg" aria-labelledby="mobile-search">
+    <div class="dropdown-menu w-100 p-3 my-0 main-bg" aria-labelledby="mobile-search">
         <form class="form" method="GET" action="">
             <div class="input-group w-100">
                 <input class="form-control border" type="text" name="q" placeholder="Search your new favourite book...">
@@ -26,7 +26,7 @@
             <p class="my-0 text-white">My Account</p>
         </div>
     </a>
-    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+    <div class="dropdown-menu" aria-labelledby="user-options">
         {% if request.user.is_authenticated %}
         {% if request.user.is_superuser %}
         <a href="" class="dropdown-item">Books Management</a>
