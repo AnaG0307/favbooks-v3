@@ -24,11 +24,11 @@
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 my-3">
                     <div class="card h-100 my-auto">
                         {% if book.cover %}
-                        <a href="">
+                        <a href="{% url 'book_detail' book.id %}">
                             <img src="{{ book.cover.url }}" alt="{{ book.title }}" class="card-img-top img-fluid">
                         </a>
                         {% else %}
-                        <a href="">
+                        <a href="{% url 'book_detail' book.id %}">
                             <img src="{{ MEDIA_URL }} noimage.png" alt="{{ book.title }}"
                                 class="card-img-top img-fluid img-thumbnail">
                         </a>

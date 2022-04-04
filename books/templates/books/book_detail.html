@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="image-container mt-5 mb-3">
+                {% if book.cover %}
+                <a href="{{ book.cover.url }}" target="_blank">
+                    <img src="{{ book.cover.url }}" alt="{{ book.title }}" class="card-img-top img-fluid">
+                </a>
+                {% else %}
+                <a href="">
+                    <img src="{{ MEDIA_URL }} noimage.png" alt="{{ book.title }}"
+                        class="card-img-top img-fluid img-thumbnail">
+                </a>
+                {% endif %}
+            </div>
+            <div class="container-fluid">
+                <p class="lead text-left mb-0"><small>Hardcover: £ {{ book.price_hardcover }}</small></p>
+                <p class="lead text-left mb-0"><small> Paperback: £ {{ book.price_paperback }}</small></p>
+                <p class="lead text-left mb-0"><small> Electronic: £ {{ book.price_electronic }}</small></p>
+                {% if book.rating %}
+                <small class="text-muted"><i class="fas fa-star"></i> {{ book.rating }} / 5</small>
+                {% else %}
+                <small class="text-muted">No Rating Yet</small>
+                {% endif %}
+                </p>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="container-fluid my-5">
+                <p class="lead text-left font-weight-bold">{{ book.title }}</p>
+                <p class="lead text-left font-weight-bold">by {{ book.author }}</p>
+                <p class="lead text-left"><small>{{ book.synopsis }}</small></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

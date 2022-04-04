@@ -5,4 +5,5 @@ from . import views
 
 urlpatterns = [
     path('', views.all_books, name='books'),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('<book_id>/', views.book_detail, name='book_detail'),
+]
