@@ -10,10 +10,49 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col">
-                {{ books }}
+            <div class="col text-center mt-3">
+                <h2>All Books</h2>
+                <hr class="w-50 mb-1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="product container col-10 offset-1">
+                <div class="row mt-1 mb-2"></div>
+                <div class="row">
+                    {% for book in books %}
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 my-3">
+                            <div class="card h-100">
+                                {% if books.cover %}
+                                <a href="">
+                                    <img src="{{ book.cover.url }}" alt="{{ book.title }}" class="card-img-top img-fluid">
+                                </a>
+                                {% else %}
+                                <a href="">
+                                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ book.title }}" class="card-img-top img-fluid">
+                                </a>
+                                {% endif %}
+                                <div class="card-body">
+                                    <p class="card-text">{{ book.title }}</p>
+                                    <p class="card-text">{{ book.author }}</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="lead text-left">£ {{ book.price_hardcover }}</p>
+                                            {% if book.rating %}
+                                                <small class="text-muted"><i class="fas fa-star"></i>{{ book.rating }}</small>
+                                            {% else %}
+                                                <small class="text-muted">No Rating Yet</small>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
