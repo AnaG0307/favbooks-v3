@@ -16,10 +16,10 @@
                 Fiction
             </a>
             <div class="dropdown-menu" aria-labelledby="fiction-books-link">
-                <a class="dropdown-item" href="">All Fiction</a>
-                <a class="dropdown-item" href="#">General Fiction</a>
-                <a class="dropdown-item" href="#">Crime & Thrillers</a>
-                <a class="dropdown-item" href="#">Science Fiction</a>
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=general_fiction,crime_thrillers,science_fiction">All Fiction</a>
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=general_fiction">General Fiction</a>
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=crime_thrillers">Crime &amp; Thrillers</a>
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=science_fiction">Science Fiction</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -27,10 +27,10 @@
                 Non-Fiction
             </a>
             <div class="dropdown-menu" aria-labelledby="nonfiction-books-link">
-                <a class="dropdown-item" href="#">All Non-Fiction</a>
-                <a class="dropdown-item" href="#">Crafts & Hobbies</a>
-                <a class="dropdown-item" href="#">Sports</a>
-                <a class="dropdown-item" href="#">Food & Drink</a>
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=food_drink,sports,crafts_hobbies">All Non-Fiction</a>
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=crafts_hobbies">Crafts &amp; Hobbies</a>
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=sports">Sports</a>
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=food_drink">Food &amp; Drink</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -38,9 +38,9 @@
                 Children
             </a>
             <div class="dropdown-menu" aria-labelledby="children-books-link">
-                <a class="dropdown-item" href="#">All Children</a>
-                <a class="dropdown-item" href="#">Baby & Toddler</a>
-                <a class="dropdown-item" href="#">Teen & Young Age</a>
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=baby_toddler,teen_young_age">All Children</a>
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=baby_toddler">Baby &amp; Toddler</a>
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=teen_young_age">Teen &amp; Young Age</a>
             </div>
         </li>
         <li class="nav-item">
