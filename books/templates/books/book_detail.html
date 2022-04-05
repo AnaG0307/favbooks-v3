@@ -16,12 +16,12 @@
             <div class="image-container mt-5 mb-3">
                 {% if book.cover %}
                 <a href="{{ book.cover.url }}" target="_blank">
-                    <img src="{{ book.cover.url }}" alt="{{ book.title }}" class="img-fluid">
+                    <img src="{{ book.cover.url }}" alt="{{ book.title }}" class="w-75 img-fluid img-thumbnail">
                 </a>
                 {% else %}
                 <a href="">
                     <img src="{{ MEDIA_URL }} noimage.png" alt="{{ book.title }}"
-                        class="card-img-top img-fluid img-thumbnail">
+                        class="w-75 img-fluid img-thumbnail">
                 </a>
                 {% endif %}
             </div>
@@ -45,11 +45,11 @@
                 <p class="lead text-left price mt-3 ft-md"><i class="far fa-heart"></i> Add to Wish List</p>
             </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-6">
             <div class="container-fluid mt-5">
                 <p class="lead text-left font-weight-bold">{{ book.title }}</p>
                 <p class="lead text-left"><small class="font-weight-bold"> by {{ book.author }}</small></p>
-                <p class="lead text-left"><small>{{ book.synopsis }}</small></p>
+                <p class="lead text-left ft-md"><small>{{ book.synopsis }}</small></p>
             </div>
         </div>
     </div>
