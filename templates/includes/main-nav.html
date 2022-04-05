@@ -5,7 +5,9 @@
                 All Books
             </a>
             <div class="dropdown-menu" aria-labelledby="fiction-books-link">
-                <a class="dropdown-item" href="{% url 'books' %}?sort=price_hardcover&direction=asc">By Price</a>
+                <a class="dropdown-item" href="{% url 'books' %}?sort=price_hardcover&direction=asc">By Price (hardcover)</a>
+                <a class="dropdown-item" href="{% url 'books' %}?sort=price_paperback&direction=asc">By Price (paperback)</a>
+                <a class="dropdown-item" href="{% url 'books' %}?sort=price_electronic&direction=asc">By Price (electronic)</a>
                 <a class="dropdown-item" href="{% url 'books' %}?sort=rating&direction=desc">By Rating</a>
                 <a class="dropdown-item" href="{% url 'books' %}?sort=book_sub_category&direction=asc">By Category</a>
                 <a class="dropdown-item" href="{% url 'books' %}">All Books</a>

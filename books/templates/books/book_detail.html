@@ -16,7 +16,7 @@
             <div class="image-container mt-5 mb-3">
                 {% if book.cover %}
                 <a href="{{ book.cover.url }}" target="_blank">
-                    <img src="{{ book.cover.url }}" alt="{{ book.title }}" class="card-img-top img-fluid">
+                    <img src="{{ book.cover.url }}" alt="{{ book.title }}" class="img-fluid">
                 </a>
                 {% else %}
                 <a href="">
@@ -29,21 +29,40 @@
                 <p class="lead text-left mb-0"><small>Hardcover: £ {{ book.price_hardcover }}</small></p>
                 <p class="lead text-left mb-0"><small> Paperback: £ {{ book.price_paperback }}</small></p>
                 <p class="lead text-left mb-0"><small> Electronic: £ {{ book.price_electronic }}</small></p>
+                {% if book.book_sub_category %}
+                <p class="small mt-1 mb-0">
+                    <a href="{% url 'books' %}?book_sub_category={{ book.book_sub_category.book_sub_category }}"
+                        class="text-muted">
+                        <i class="fas fa-hashtag"></i> {{ book.book_sub_category.book_friendly_sub_category }}
+                    </a>
+                </p>
+                {% endif %}
                 {% if book.rating %}
                 <small class="text-muted"><i class="fas fa-star"></i> {{ book.rating }} / 5</small>
                 {% else %}
                 <small class="text-muted">No Rating Yet</small>
                 {% endif %}
-                </p>
+                <p class="lead text-left price mt-3 ft-md"><i class="far fa-heart"></i> Add to Wish List</p>
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <div class="container-fluid my-5">
+            <div class="container-fluid mt-5">
                 <p class="lead text-left font-weight-bold">{{ book.title }}</p>
-                <p class="lead text-left font-weight-bold">by {{ book.author }}</p>
+                <p class="lead text-left"><small class="font-weight-bold"> by {{ book.author }}</small></p>
                 <p class="lead text-left"><small>{{ book.synopsis }}</small></p>
             </div>
         </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="container-fluid">
+                <p>Add your Comments Section</p>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="container-fluid">
+                <p>Comments Section</p>
+            </div>
     </div>
 </div>
 {% endblock %}

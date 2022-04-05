@@ -36,11 +36,22 @@
                         <div class="card-body">
                             <p class="card-text font-weight-bold">{{ book.title }}</p>
                             <p class="card-text font-weight-bold">by {{ book.author }}</p>
-                            <p class="lead text-left">
-                                <small>
-                                    £ {{ book.price_hardcover }}
-                                </small>
+                            <p class="lead text-left my-0 text-muted"><small class="ft-sm">£ {{ book.price_hardcover }}
+                                    (Hardcover)</small></p>
+                            <p class="lead text-left my-0 text-muted"><small class="ft-sm">£ {{ book.price_paperback }}
+                                    (Paperback)</small></p>
+                            <p class="lead text-left my-0 text-muted"><small class="ft-sm">£ {{ book.price_electronic }}
+                                    (Electronic)</small></p>
+                            {% if book.book_sub_category %}
+                            <p class="small mt-3 mb-0">
+                                <a href="{% url 'books' %}?book_sub_category={{ book.book_sub_category.book_sub_category }}"
+                                    class="text-muted">
+                                    <i class="fas fa-hashtag"></i>
+                                    {{ book.book_sub_category.book_friendly_sub_category }}
+                                </a>
                             </p>
+                            {% endif %}
+                            <p class="lead text-left price mt-3 ft-md"><i class="far fa-heart"></i> Add to Wish List</p>
                         </div>
                         <div class="card-footer">
                             <div class="row">
@@ -52,7 +63,8 @@
                                 <div class="col">
                                     <p>
                                         {% if book.rating %}
-                                        <small class="text-muted"><i class="fas fa-star"></i> {{ book.rating }} / 5</small>
+                                        <small class="text-muted"><i class="fas fa-star"></i> {{ book.rating }} /
+                                            5</small>
                                         {% else %}
                                         <small class="text-muted">No Rating Yet</small>
                                         {% endif %}
