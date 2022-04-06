@@ -21,20 +21,20 @@
             <div class="row mt-1 mb-2">
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex">
                     <div class="sort-select-wrapper w-75">
-                        <select id="sort-selector" class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                        <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                             <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                            <option value="reset" {% if current_sorting == 'price_hardcover_asc' %}selected{% endif %}>Price Hardcover (low to high)</option>
-                            <option value="reset" {% if current_sorting == 'price_hardcover_desc' %}selected{% endif %}>Price Hardcover (high to low)</option>
-                            <option value="reset" {% if current_sorting == 'price_paperback_asc' %}selected{% endif %}>Price Paperback (low to high)</option>
-                            <option value="reset" {% if current_sorting == 'price_paperback_desc' %}selected{% endif %}>Price Paperback (high to low)</option>
-                            <option value="reset" {% if current_sorting == 'price_electronic_asc' %}selected{% endif %}>Price Electronic (low to high)</option>
-                            <option value="reset" {% if current_sorting == 'price_electronic_desc' %}selected{% endif %}>Price Electronic (high to low)</option>
-                            <option value="reset" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
-                            <option value="reset" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
-                            <option value="reset" {% if current_sorting == 'title_asc' %}selected{% endif %}>Title (low to high)</option>
-                            <option value="reset" {% if current_sorting == 'title_desc' %}selected{% endif %}>Title (high to low)</option>
-                            <option value="reset" {% if current_sorting == 'sub_category_asc' %}selected{% endif %}>Category (low to high)</option>
-                            <option value="reset" {% if current_sorting == 'sub_category_desc' %}selected{% endif %}>Category (high to low)</option>
+                            <option value="price_hardcover__asc" {% if current_sorting == 'price_hardcover_asc' %}selected{% endif %}>Price Hardcover (low to high)</option>
+                            <option value="price_hardcover__desc" {% if current_sorting == 'price_hardcover_desc' %}selected{% endif %}>Price Hardcover (high to low)</option>
+                            <option value="price_paperback__asc" {% if current_sorting == 'price_paperback_asc' %}selected{% endif %}>Price Paperback (low to high)</option>
+                            <option value="price_paperback__desc" {% if current_sorting == 'price_paperback_desc' %}selected{% endif %}>Price Paperback (high to low)</option>
+                            <option value="price_electronic__asc" {% if current_sorting == 'price_electronic_asc' %}selected{% endif %}>Price Electronic (low to high)</option>
+                            <option value="price_electronic__desc" {% if current_sorting == 'price_electronic_desc' %}selected{% endif %}>Price Electronic (high to low)</option>
+                            <option value="rating__asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                            <option value="rating__desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                            <option value="title__asc" {% if current_sorting == 'title_asc' %}selected{% endif %}>Title (low to high)</option>
+                            <option value="title__desc" {% if current_sorting == 'title_desc' %}selected{% endif %}>Title (high to low)</option>
+                            <option value="book_sub_category__asc" {% if current_sorting == 'book_sub_category_asc' %}selected{% endif %}>Category (low to high)</option>
+                            <option value="book_sub_category__desc" {% if current_sorting == 'book_sub_category_desc' %}selected{% endif %}>Category (high to low)</option>
                         </select>
                     </div>
                 </div>
@@ -109,29 +109,31 @@
 </div>
 {% endblock %}
 
+
+<!-- JS to sort the products by category in ascending&descending order -->
+
 {% block postloadjs %}
     {{ block.super }}
-<!-- JS to sort the products by category in ascending&descending order -->
-<script type="text/javascript">
-    $('#sort-selector').change(function() {
-        var selector = $(this);
-        var currentUrl = new URL(window.location);
+    <script type="text/javascript">
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
 
-        var selectedVal = selector.val();
-        if(selectedVal != "reset"){
-            var sort = selectedVal.split("_")[0];
-            var direction = selectedVal.split("_")[1];
+            var selectedVal = selector.val();
+            if(selectedVal != "reset"){
+                var sort = selectedVal.split("__")[0];
+                var direction = selectedVal.split("__")[1];
 
-            currentUrl.searchParams.set("sort", sort);           
-            currentUrl.searchParams.set("direction", direction);
-            
-            window.location.replace(currentUrl);
-        } else {
-            currentUrl.searchParams.delete("sort");           
-            currentUrl.searchParams.delete("direction");
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
 
-            window.location.replace(currentUrl);
-        }
-    })
-</script>
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script>
 {% endblock %}
