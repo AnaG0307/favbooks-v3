@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.db.models import Q
+from django.db.models.functions import Lower
 from .models import Book, Sub_Category
 
 
@@ -21,7 +22,7 @@ def all_books(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 books = books.annotate(lower_name=Lower('name'))
-            
+
             if sortkey == 'book_sub_category':
                 sortkey = 'book_sub_category__book_sub_category'
 
@@ -30,7 +31,7 @@ def all_books(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             books = books.order_by(sortkey)
-        
+
         # sorting by sub_category functionality
         if 'book_sub_category' in request.GET:
             book_sub_categories = request.GET['book_sub_category'].split(',')
