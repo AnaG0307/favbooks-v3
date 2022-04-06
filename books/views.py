@@ -21,6 +21,9 @@ def all_books(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 books = books.annotate(lower_name=Lower('name'))
+            
+            if sortkey == 'book_sub_category':
+                sortkey = 'book_sub_category__book_sub_category'
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']

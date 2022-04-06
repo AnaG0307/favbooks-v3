@@ -13,12 +13,40 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2>All Books</h2>
+            <h4>Your New Favourite Books!</h4>
         </div>
     </div>
     <div class="row">
         <div class="product container col-10 offset-1">
-            <div class="row mt-1 mb-2"></div>
+            <div class="row mt-1 mb-2">
+                <div class="col-12 col-md-6 my-auto order-md-last d-flex">
+                    <div class="sort-select-wrapper w-75">
+                        <select id="sort-selector" class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                            <option value="reset" {% if current_sorting == 'price_hardcover_asc' %}selected{% endif %}>Price Hardcover (low to high)</option>
+                            <option value="reset" {% if current_sorting == 'price_hardcover_desc' %}selected{% endif %}>Price Hardcover (high to low)</option>
+                            <option value="reset" {% if current_sorting == 'price_paperback_asc' %}selected{% endif %}>Price Paperback (low to high)</option>
+                            <option value="reset" {% if current_sorting == 'price_paperback_desc' %}selected{% endif %}>Price Paperback (high to low)</option>
+                            <option value="reset" {% if current_sorting == 'price_electronic_asc' %}selected{% endif %}>Price Electronic (low to high)</option>
+                            <option value="reset" {% if current_sorting == 'price_electronic_desc' %}selected{% endif %}>Price Electronic (high to low)</option>
+                            <option value="reset" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                            <option value="reset" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                            <option value="reset" {% if current_sorting == 'title_asc' %}selected{% endif %}>Title (low to high)</option>
+                            <option value="reset" {% if current_sorting == 'title_desc' %}selected{% endif %}>Title (high to low)</option>
+                            <option value="reset" {% if current_sorting == 'sub_category_asc' %}selected{% endif %}>Category (low to high)</option>
+                            <option value="reset" {% if current_sorting == 'sub_category_desc' %}selected{% endif %}>Category (high to low)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12 col-md6 order-md-first">
+                    <p class="text-muted mt-3">
+                        {% if search_term or current_sub_categories or current_sorting != 'None_None' %}
+                        <span class="small"><a href="{% url 'books' %}">Back to All Books</a> | </span>
+                        {% endif %}
+                        {{ books|length }} Books{% if serach_term %}found for <strong>"{{ search_term }}"</strong>{% endif %}
+                    </p>
+                </div>
+            </div>
             <div class="row">
                 {% for book in books %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 my-3">
