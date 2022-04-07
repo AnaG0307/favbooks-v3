@@ -11,14 +11,27 @@
 
 {% block content %}
 
-<div class="container-fluid">
+<div class="container mb-2">
     <div class="row">
         <div class="col">
-            <div class="h6">Your Shopping Bag</div>
+            <hr>
+            <div class="mb-4 text-center font-weight-bold">Your Shopping Bag</div>
+            <hr>
         </div>
     </div>
     <div class="row">
         <div class="col">
+            {% if bag_items %}
+            <div class="table-responsive rounded"></div>
+            {% else %}
+            <p class="lead-mb-5">Your bag is empty.</p>
+            <a href="{% url 'books' %}" class="btn border">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span>Keep Shopping</span>
+            </a>
+            {% endif %}
         </div>
     </div>
 </div>
