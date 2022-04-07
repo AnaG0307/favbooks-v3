@@ -1,13 +1,13 @@
 from django.shortcuts import render, redirect
 
 
+# View to return the contents of the bag
 def view_bag(request):
-    """ View to return the contents of the bag """
 
     return render(request, 'bag/bag.html')
 
 
-    # View to add quantity of a specific book to the shopping bag
+# View to add quantity of a specific book to the shopping bag
 def add_to_bag(request, item_id):
 
     quantity = int(request.POST.get('quantity'))
@@ -20,5 +20,4 @@ def add_to_bag(request, item_id):
         bag[item_id] = quantity
 
     request.session['bag'] = bag
-    print(request.session['bag'])
     return redirect(redirect_url)
