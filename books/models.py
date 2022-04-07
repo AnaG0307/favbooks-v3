@@ -2,9 +2,8 @@ from django.db import models
 
 
 class Category(models.Model):
-    """
-    Meta class to correct the "categorys" incorrect spelling in the admin site
-    """
+    """ Meta class to correct the "categorys" incorrect spelling in the admin site """
+
     class Meta:
         verbose_name_plural = "Categories"
 
@@ -21,10 +20,8 @@ class Category(models.Model):
 
 
 class Sub_Category(models.Model):
+    """ Meta class to correct the "categorys" incorrect spelling in the admin site """
 
-    """
-    Meta class to correct the "categorys" incorrect spelling in the admin site
-    """
     class Meta:
         verbose_name_plural = "Sub_Categories"
 

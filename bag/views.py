@@ -1,14 +1,14 @@
 from django.shortcuts import render, redirect
 
 
-# View to return the contents of the bag
 def view_bag(request):
+    """ View to return the contents of the bag """
 
     return render(request, 'bag/bag.html')
 
 
-# View to add quantity of a specific book to the shopping bag
 def add_to_bag(request, item_id):
+    """ View to add quantity of a specific book to the shopping bag """
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')

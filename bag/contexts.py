@@ -6,17 +6,16 @@ from books.models import Book
 
 def bag_contents(request):
 
-    bag_items = 0
+    bag_items = []
     total = 0
     product_count = 0
     bag = request.session.get('bag', {})
 
     for item_id, quantity in bag.items():
         product = get_object_or_404(Book, pk=item_id)
-        # total += quantity * book.price_hardcover
-        # total += quantity * book.price_paperback
-        # total += quantity * book.price_electronic
         total += quantity * product.price_hardcover
+        total += quantity * product.price_paperback
+        total += quantity * product.price_electronic
         product_count += quantity
         bag_items.append({
             'item_id': item_id,
