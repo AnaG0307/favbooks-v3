@@ -24,9 +24,9 @@
                 <table class="table table-sm table-borderless">
                     <thead class="thead-dark">
                         <tr>
-                            <th scope="col">SKU</th>
                             <th scope="col">Type</th>
-                            <th scope="col">Title</th>
+                            <th scope="col">Book Title</th>
+                            <th scope="col"></th>
                             <th scope="col">Quantity</th>
                             <th scope="col">Total</th>
                         </tr>
@@ -34,19 +34,48 @@
                     {% for item in bag_items %}
                     <tbody>
                         <tr>
-                            <td>
-                                <p>{{ item.product.sku|upper }}</p>
-                            </td>
-                            <td>
+                            <td class="py-2">
                                 <p>{{ item.product.book_type1.book_friendly_type }}</p>
                             </td>
-                            <td>
+                            <td class="py-2">
                                 <p>{{ item.product.title }}</p>
                             </td>
-                            <td class="w-25">
-                                <p>{{ item.quantity }}</p>
-                            </td>
                             <td>
+                                <p></p>
+                            </td class="py-2">
+                            <td class="w-25">
+                                <!-- Form to increase/decrease book quantity -->
+                                <form action="" method="POST" class="form update-form">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <!-- Increment book quantity button -->
+                                            <div class="input-group-prepend">
+                                                <button class="decrement-qty btn btn-sm border" data-item_id="{{ item.item_id }}"
+                                                    id="decrement-qty_{{ item.item_id }}">
+                                                    <span>
+                                                        <i class="fas fa-minus fa-sm"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <!-- Current quantity in the shopping bag -->
+                                            <input type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                                data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}"
+                                                class="form-control qty-input form-control-sm">
+                                            <!-- Decrement book quantity button -->
+                                            <div class="input-group-append">
+                                                <button class="increment-qty btn btn-sm border" data-item_id="{{ item.item_id }}"
+                                                    id="increment-qty_{{ item.item_id }}">
+                                                    <span>
+                                                        <i class="fas fa-plus fa-sm"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </td>
+                            <td class="py-2">
                                 <p>£ {{ item.product.price_hardcover }}</p>
                             </td>
                         </tr>
