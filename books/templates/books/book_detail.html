@@ -25,9 +25,7 @@
                 {% endif %}
             </div>
             <div class="container-fluid">
-                <p class="lead text-left mb-0"><small>Hardcover: £ {{ book.price_hardcover }}</small></p>
-                <p class="lead text-left mb-0"><small> Paperback: £ {{ book.price_paperback }}</small></p>
-                <p class="lead text-left mb-0"><small> Electronic: £ {{ book.price_electronic }}</small></p>
+                <p class="lead text-left mb-0"><small>£ {{ book.price_hardcover }} | {{ book.book_type1.book_friendly_type }}</small></p>
                 {% if book.book_sub_category %}
                 <p class="small mt-1 mb-0">
                     <a href="{% url 'books' %}?book_sub_category={{ book.book_sub_category.book_sub_category }}"
@@ -49,7 +47,7 @@
                             <p class="mt-3"><strong>Quantity:</strong></p>
                             <div class="form-group w-50">
                                 <div class="input-group">
-                                    <input type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ book.id }}" id="id_qty_{{ book.id }}" class="form-control qty_input">
+                                    <input type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ book.id }}" id="id_qty_{{ book.id }}" class="form-control qty-input">
                                 </div>
                             </div>
                         </div>
@@ -78,12 +76,12 @@
     <div class="row mt-5">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="container-fluid">
-                <p>Add your Comments Section</p>
+                <p>Add your Review Section</p>
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <div class="container-fluid">
-                <p>Comments Section</p>
+                <p>Reviews Section</p>
             </div>
         </div>
     </div>

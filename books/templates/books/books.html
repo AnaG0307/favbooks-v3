@@ -25,10 +25,10 @@
                             <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                             <option value="price_hardcover__asc" {% if current_sorting == 'price_hardcover_asc' %}selected{% endif %}>Price Hardcover (low to high)</option>
                             <option value="price_hardcover__desc" {% if current_sorting == 'price_hardcover_desc' %}selected{% endif %}>Price Hardcover (high to low)</option>
-                            <option value="price_paperback__asc" {% if current_sorting == 'price_paperback_asc' %}selected{% endif %}>Price Paperback (low to high)</option>
+                            <!-- <option value="price_paperback__asc" {% if current_sorting == 'price_paperback_asc' %}selected{% endif %}>Price Paperback (low to high)</option>
                             <option value="price_paperback__desc" {% if current_sorting == 'price_paperback_desc' %}selected{% endif %}>Price Paperback (high to low)</option>
                             <option value="price_electronic__asc" {% if current_sorting == 'price_electronic_asc' %}selected{% endif %}>Price Electronic (low to high)</option>
-                            <option value="price_electronic__desc" {% if current_sorting == 'price_electronic_desc' %}selected{% endif %}>Price Electronic (high to low)</option>
+                            <option value="price_electronic__desc" {% if current_sorting == 'price_electronic_desc' %}selected{% endif %}>Price Electronic (high to low)</option> -->
                             <option value="rating__asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
                             <option value="rating__desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
                             <option value="title__asc" {% if current_sorting == 'title_asc' %}selected{% endif %}>Title (A to Z)</option>
@@ -53,7 +53,7 @@
                     <div class="card h-100 my-auto">
                         {% if book.cover %}
                         <a href="{% url 'book_detail' book.id %}">
-                            <img src="{{ book.cover.url }}" alt="{{ book.title }}" class="card-img-top img-fluid">
+                            <img src="{{ book.cover.url }}" alt="{{ book.title }}" class="card-img-top img-thumbnail img-fluid">
                         </a>
                         {% else %}
                         <a href="{% url 'book_detail' book.id %}">
@@ -64,12 +64,7 @@
                         <div class="card-body">
                             <p class="card-text font-weight-bold">{{ book.title }}</p>
                             <p class="card-text font-weight-bold">by {{ book.author }}</p>
-                            <p class="lead text-left my-0 text-muted"><small class="ft-sm">£ {{ book.price_hardcover }}
-                                    (Hardcover)</small></p>
-                            <p class="lead text-left my-0 text-muted"><small class="ft-sm">£ {{ book.price_paperback }}
-                                    (Paperback)</small></p>
-                            <p class="lead text-left my-0 text-muted"><small class="ft-sm">£ {{ book.price_electronic }}
-                                    (Electronic)</small></p>
+                            <p class="lead text-left my-0 text-muted"><small class="ft-sm">£ {{ book.price_hardcover }} | {{ book.book_type1.book_friendly_type }}</small></p>
                             {% if book.book_sub_category %}
                             <p class="small mt-3 mb-0">
                                 <a href="{% url 'books' %}?book_sub_category={{ book.book_sub_category.book_sub_category }}"
@@ -85,7 +80,7 @@
                             <div class="row">
                                 <div class="col">
                                     <p class="lead text-left">
-                                        <small class="text-muted">Comments</small>
+                                        <small class="text-muted">Reviews</small>
                                     </p>
                                 </div>
                                 <div class="col">
@@ -111,7 +106,6 @@
 
 
 <!-- JS to sort the products by category in ascending&descending order -->
-
 {% block postloadjs %}
     {{ block.super }}
     <script type="text/javascript">
