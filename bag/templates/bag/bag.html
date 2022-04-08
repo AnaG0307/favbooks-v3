@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -14,9 +14,7 @@
 <div class="container mb-2">
     <div class="row">
         <div class="col">
-            <hr>
-            <div class="mb-4 text-center font-weight-bold">Your Shopping Bag</div>
-            <hr>
+            <div class="my-4 text-center font-weight-bold">Your Shopping Bag</div>
         </div>
     </div>
     <div class="row">
@@ -24,21 +22,26 @@
             {% if bag_items %}
             <div class="table-responsive rounded">
                 <table class="table table-sm table-borderless">
-                    <thead>
+                    <thead class="thead-dark">
                         <tr>
                             <th scope="col">SKU</th>
+                            <th scope="col">Type</th>
                             <th scope="col">Title</th>
                             <th scope="col">Quantity</th>
                             <th scope="col">Total</th>
                         </tr>
                     </thead>
                     {% for item in bag_items %}
+                    <tbody>
                         <tr>
                             <td>
                                 <p>{{ item.product.sku|upper }}</p>
                             </td>
-                            <td>                               
-                                 <p>{{ item.product.title }}</p>
+                            <td>
+                                <p>{{ item.product.book_type1.book_friendly_type }}</p>
+                            </td>
+                            <td>
+                                <p>{{ item.product.title }}</p>
                             </td>
                             <td class="w-25">
                                 <p>{{ item.quantity }}</p>
@@ -47,6 +50,7 @@
                                 <p>£ {{ item.product.price_hardcover }}</p>
                             </td>
                         </tr>
+                    </tbody>
                     {% endfor %}
                     <tr>
                         <td colspan="5" class="pt-5 text-right">
@@ -54,9 +58,10 @@
                             <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
                             <h4 class="mt-4"><strong>Grand Total £{{ grand_total|floatformat:2 }}</strong></h4>
                             {% if free_delivery_delta > 0 %}
-                                <p class="mb-1-text-danger">
-                                    You could get free delivery if you spend <strong>£{{ free_delivery_delta }}</strong> more!
-                                </p>
+                            <p class="mb-1-text-danger">
+                                You could get free delivery if you spend <strong>£{{ free_delivery_delta }}</strong>
+                                more!
+                            </p>
                             {% endif %}
                         </td>
                     </tr>
@@ -74,7 +79,7 @@
                             </a>
                         </td>
                     </tr>
-                </table>    
+                </table>
             </div>
             {% else %}
             <p class="lead-mb-5">Your bag is empty.</p>
