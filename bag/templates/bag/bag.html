@@ -23,7 +23,58 @@
         <div class="col">
             {% if bag_items %}
             <div class="table-responsive rounded">
-                {{ bag_items }}
+                <table class="table table-sm table-borderless">
+                    <thead>
+                        <tr>
+                            <th scope="col">SKU</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    {% for item in bag_items %}
+                        <tr>
+                            <td>
+                                <p>{{ item.product.sku|upper }}</p>
+                            </td>
+                            <td>                               
+                                 <p>{{ item.product.title }}</p>
+                            </td>
+                            <td class="w-25">
+                                <p>{{ item.quantity }}</p>
+                            </td>
+                            <td>
+                                <p>£ {{ item.product.price_hardcover }}</p>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    <tr>
+                        <td colspan="5" class="pt-5 text-right">
+                            <h6>Bag Total <strong>£{{ total|floatformat:2 }}</strong></h6>
+                            <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
+                            <h4 class="mt-4"><strong>Grand Total £{{ grand_total|floatformat:2 }}</strong></h4>
+                            {% if free_delivery_delta > 0 %}
+                                <p class="mb-1-text-danger">
+                                    You could get free delivery if you spend <strong>£{{ free_delivery_delta }}</strong> more!
+                                </p>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-right">
+                            <a href="{% url 'books' %}" class="btn border">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span>Keep Shopping</span>
+                            </a>
+                            <a href="" class="btn border">
+                                <span>Secure Checkout</span>
+                                <span><i class="fas fa-lock"></i></span>
+                            </a>
+                        </td>
+                    </tr>
+                </table>    
             </div>
             {% else %}
             <p class="lead-mb-5">Your bag is empty.</p>
