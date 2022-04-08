@@ -12,6 +12,7 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
+        <!-- Book details section -->
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container mt-5 mb-3">
                 {% if book.cover %}
@@ -48,6 +49,7 @@
                             <p class="mt-3"><strong>Quantity:</strong></p>
                             <div class="form-group w-50">
                                 <div class="input-group">
+                                    <!-- Increment book quantity button -->
                                     <div class="input-group-prepend">
                                         <button class="decrement-qty btn border" data-item_id="{{ book.id }}"
                                             id="decrement-qty_{{ book.id }}">
@@ -59,6 +61,7 @@
                                     <input type="number" name="quantity" value="1" min="1" max="99"
                                         data-item_id="{{ book.id }}" id="id_qty_{{ book.id }}"
                                         class="form-control qty-input">
+                                     <!-- Decrement book quantity button -->
                                     <div class="input-group-append">
                                         <button class="increment-qty btn border" data-item_id="{{ book.id }}"
                                             id="increment-qty_{{ book.id }}">
@@ -70,6 +73,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Keep shopping and add to bag buttons -->
                         <div class="col-12">
                             <a href="{% url 'books' %}" class="btn btn-border">
                                 <span class="icon">
@@ -84,6 +88,7 @@
                 </form>
             </div>
         </div>
+        <!-- Books title, author and description -->
         <div class="col-12 col-md-6 col-lg-6">
             <div class="container-fluid mt-5">
                 <p class="lead text-left font-weight-bold">{{ book.title }}</p>
@@ -92,6 +97,7 @@
             </div>
         </div>
     </div>
+    <!-- Customers reviews section -->
     <div class="row mt-5">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="container-fluid">
@@ -107,6 +113,6 @@
     {% endblock %}
 
     {% block postloadjs %}
-    {{ block.super }}
-    {% include 'books/includes/qty_input_script.html' %}
+        {{ block.super }}
+        {% include 'books/includes/qty_input_script.html' %}
     {% endblock %}
