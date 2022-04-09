@@ -24,7 +24,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Red+Hat+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Red+Hat+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     {% endblock %}
 
     {% block extra_css %}
@@ -57,7 +59,7 @@
 
 <body>
     <!-- Navigation Bar -->
-    <header class="container-fluid fixed-top">
+    <header class="container-fluid fixed-top p-0">
         <div id="topnav" class="row pt-lg-2 d-none d-lg-flex main-bg">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
@@ -123,7 +125,7 @@
             </div>
         </div>
         <div class="row">
-            <nav class="navbar navbar-expand-lg navbar-light w-100 main-bg">
+            <nav class="navbar navbar-expand-lg navbar-light w-100 main-bg mx-2">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -138,16 +140,17 @@
             </div>
         </div>
     </header>
-        <!-- Message Box -->
-        {% if messages %}
-        <div class=""></div>
-        {% endif %}
+    <!-- Message Box -->
+    {% if messages %}
+    <div class=""></div>
+    {% endif %}
 
-        {% block page_header %}
-        {% endblock %}
-
+    {% block page_header %}
+    {% endblock %}
+    <main>
         {% block content %}
         {% endblock %}
+    </main>
     <footer>
         <!-- Footer -->
         {% include 'includes/footer.html' %}
