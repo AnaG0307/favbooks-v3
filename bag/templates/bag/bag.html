@@ -61,7 +61,7 @@
                                             <!-- Current quantity in the shopping bag -->
                                             <input type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99"
                                                 data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}"
-                                                class="form-control qty-input form-control-sm">
+                                                class="form-control qty_input form-control-sm">
                                             <!-- Decrement book quantity button -->
                                             <div class="input-group-append">
                                                 <button class="increment-qty btn btn-sm border" data-item_id="{{ item.item_id }}"
@@ -123,4 +123,9 @@
     </div>
 </div>
 
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'books/includes/qty_input_script.html' %}
 {% endblock %}
