@@ -74,6 +74,8 @@
                                         </div>
                                     </div>
                                 </form>
+                                <a href="" class="update-link text-info"><small>Update</small></a>
+                                <a href="" class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                             </td>
                             <td class="py-2">
                                 <p>£ {{ item.product.price_hardcover }}</p>
@@ -128,4 +130,25 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'books/includes/qty_input_script.html' %}
+
+<script type="text/javascript">
+    // Update book quantity
+    $('.update-link').click(function(e){
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove book and reload page
+    $('.remove-item').click(function(e){
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove/$(itemId)`;
+        var data = {'csrfmiddlewaretoken': csrfToken};
+
+        $.post(url, data)
+            .done(function() {
+                location.reload();
+            })
+    })
+</script>
 {% endblock %}
