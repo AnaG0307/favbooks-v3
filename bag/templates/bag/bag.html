@@ -14,7 +14,7 @@
 <div class="container mb-2">
     <div class="row">
         <div class="col">
-            <div class="my-4 text-center font-weight-bold">Your Shopping Bag</div>
+            <p class="my-sm-2 my-md-3 my-lg-5 text-center font-weight-bold">Your Shopping Bag</p>
         </div>
     </div>
     <div class="row">
@@ -45,7 +45,7 @@
                             </td class="py-2">
                             <td class="w-25">
                                 <!-- Form to increase/decrease book quantity -->
-                                <form action="" method="POST" class="form update-form">
+                                <form action="{% url 'adjust_bag' item.item_id %}" method="POST" class="form update-form">
                                     {% csrf_token %}
                                     <div class="form-group">
                                         <div class="input-group">
