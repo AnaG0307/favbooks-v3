@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
 <div class="container header-container">
@@ -26,9 +27,10 @@
                         <tr>
                             <th scope="col">Type</th>
                             <th scope="col">Book Title</th>
+                            <th scope="col">Price</th>
                             <th scope="col"></th>
                             <th scope="col">Quantity</th>
-                            <th scope="col">Total</th>
+                            <th scope="col">Subtotal</th>
                         </tr>
                     </thead>
                     {% for item in bag_items %}
@@ -40,12 +42,15 @@
                             <td class="py-2">
                                 <p>{{ item.product.title }}</p>
                             </td>
+                            <td class="py-2">
+                                <p>£ {{ item.product.price_hardcover }}</p>
+                            </td>
                             <td>
                                 <p></p>
                             </td class="py-2">
                             <td class="w-25">
                                 <!-- Form to increase/decrease book quantity -->
-                                <form action="{% url 'adjust_bag' item.item_id %}" method="POST" class="form update-form">
+                                <form method="POST" class="form update-form" action="{% url 'adjust_bag' item.item_id %}">
                                     {% csrf_token %}
                                     <div class="form-group">
                                         <div class="input-group">
@@ -78,7 +83,7 @@
                                 <a href="" class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                             </td>
                             <td class="py-2">
-                                <p>£ {{ item.product.price_hardcover }}</p>
+                                <p>£ {{ item.product.price_hardcover | calc_subtotal:item.quantity }}</p>
                             </td>
                         </tr>
                     </tbody>
@@ -133,16 +138,16 @@
 
 <script type="text/javascript">
     // Update book quantity
-    $('.update-link').click(function(e){
+    $('.update-link').click(function(e) {
         var form = $(this).prev('.update-form');
         form.submit();
     })
 
     // Remove book and reload page
-    $('.remove-item').click(function(e){
+    $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/bag/remove/$(itemId)`;
+        var url = `/bag/remove/${itemId}/`;
         var data = {'csrfmiddlewaretoken': csrfToken};
 
         $.post(url, data)
