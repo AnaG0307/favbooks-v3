@@ -1,57 +1,66 @@
 <div class="collapse navbar-collapse nav-bg" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
-        <!-- <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-4" href="#" id="all-books-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link text-white mr-4" href="{% url 'home' %}">
+                Home
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="logo-font font-weight-bold nav-link text-white mr-4" href="{% url 'books' %}" id="all-books-link">
                 All Books
             </a>
-            <div class="dropdown-menu" aria-labelledby="fiction-books-link">
-                <a class="dropdown-item" href="{% url 'books' %}?sort=price_hardcover&direction=asc">By Hardcover Price</a>
-                <a class="dropdown-item" href="{% url 'books' %}?sort=price_paperback&direction=asc">By Paperback Price</a>
-                <a class="dropdown-item" href="{% url 'books' %}?sort=price_electronic&direction=asc">By Electronic Price</a>
-                <a class="dropdown-item" href="{% url 'books' %}?sort=rating&direction=desc">By Rating</a>
-                <a class="dropdown-item" href="{% url 'books' %}?sort=book_sub_category&direction=asc">By Category</a>
-                <a class="dropdown-item" href="{% url 'books' %}">All Books</a>
-            </div>
-        </li> -->
+        </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-4" href="#" id="fiction-books-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-white mr-4" href="#" id="fiction-books-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Fiction
             </a>
             <div class="dropdown-menu" aria-labelledby="fiction-books-link">
-                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=general_fiction,crime_thrillers,science_fiction">All Fiction</a>
+                <a class="dropdown-item"
+                    href="{% url 'books' %}?book_sub_category=general_fiction,crime_thrillers,science_fiction">All
+                    Fiction</a>
                 <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=general_fiction">General Fiction</a>
-                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=crime_thrillers">Crime &amp; Thrillers</a>
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=crime_thrillers">Crime &amp;
+                    Thrillers</a>
                 <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=science_fiction">Science Fiction</a>
             </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-4" href="#" id="nonfiction-books-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-white mr-4" href="#" id="nonfiction-books-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Non-Fiction
             </a>
             <div class="dropdown-menu" aria-labelledby="nonfiction-books-link">
-                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=food_drink,sports,crafts_hobbies">All Non-Fiction</a>
-                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=crafts_hobbies">Crafts &amp; Hobbies</a>
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=food_drink,sports,crafts_hobbies">All
+                    Non-Fiction</a>
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=crafts_hobbies">Crafts &amp;
+                    Hobbies</a>
                 <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=sports">Sports</a>
                 <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=food_drink">Food &amp; Drink</a>
             </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white mr-4" href="#" id="children-books-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-white mr-4" href="#" id="children-books-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Children
             </a>
             <div class="dropdown-menu" aria-labelledby="children-books-link">
-                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=baby_toddler,teen_young_age">All Children</a>
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=baby_toddler,teen_young_age">All
+                    Children</a>
                 <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=baby_toddler">Baby &amp; Toddler</a>
-                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=teen_young_age">Teen &amp; Young Age</a>
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=teen_young_age">Teen &amp; Young
+                    Age</a>
             </div>
         </li>
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-white mr-4" href="#" id="events-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-white mr-4" href="#" id="events-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Events
             </a>
         </li>
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-white mr-4" href="#" id="subscriptions-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-white mr-4" href="#" id="subscriptions-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Subscriptions
             </a>
         </li>
