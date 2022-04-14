@@ -42,6 +42,7 @@
                 <small class="text-muted">No Rating Yet</small>
                 {% endif %}
                 <p class="lead text-left price mt-3 ft-md"><i class="far fa-heart"></i> Add to Wish List</p>
+                <!-- Change quantity and add to bag form -->
                 <form action="{% url 'add_to_bag' book.id %}" method="POST" class="form">
                     {% csrf_token %}
                     <div class="form-row">

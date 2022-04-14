@@ -8,9 +8,9 @@ body {
     padding-top: 164px;
 }
 
-main {
+/* main {
     padding-bottom: 215px;
-}
+} */
 
 /* ------------------ Navigation Bar, Page and Footer */
 
@@ -44,6 +44,7 @@ main {
     bottom: 0;
     width: 100%;
     text-align: center;
+    margin-top: 260px;
 }
 
 .copyright {
