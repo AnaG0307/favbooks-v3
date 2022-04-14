@@ -6,7 +6,13 @@ html {
 body {
     font-family: 'Red Hat Mono', monospace;
     padding-top: 164px;
-    padding-bottom: 164px;
+    height: 100%;
+}
+
+/* Credit -> https://css-tricks.com/a-clever-sticky-footer-technique/ */
+body > footer {
+    position: sticky;
+    top: 100vh;
 }
 
 /* ------------------ Navigation Bar, Page and Footer */
@@ -84,7 +90,7 @@ body {
 
 /* Media query, small devices */
 
-@media only screen and (min-width: 600px) {
+/* @media only screen and (min-width: 600px) {
     body {
         padding-top: 64px;
         padding-bottom: 264px;
@@ -93,7 +99,7 @@ body {
 }
 
 /* Media query for extra small devices */
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
     body {
         padding-top: 64px;
         padding-bottom: 264px;
@@ -107,4 +113,4 @@ body {
     h4 {
         font-size: small;
     }
-}
+} */ */

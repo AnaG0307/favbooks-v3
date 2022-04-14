@@ -37,12 +37,20 @@
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/82e8dfd6a3.js" crossorigin="anonymous"></script>
     <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
     {% endblock %}
 
     {% block extra_js %}
@@ -142,12 +150,28 @@
     {% block page_header %}
     {% endblock %}
     <main>
-        {% block content %}
-        {% endblock %}
+    {% block content %}
+    {% endblock %}
     </main>
-    <footer>
-        <!-- Footer -->
-        {% include 'includes/footer.html' %}
+    <!-- Footer -->
+    <footer class="container-fluid main-bg">
+        <div class="row my-auto ps-3 pt-3 text-white">
+            <div class="col-12 col-lg-4 my-auto py-1 py-sm-0 py-lg-0">
+                <p>Site Map</p>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-sm-0 py-lg-0">
+                <p>About Us</p>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-1 py-sm-0 py-lg-0">
+                <p>Social Media</p>
+            </div>
+        </div>
+        <div class="row px-3 pt-3 pt-sm-0">
+            <div class="footer-copyright text-center py-3">
+                <p class="m-0 text-center text-white copyright">Made by Ana Genover ©2022 Copyright (for educational purposes only, no
+                    deliveries will be issued)</p>
+            </div>
+        </div>
     </footer>
 
     {% block postloadjs %}
