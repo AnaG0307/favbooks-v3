@@ -90,20 +90,16 @@ body > footer {
 
 /* Media query, small devices */
 
-/* @media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) {
     body {
-        padding-top: 64px;
-        padding-bottom: 264px;
-        font-size: smaller;
+        padding-top: 94px;
     }
 }
 
 /* Media query for extra small devices */
-/* @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     body {
         padding-top: 64px;
-        padding-bottom: 264px;
-        font-size: small;
     }
 
     header,
@@ -113,4 +109,4 @@ body > footer {
     h4 {
         font-size: small;
     }
-} */ */
+}
