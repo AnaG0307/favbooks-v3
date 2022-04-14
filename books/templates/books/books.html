@@ -43,7 +43,7 @@
                         {% if search_term or current_sub_categories or current_sorting != 'None_None' %}
                         <span class="small"><a href="{% url 'books' %}">Back to All Books</a> | </span>
                         {% endif %}
-                        {{ books|length }} Books{% if serach_term %}found for <strong>"{{ search_term }}"</strong>{% endif %}
+                        {{ books|length }} Books{% if search_term %}found for <strong>"{{ search_term }}"</strong>{% endif %}
                     </p>
                 </div>
             </div>
