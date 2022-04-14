@@ -2,26 +2,21 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid index-bg">
-        <div class="row h-100 text-white">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4">
-                    Opening Hours
-                </h1>
-            </div>
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4">
-                    Where to find us!
-                </h1>
-            </div>
+<div class="container-fluid index-bg">
+    <div class="row h-100 text-white">
+        <div class="col-7 col-md-6 my-auto">
+            <a href="{% url 'books' %}">
+                <h6 class="display-4">SHOP NOW!</h6>
+            </a>
         </div>
     </div>
+</div>
 {% endblock %}

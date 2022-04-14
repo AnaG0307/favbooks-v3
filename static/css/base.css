@@ -6,11 +6,8 @@ html {
 body {
     font-family: 'Red Hat Mono', monospace;
     padding-top: 164px;
+    padding-bottom: 164px;
 }
-
-/* main {
-    padding-bottom: 215px;
-} */
 
 /* ------------------ Navigation Bar, Page and Footer */
 
@@ -81,4 +78,33 @@ body {
 
 .allauth-form-inner-content {
     margin-top: 1.5rem;
+}
+
+/* ------------------ Media Queries */
+
+/* Media query, small devices */
+
+@media only screen and (min-width: 600px) {
+    body {
+        padding-top: 64px;
+        padding-bottom: 264px;
+        font-size: smaller;
+    }
+}
+
+/* Media query for extra small devices */
+@media only screen and (max-width: 600px) {
+    body {
+        padding-top: 64px;
+        padding-bottom: 264px;
+        font-size: small;
+    }
+
+    header,
+    footer,
+    small,
+    p,
+    h4 {
+        font-size: small;
+    }
 }
