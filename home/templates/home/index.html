@@ -11,12 +11,37 @@
 
 {% block content %}
 <div class="container-fluid index-bg">
-    <div class="row h-100 text-white">
-        <div class="col-7 col-md-6 my-auto">
-            <a href="{% url 'books' %}">
-                <h6 class="display-4">SHOP NOW!</h6>
-            </a>
+    <div class="row h-100 text-center text-white">
+        <div class="col-12 col-md-6 my-auto py-2 index-bg-2">
+            <h6>Opening times</h6>
+            <p class="m-0 p-0"><small>Monday: 10am - 10pm</small></p>
+            <p class="m-0 p-0"><small>Tuesday: 10am - 10pm</small></p>
+            <p class="m-0 p-0"><small>Wednesday: 10am - 10pm</small></p>
+            <p class="m-0 p-0"><small>Thursday: 10am - 10pm</small></p>
+            <p class="m-0 p-0"><small>Friday: 10am - 10pm</small></p>
+            <p class="m-0 p-0"><small>Saturday: 10am - 10pm</small></p>
+            <p class="m-0 p-0"><small>Sunday: 11am - 5pm</small></p>
+        </div>
+        <div class="col-12 col-md-6 my-auto py-2 text-center index-bg-2">
+            <h6>Where to find us</h6>
+            <div class="m-auto" id="googleMap" style="width:75%;height:170px;"></div>
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script>
+    function myMap() {
+        var mapProp = {
+            center: new google.maps.LatLng(51.508742, -0.120850),
+            zoom: 5,
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+
 {% endblock %}

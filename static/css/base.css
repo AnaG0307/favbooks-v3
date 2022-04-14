@@ -23,6 +23,10 @@ body > footer {
     height: calc(100vh - 164px);
 }
 
+.index-bg-2 {
+    background-color: rgba(111, 29, 27, 0.8);
+}
+
 .text-white {
     color: #C8C8C8 !important;
 }
