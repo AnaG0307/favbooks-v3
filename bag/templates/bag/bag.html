@@ -40,7 +40,8 @@
                                 <p>{{ item.product.book_type1.book_friendly_type }}</p>
                             </td>
                             <td class="py-2">
-                                <p>{{ item.product.title }}</p>
+                                <a href="{% url 'book_detail' item.item_id %}">{{ item.product.title }}</a>
+                                <!-- <p>{{ item.product.title }}</p> -->
                             </td>
                             <td class="py-2">
                                 <p>£ {{ item.product.price_hardcover }}</p>
