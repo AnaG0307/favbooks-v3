@@ -10,7 +10,7 @@ body {
 }
 
 main {
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 /* Credit -> https://css-tricks.com/a-clever-sticky-footer-technique/ */
@@ -68,10 +68,6 @@ body > footer {
     font-size: smaller;
 }
 
-.map {
-    z-index: 3;
-}
-
 /* ------------------ Body */
 
 .ft-sm {
@@ -93,22 +89,23 @@ body > footer {
 
 /* ------------------ Buttons */
 
-.update-link,
-.remove-item,
 .btt {
     cursor: pointer;
-    background-color: black !important;
-    color: #C8C8C8 !important;
-    padding: 2px 7px;
+    background-color: #343a40 !important;
+    color: whitesmoke !important;
     text-align: center;
+    padding: 2px 7px;
     text-decoration: none;
-    border-radius: 6px;
-    border: 3px solid #C8C8C8;
+    border-radius: 4px;
+    border: 2px solid whitesmoke !important;
     display: inline-block;
 }
 
-a.link {
-    text-decoration: none;
+.btt:hover,
+.btt:active {
+    background-color: whitesmoke !important;
+    color: #343a40 !important;
+    border: 2px solid #343a40 !important;
 }
 
 /* ------------------ Allauth Forms */
@@ -122,15 +119,17 @@ a.link {
 /* Media query, small devices */
 
 @media only screen and (min-width: 600px) {
-    body {
-        padding-top: 94px;
+    body,
+    main {
+        padding-top: 54px;
     }
 }
 
 /* Media query for extra small devices */
 @media only screen and (max-width: 600px) {
-    body {
-        padding-top: 64px;
+    body,
+    main {
+        padding-top: 30px;
     }
 
     header,

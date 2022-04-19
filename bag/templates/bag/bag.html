@@ -80,8 +80,8 @@
                                         </div>
                                     </div>
                                 </form>
-                                <a class="update-link text-info text-decoration-none"><small>Update</small></a>
-                                <a class="remove-item text-danger text-decoration-none float-right" id="remove_{{ item.item_id }}"><small>Remove <i class="fas fa-backspace"></i></small></a>
+                                <a class="update-link btt"><small>Update</small></a>
+                                <a class="remove-item float-right btt" id="remove_{{ item.item_id }}"><small>Remove <i class="fas fa-backspace"></i></small></a>
                             </td>
                             <td class="py-2">
                                 <p>£ {{ item.product.price_hardcover | calc_subtotal:item.quantity }}</p>
@@ -104,13 +104,13 @@
                     </tr>
                     <tr>
                         <td colspan="5" class="text-right">
-                            <a href="{% url 'books' %}" class="btn border">
+                            <a href="{% url 'books' %}" class="btn btt">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span>Keep Shopping</span>
                             </a>
-                            <a href="" class="btn border">
+                            <a href="" class="btn btt">
                                 <span>Secure Checkout</span>
                                 <span><i class="fas fa-lock"></i></span>
                             </a>
