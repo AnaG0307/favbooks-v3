@@ -129,6 +129,22 @@ body > footer {
     text-decoration: none;
 }
 
+/* ------------------ Toasts */
+.custom-toast {
+    overflow: visible;
+}
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 9999;
+}
+
+.message-txt {
+    color: whitesmoke;
+}
+
 /* ------------------ Allauth Forms */
 
 .allauth-form-inner-content {
