@@ -10,7 +10,7 @@ body {
 }
 
 main {
-    padding-top: 80px;
+    padding-top: 164px !important;
 }
 
 /* Credit -> https://css-tricks.com/a-clever-sticky-footer-technique/ */
@@ -106,6 +106,27 @@ body > footer {
     background-color: whitesmoke !important;
     color: #343a40 !important;
     border: 2px solid #343a40 !important;
+    text-decoration: none;
+}
+
+.btt-index {
+    cursor: pointer;
+    background-color: rgba(111, 29, 27, 0.1) !important;
+    color: whitesmoke !important;
+    text-align: center;
+    padding: 2px 7px;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 2px solid whitesmoke !important;
+    display: inline-block;
+}
+
+.btt-index:hover,
+.btt-index:active {
+    background-color: whitesmoke !important;
+    color: #343a40 !important;
+    border: 2px solid #343a40 !important;
+    text-decoration: none;
 }
 
 /* ------------------ Allauth Forms */
@@ -121,7 +142,7 @@ body > footer {
 @media only screen and (min-width: 600px) {
     body,
     main {
-        padding-top: 54px;
+        padding-top: 64px;
     }
 }
 
