@@ -76,13 +76,13 @@
                         </div>
                         <!-- Keep shopping and add to bag buttons -->
                         <div class="col-12">
-                            <a href="{% url 'books' %}" class="btn btn-border">
+                            <a href="{% url 'books' %}" class="btn btn-border btt">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span>Keep Shopping</span>
                             </a>
-                            <input type="submit" value="Add to Bag" class="btn btn-border">
+                            <input type="submit" value="Add to Bag" class="btn btn-border btt">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
@@ -92,7 +92,7 @@
         <!-- Books title, author and description -->
         <div class="col-12 col-md-6 col-lg-6">
             <div class="container-fluid mt-5">
-                <p class="lead text-left font-weight-bold">{{ book.title }}</p>
+                <p class="lead text-left font-weight-bold">"{{ book.title }}"</p>
                 <p class="lead text-left"><small class="font-weight-bold"> by {{ book.author }}</small></p>
                 <p class="lead text-left ft-md"><small>{{ book.synopsis }}</small></p>
             </div>

@@ -5,8 +5,12 @@ html {
 
 body {
     font-family: 'Red Hat Mono', monospace;
-    padding-top: 164px;
+    padding-top: 364px;
     height: 100%;
+}
+
+main {
+    padding-top: 100px;
 }
 
 /* Credit -> https://css-tricks.com/a-clever-sticky-footer-technique/ */
@@ -15,7 +19,7 @@ body > footer {
     top: 100vh;
 }
 
-/* ------------------ Navigation Bar, Page and Footer */
+/* ------------------ Navigation Bar and Index */
 
 .index-bg {
     background: url('/media/homepage-image.jpg') no-repeat center center fixed;
@@ -45,6 +49,8 @@ body > footer {
     background-color: #866209;
 }
 
+/* ------------------- Footer */
+
 .footer {
     position: fixed;
     left: 0;
@@ -56,6 +62,14 @@ body > footer {
 
 .copyright {
     font-size: x-small;
+}
+
+.schedule {
+    font-size: smaller;
+}
+
+.map {
+    z-index: 3;
 }
 
 /* ------------------ Body */
@@ -80,8 +94,21 @@ body > footer {
 /* ------------------ Buttons */
 
 .update-link,
-.remove-item {
+.remove-item,
+.btt {
     cursor: pointer;
+    background-color: black !important;
+    color: #C8C8C8 !important;
+    padding: 2px 7px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 3px solid #C8C8C8;
+    display: inline-block;
+}
+
+a.link {
+    text-decoration: none;
 }
 
 /* ------------------ Allauth Forms */

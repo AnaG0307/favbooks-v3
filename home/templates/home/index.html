@@ -12,25 +12,17 @@
 {% block content %}
 <div class="container-fluid index-bg">
     <div class="row h-100 text-center text-white">
-        <div class="col-12 col-md-6 my-auto py-2 index-bg-2">
-            <h6>Opening times</h6>
-            <p class="m-0 p-0"><small>Monday: 10am - 10pm</small></p>
-            <p class="m-0 p-0"><small>Tuesday: 10am - 10pm</small></p>
-            <p class="m-0 p-0"><small>Wednesday: 10am - 10pm</small></p>
-            <p class="m-0 p-0"><small>Thursday: 10am - 10pm</small></p>
-            <p class="m-0 p-0"><small>Friday: 10am - 10pm</small></p>
-            <p class="m-0 p-0"><small>Saturday: 10am - 10pm</small></p>
-            <p class="m-0 p-0"><small>Sunday: 11am - 5pm</small></p>
+        <div class="col-12 col-md-6 my-auto py-2 index-bg-2 text-white">
+            <a class="btt" href="{% url 'books' %}">Shop Now</a>
         </div>
         <div class="col-12 col-md-6 my-auto py-2 text-center index-bg-2">
-            <h6>Where to find us</h6>
-            <div class="m-auto" id="googleMap" style="width:75%;height:170px;"></div>
+            <a href="" class="btt">Subscriptions</a>
         </div>
     </div>
 </div>
 {% endblock %}
 
-{% block postloadjs %}
+<!-- {% block postloadjs %}
 {{ block.super }}
 <script>
     function myMap() {
@@ -44,4 +36,4 @@
 
 <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
 
-{% endblock %}
+{% endblock %} -->
