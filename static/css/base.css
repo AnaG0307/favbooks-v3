@@ -10,7 +10,7 @@ body {
 }
 
 main {
-    padding-top: 164px !important;
+    padding-top: 130px !important;
 }
 
 /* Credit -> https://css-tricks.com/a-clever-sticky-footer-technique/ */
@@ -139,10 +139,19 @@ body > footer {
 
 /* Media query, small devices */
 
+/* Media query for medium devices */
+@media only screen and (max-width: 900px) {
+    body,
+    main {
+        padding-top: 30px !important;
+    }
+}
+
+
 @media only screen and (min-width: 600px) {
     body,
     main {
-        padding-top: 64px;
+        padding-top: 50px;
     }
 }
 
@@ -150,7 +159,7 @@ body > footer {
 @media only screen and (max-width: 600px) {
     body,
     main {
-        padding-top: 30px;
+        padding-top: 30px !important;
     }
 
     header,
