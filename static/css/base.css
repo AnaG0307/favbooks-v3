@@ -146,6 +146,12 @@ body > footer {
     color: whitesmoke;
 }
 
+.bag-notification-wrapper {
+    height: 120px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 /* ------------------ Allauth Forms */
 
 .allauth-form-inner-content {

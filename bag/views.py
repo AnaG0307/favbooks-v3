@@ -21,7 +21,7 @@ def add_to_bag(request, item_id):
         bag[item_id] += quantity
         messages.success(
             request,
-            f'Updated quantity of {product.title} by {product.author} to your {bag[item_id]}'
+            f'Updated quantity of {product.title} by {product.author} to your bag'
             )
     else:
         bag[item_id] = quantity
