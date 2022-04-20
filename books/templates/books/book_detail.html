@@ -17,11 +17,11 @@
             <div class="image-container mt-5 mb-3">
                 {% if book.cover %}
                 <a href="{{ book.cover.url }}" target="_blank">
-                    <img src="{{ book.cover.url }}" alt="{{ book.title }}" class="w-75 img-fluid img-thumbnail">
+                    <img src="{{ book.cover.url }}" alt="{{ book.title }}" class="w-50 img-center img-fluid img-thumbnail">
                 </a>
                 {% else %}
                 <a href="">
-                    <img src="{{ MEDIA_URL }} noimage.png" alt="{{ book.title }}" class="w-75 img-fluid img-thumbnail">
+                    <img src="{{ MEDIA_URL }} noimage.png" alt="{{ book.title }}" class="w-50 img-center img-fluid img-thumbnail">
                 </a>
                 {% endif %}
             </div>

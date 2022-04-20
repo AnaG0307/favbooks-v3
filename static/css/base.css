@@ -79,6 +79,12 @@ body > footer {
     font-size: 16px !important;
 }
 
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* ------------------ Cards */
 
 .card-img-top {
