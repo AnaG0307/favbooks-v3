@@ -14,7 +14,7 @@ from pathlib import Path
 import os
 import dj_database_url
 if os.path.exists('env.py'):
-    import env
+    import env #noqa: F401
 
 # development = os.environ.get('DEVELOPMENT', False)
 
