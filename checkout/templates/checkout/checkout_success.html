@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="container mb-2">
+    <div class="row">
+        <div class="col">
+            <p class="my-sm-2 my-md-3 my-lg-5 text-center font-weight-bold">Thank You!</p>
+            <hr>
+            <p class="text-center">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-lg-7"></div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-lg-7 text-right">
+            <!-- add subscriptions page reference when created -->
+            <a href="#" class="btn btt my-2">
+                <span class="mr-2">
+                    <i class="fas fa-books"></i>
+                </span>
+                <span class="text-uppercase">Now check out our subscriptions here!</span>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
