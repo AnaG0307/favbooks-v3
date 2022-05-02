@@ -100,7 +100,7 @@
                             <a href="" class="dropdown-item">Subscription Management</a>
                             {% endif %}
                             <hr class="dropdown-divider">
-                            <a href="" class="dropdown-item">My Profile</a>
+                            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                             <a href="" class="dropdown-item">My Subscriptions</a>
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
