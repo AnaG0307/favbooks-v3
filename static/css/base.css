@@ -135,7 +135,7 @@ body > footer {
     text-decoration: none;
 }
 
-/* ------------------ Toasts */
+/* ------------------ Boostrap Toasts */
 .custom-toast {
     overflow: visible;
 }
@@ -169,13 +169,12 @@ body > footer {
 /* Media query, small devices */
 
 /* Media query for medium devices */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 950px) {
     body,
     main {
         padding-top: 57px !important;
     }
 }
-
 
 @media only screen and (min-width: 600px) {
     body,
