@@ -26,6 +26,7 @@
                             <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                             <option value="price_hardcover__asc" {% if current_sorting == 'price_hardcover_asc' %}selected{% endif %}>Price Hardcover (low to high)</option>
                             <option value="price_hardcover__desc" {% if current_sorting == 'price_hardcover_desc' %}selected{% endif %}>Price Hardcover (high to low)</option>
+                            <!-- TO BE IMPLEMENTED: filter for paperback and electronic prices -->
                             <!-- <option value="price_paperback__asc" {% if current_sorting == 'price_paperback_asc' %}selected{% endif %}>Price Paperback (low to high)</option>
                             <option value="price_paperback__desc" {% if current_sorting == 'price_paperback_desc' %}selected{% endif %}>Price Paperback (high to low)</option>
                             <option value="price_electronic__asc" {% if current_sorting == 'price_electronic_asc' %}selected{% endif %}>Price Electronic (low to high)</option>
@@ -67,6 +68,7 @@
                             <p class="card-text font-weight-bold">"{{ book.title }}"</p>
                             <p class="card-text font-weight-bold">by {{ book.author }}</p>
                             <p class="lead text-left my-0 text-muted"><small class="ft-sm">£ {{ book.price_hardcover }} | {{ book.book_type1.book_friendly_type }}</small></p>
+                            <p class="lead text-left my-0 text-muted"><small class="ft-sm">£ {{ book.price_paperback }} | {{ book.book_type2.book_friendly_type }}</small></p>
                             {% if book.book_sub_category %}
                             <p class="small mt-3 mb-0">
                                 <a href="{% url 'books' %}?book_sub_category={{ book.book_sub_category.book_sub_category }}"
