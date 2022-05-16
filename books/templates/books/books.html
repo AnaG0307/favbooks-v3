@@ -69,6 +69,7 @@
                             <p class="card-text font-weight-bold">by {{ book.author }}</p>
                             <p class="lead text-left my-0 text-muted"><small class="ft-sm">£ {{ book.price_hardcover }} | {{ book.book_type1.book_friendly_type }}</small></p>
                             <p class="lead text-left my-0 text-muted"><small class="ft-sm">£ {{ book.price_paperback }} | {{ book.book_type2.book_friendly_type }}</small></p>
+                            <p class="lead text-left my-0 text-muted"><small class="ft-sm">£ {{ book.price_electronic }} | {{ book.book_type3.book_friendly_type }}</small></p>
                             {% if book.book_sub_category %}
                             <p class="small mt-3 mb-0">
                                 <a href="{% url 'books' %}?book_sub_category={{ book.book_sub_category.book_sub_category }}"
@@ -78,12 +79,14 @@
                                 </a>
                             </p>
                             {% endif %}
+                            <!-- TO IMPLEMENT: Add to wishlist feature -->
                             <p class="lead text-left price mt-3 ft-md"><i class="far fa-heart"></i> Add to Wish List</p>
                         </div>
                         <div class="card-footer">
                             <div class="row">
                                 <div class="col">
                                     <p class="lead text-left">
+                                        <!-- TO IMPLEMENT: Add book reviews -->
                                         <small class="text-muted">Reviews</small>
                                     </p>
                                 </div>
