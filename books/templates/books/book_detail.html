@@ -28,6 +28,10 @@
             <div class="container-fluid">
                 <p class="lead text-left mb-0"><small>£ {{ book.price_hardcover }} |
                         {{ book.book_type1.book_friendly_type }}</small></p>
+                <p class="lead text-left mb-0"><small>£ {{ book.price_paperback }} |
+                        {{ book.book_type2.book_friendly_type }}</small></p>
+                <p class="lead text-left mb-0"><small>£ {{ book.price_electronic }} |
+                        {{ book.book_type3.book_friendly_type }}</small></p>
                 {% if book.book_sub_category %}
                 <p class="small mt-1 mb-0">
                     <a href="{% url 'books' %}?book_sub_category={{ book.book_sub_category.book_sub_category }}"
