@@ -36,14 +36,28 @@
                     {% for item in bag_items %}
                     <tbody>
                         <tr>
+                            <!-- Shows book type -->
                             <td class="py-2">
+                                {% if item..product.book_type1 %}
                                 <p>{{ item.product.book_type1.book_friendly_type }}</p>
+                                {% elif item.product.book_type2 %}
+                                <p>{{ item.product.book_type2.book_friendly_type }}</p>
+                                {% else %}
+                                <p>{{ item.product.book_type3.book_friendly_type }}</p>
+                                {% endif %}
                             </td>
                             <td class="py-2">
                                 <a href="{% url 'book_detail' item.item_id %}">{{ item.product.title }}</a>
                             </td>
+                            <!-- Shows book price depending on the type -->
                             <td class="py-2">
+                                {% if item.product.price_hardcover %}
                                 <p>£ {{ item.product.price_hardcover }}</p>
+                                {% elif item.product.price_paperback %}
+                                <p>£ {{ item.product.price_paperback }}</p>
+                                {% else %}
+                                <p>£ {{ item.product.price_electronic }}</p>
+                                {% endif %}
                             </td>
                             <td>
                                 <p></p>
@@ -82,8 +96,15 @@
                                 <a class="update-link btt"><small>Update</small></a>
                                 <a class="remove-item float-right btt" id="remove_{{ item.item_id }}"><small>Remove <i class="fas fa-backspace"></i></small></a>
                             </td>
+                            <!-- Shows final price depending on the type of book and qty -->
                             <td class="py-2">
+                                {% if item.product.price_hardcover %}
                                 <p>£ {{ item.product.price_hardcover | calc_subtotal:item.quantity }}</p>
+                                {% elif item.product.price_paperback %}
+                                <p>£ {{ item.product.price_paperback | calc_subtotal:item.quantity }}</p>
+                                {% else %}
+                                <p>£ {{ item.product.price_electronic | calc_subtotal:item.quantity }}</p>
+                                {% endif %}
                             </td>
                         </tr>
                     </tbody>
