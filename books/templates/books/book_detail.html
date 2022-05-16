@@ -51,6 +51,15 @@
                     {% csrf_token %}
                     <div class="form-row">
                         <div class="col-12">
+                            <!-- Select book type -->
+                            <p><strong>Book Type:</strong></p>
+                            <select class="form-control w-50" name="book_type" id='id_book_type'>
+                                <option>{{ book.book_type1.book_friendly_type }}</option>
+                                <option>{{ book.book_type2.book_friendly_type }}</option>
+                                <option>{{ book.book_type3.book_friendly_type }}</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
                             <p class="mt-3"><strong>Quantity:</strong></p>
                             <div class="form-group w-50">
                                 <div class="input-group">
