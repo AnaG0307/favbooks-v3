@@ -13,6 +13,7 @@ def profile(request):
     context = {
         'orders': orders,
         'form': form,
+        'profile': profile,
     }
 
     return render(request, template, context)
