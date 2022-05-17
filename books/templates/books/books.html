@@ -56,7 +56,7 @@
                     <div class="card h-100 my-auto">
                         {% if book.cover %}
                         <a href="{% url 'book_detail' book.id %}">
-                            <img src="{{ book.cover.url }}" alt="{{ book.title }}" class="card-img-top img-thumbnail img-fluid">
+                            <img src="{{ book.cover.url }}" alt="{{ book.title }}" class="card-img-top img-fluid">
                         </a>
                         {% else %}
                         <a href="{% url 'book_detail' book.id %}">
@@ -68,8 +68,9 @@
                             <p class="card-text font-weight-bold">"{{ book.title }}"</p>
                             <p class="card-text font-weight-bold">by {{ book.author }}</p>
                             <p class="lead text-left my-0 text-muted"><small class="ft-sm">£ {{ book.price_hardcover }} | {{ book.book_type1.book_friendly_type }}</small></p>
-                            <p class="lead text-left my-0 text-muted"><small class="ft-sm">£ {{ book.price_paperback }} | {{ book.book_type2.book_friendly_type }}</small></p>
-                            <p class="lead text-left my-0 text-muted"><small class="ft-sm">£ {{ book.price_electronic }} | {{ book.book_type3.book_friendly_type }}</small></p>
+                            <!-- TO IMPLEMENT: show different prices for different types of books -->
+                            <!-- <p class="lead text-left my-0 text-muted"><small class="ft-sm">£ {{ book.price_paperback }} | {{ book.book_type2.book_friendly_type }}</small></p>
+                            <p class="lead text-left my-0 text-muted"><small class="ft-sm">£ {{ book.price_electronic }} | {{ book.book_type3.book_friendly_type }}</small></p> -->
                             {% if book.book_sub_category %}
                             <p class="small mt-3 mb-0">
                                 <a href="{% url 'books' %}?book_sub_category={{ book.book_sub_category.book_sub_category }}"
@@ -78,39 +79,20 @@
                                     {{ book.book_sub_category.book_friendly_sub_category }}
                                 </a>
                             </p>
+                            <p class="small mt-3 mb-0">
+                                {% if book.rating %}
+                                <small class="text-muted"><i class="fas fa-star"></i> {{ book.rating }} /
+                                    5</small>
+                                {% else %}
+                                <small class="text-muted">No Rating Yet</small>
+                                {% endif %}
+                            </p>
                             {% endif %}
-                            <!-- TO IMPLEMENT: Add to wishlist feature -->
-                            <p class="lead text-left price mt-3 ft-md"><i class="far fa-heart"></i> Add to Wish List</p>
-                        </div>
-                        <div class="card-footer">
-                            <div class="row">
-                                <div class="col">
-                                    <p class="lead text-left">
-                                        <!-- TO IMPLEMENT: Add book reviews -->
-                                        <small class="text-muted">Reviews</small>
-                                    </p>
-                                </div>
-                                <div class="col">
-                                    <p>
-                                        {% if book.rating %}
-                                        <small class="text-muted"><i class="fas fa-star"></i> {{ book.rating }} /
-                                            5</small>
-                                        {% else %}
-                                        <small class="text-muted">No Rating Yet</small>
-                                        {% endif %}
-                                    </p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
                 {% endfor %}
             </div>
-            <!-- <div class="container m-5 p-5">
-                <div class="row">
-                    <div class="col"></div>
-                </div>
-            </div> -->
         </div>
     </div>
 </div>

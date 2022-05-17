@@ -93,6 +93,11 @@ body > footer {
     object-fit: cover;
 }
 
+.card {
+    border-color:#EBAEAD;
+    border-width: 0.15rem;
+}
+
 /* ------------------ Buttons */
 
 .btt {
