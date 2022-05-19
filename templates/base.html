@@ -108,7 +108,7 @@
                         <div class="dropdown-menu" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
-                            <a href="" class="dropdown-item">Books Management</a>
+                            <a href="{% url 'add_book' %}" class="dropdown-item">Books Management</a>
                             <a href="" class="dropdown-item">Newsletter Management</a>
                             <hr class="dropdown-divider">
                             {% endif %}

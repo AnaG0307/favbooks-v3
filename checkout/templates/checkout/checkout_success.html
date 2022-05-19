@@ -19,7 +19,6 @@
     <div class="row">
         <div class="col">
             <h2 class="my-sm-2 my-md-3 my-lg-5 text-center font-weight-bold">Thank You!</h2>
-            <hr>
             <p class="text-center my-4">Your order information is below. A confirmation email will be sent to
                 <strong>{{ order.email }}</strong>.
             </p>
@@ -194,14 +193,14 @@
             {% if from_profile %}
                 <a href="{% url 'profile' %}" class="btn btt my-5 py-2">
                     <span class="mr-2">
-                        <i class="fas fa-angle-left fa-2x"></i>
+                        <i class="fas fa-angle-left"></i>
                     </span>
                     <span class="text-uppercase">Back to profile and order history</span>
                 </a>
             {% else %}
                 <a href="#" class="btn btt my-5 py-2">
                     <span class="mr-2">
-                        <i class="fas fa-book fa-2x"></i>
+                        <i class="fas fa-book"></i>
                     </span>
                     <span class="text-uppercase">Now sign up to our newsletter here!</span>
                 </a>
