@@ -15,7 +15,7 @@
     <div class="row">
         <div class="col-12 col-md-6">
             <h3 class="my-sm-2 my-md-3 my-lg-5 text-center font-weight-bold">Book Management</h3>
-            <h5 class="text-muted">Edit Book</h5>
+            <h5 class="text-muted text-center mb-5">Edit Book</h5>
         </div>
     </div>
     <div class="row">
@@ -25,6 +25,7 @@
                 {{ form | crispy }}
                 <div class="text-right">
                     <a class="btn btt" href="{% url 'books' %}">Cancel</a>
+                    <a class="btn btt" href="{% url 'delete_book' book.id %}">Delete</a>
                     <button class="btn btt" type="submit">Update Book</button>
                 </div>
             </form>

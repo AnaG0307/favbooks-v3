@@ -46,6 +46,13 @@
                 {% else %}
                 <small class="text-muted">No Rating Yet</small>
                 {% endif %}
+                <!-- Superuser edit/delete buttons -->
+                {% if request.user.is_superuser %}
+                <small class="ml-3">
+                    <a href="{% url 'edit_book' book.id %}">Edit</a>
+                    <a class="text-danger" href="{% url 'delete_book' book.id %}">Delete</a>
+                </small>
+                {% endif %}
                 <!-- Change quantity and add to bag form -->
                 <form action="{% url 'add_to_bag' book.id %}" method="POST" class="form">
                     {% csrf_token %}
