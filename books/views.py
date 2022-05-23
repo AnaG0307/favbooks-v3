@@ -37,8 +37,12 @@ def all_books(request):
         # sorting by sub_category functionality
         if 'book_sub_category' in request.GET:
             book_sub_categories = request.GET['book_sub_category'].split(',')
-            books = books.filter(book_sub_category__book_sub_category__in=book_sub_categories)
-            book_sub_categories = Sub_Category.objects.filter(book_sub_category__in=book_sub_categories)
+            books = books.filter(
+                book_sub_category__book_sub_category__in=book_sub_categories
+                )
+            book_sub_categories = Sub_Category.objects.filter(
+                book_sub_category__in=book_sub_categories
+                )
 
         # search functionality
         if 'q' in request.GET:

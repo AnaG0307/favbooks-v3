@@ -1,4 +1,5 @@
 from django import forms
+from .widgets import CustomClearableFileInput
 from .models import Book, Category, Sub_Category
 
 
@@ -8,12 +9,21 @@ class BookForm(forms.ModelForm):
         model = Book
         fields = '__all__'
 
+    cover = forms.ImageField(
+        label='Cover',
+        required=False,
+        widget=CustomClearableFileInput
+        )
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         categories = Category.objects.all()
         sub_categories = Sub_Category.objects.all()
         friendly_names_c = [(c.id, c.get_friendly_name()) for c in categories]
-        friendly_names_s = [(s.id, s.get_friendly_name()) for s in sub_categories]
+        friendly_names_s = [(
+            s.id,
+            s.get_friendly_name()
+            ) for s in sub_categories]
 
         self.fields['book_category'].choices = friendly_names_c
         for field_name, field in self.fields.items():
