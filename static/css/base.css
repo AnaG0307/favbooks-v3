@@ -29,6 +29,8 @@ body > footer {
 
 .index-bg-2 {
     background-color: rgba(111, 29, 27, 0.8);
+    max-width: 25%;
+    border-radius: 10px;
 }
 
 .text-white {

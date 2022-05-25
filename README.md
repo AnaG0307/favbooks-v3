@@ -80,10 +80,10 @@
 - **Login/Logout/Register:**
 
 
-- **Add Recipe:**
+- **Add/Update/Delete Book:**
 
 
-- **My Recipes:**
+- **Newsletter:**
 
 
 - **Admin Site:**
@@ -91,6 +91,9 @@
 
 #### **Future Features**
 
+- **Events:**
+- **Reviews:**
+- **My Wishlist:**
 
 
 ### **Wireframes**
@@ -143,6 +146,7 @@ Below are the initial wireframes for the site for both desktop screens and small
 - [W3C](https://validator.w3.org/#validate_by_input)
 - [Stackoverflow](https://stackoverflow.com/)
 - [Bootstrap](https://getbootstrap.com/)
+- [Coolors](https://coolors.co/)
 
 
 
