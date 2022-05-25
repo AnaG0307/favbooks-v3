@@ -1,8 +1,11 @@
 <footer class="container-fluid main-bg">
     <div class="row my-auto ps-3 pt-3 text-white">
         <div class="col-12 col-lg-4 my-auto text-center py-1 py-lg-0">
-            <p>About Us</p>
-            <p>Site Map</p>
+            <p>Opening times</p>
+            <p class="m-0 p-0 schedule"><small>Monday to Saturday: 10am - 10pm</small></p>
+            <p class="m-0 p-0 schedule"><small>Sunday: 11am - 5pm</small></p>
+        </div>
+        <div class="col-12 col-lg-4 my-auto py-1 text-center py-lg-0">
             <p>Social Media</p>
             <a href="https://www.facebook.com/" target="_blank"><i
                     class="fab fa-facebook-square ms-3 fa-2x link-light"></i></a>
@@ -14,41 +17,15 @@
                     class="fab fa-youtube-square ms-3 fa-2x link-light"></i></a>
             </p>
         </div>
-        <div class="col-12 col-lg-4 my-auto py-1 text-center py-lg-0">
-            <h6>Where to find us</h6>
-            <div class="m-auto map" id="googleMap" style="width:75%;height:170px;"></div>
-        </div>
         <div class="col-12 col-lg-4 my-auto text-center py-1 py-lg-0">
-            <p>Opening times</p>
-            <p class="m-0 p-0 schedule"><small>Monday: 10am - 10pm</small></p>
-            <p class="m-0 p-0 schedule"><small>Tuesday: 10am - 10pm</small></p>
-            <p class="m-0 p-0 schedule"><small>Wednesday: 10am - 10pm</small></p>
-            <p class="m-0 p-0 schedule"><small>Thursday: 10am - 10pm</small></p>
-            <p class="m-0 p-0 schedule"><small>Friday: 10am - 10pm</small></p>
-            <p class="m-0 p-0 schedule"><small>Saturday: 10am - 10pm</small></p>
-            <p class="m-0 p-0 schedule"><small>Sunday: 11am - 5pm</small></p>
+            <p>Where to find us</p>
+            <p class="m-0 p-0 schedule"><small>107 Charing Cross Rd, London WC2H 0DT, United Kingdom</small></p>
         </div>
     </div>
     <div class="row px-3 pt-3 pt-sm-0">
         <div class="text-center py-3">
             <p class="m-0 text-center text-white copyright">Made by Ana Genover ©2022 Copyright (for educational
-                purposes only, no
-                deliveries will be issued)</p>
+                purposes only, no deliveries will be issued)</p>
         </div>
     </div>
-
-    {% block postloadjs %}
-    <script>
-        function myMap() {
-            var mapProp = {
-                center: new google.maps.LatLng(51.508742, -0.120850),
-                zoom: 5,
-            };
-            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-        }
-    </script>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
-
-    {% endblock %}
 </footer>
