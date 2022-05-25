@@ -11,9 +11,9 @@ def newsletter_signup(request):
     if form.is_valid():
         instance = form.save(commit=False)
         if NewsletterUser.objects.filter(email=instance.email).exists():
-            messages.info(request, f'Sorry, {NewsletterUser.email} is already subscribed to our newsletter!')
+            messages.info(request, 'Sorry, this email is already subscribed to our newsletter!')
         else:
-            messages.success(request, f'{NewsletterUser.email} is been added succesfully to receive our newsletter!')
+            messages.success(request, 'Your email is been added succesfully to receive our newsletter!')
             instance.save()
 
     context = {
