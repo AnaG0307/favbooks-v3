@@ -21,4 +21,5 @@ def newsletter_signup(request):
     }
 
     template = 'newsletter/newsletter_signup.html'
+
     return render(request, template, context)
