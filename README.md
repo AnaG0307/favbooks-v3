@@ -176,9 +176,48 @@ Some of the [Future Features](#Future-Features) have been described in the ERD a
 - [Coolors](https://coolors.co/)
 
 
-
 ## **Deployment**
 
+The project is been deployed to Heroku and AWS. Steps for deployment:
+
+- Deployment to Heroku:
+    - Create an account in Heroku;
+    - Create a new app in Heroku: choose a unique name and region;
+    - On the resourcs tab provide a new Postgres database (used free plan for this project);
+    - Go back to gitpod and install dj_database_url and psycopg2 and freeze the requirements in requirements.txt file to ensure Heroku installs our apps requirements when we deploy;
+    - In settings.py import dj_database, comment out the default database configuration, replace it with a call to dj_database_url.parse and give it the database URL from Heroku (which can be found in the settings tab);
+    - Migrate all the changes;
+    - Import all the books, categories and subcategories using the command 'python3 manage.py load data name';
+    - Create a super user using command 'python3 manage.py createsuperuser' and follow terminal instructions;
+    - Create an if statement in settings.py to allow the system to take the database from os.environ if it exists otherwise it will use the default configuration.
+    - Install gunicorn in the terminal and freeze to requirements.txt file;
+    - Create a Procfile to tell Heroku to create a web dyno;
+    - Temporarily disable collect_static using command 'heroku config:set DISABLE_COLLECT_STATIC=1';
+    - In settings.py add the hostname of the heroku app and a localhost so that gitpod will keep working;
+    - Add, commit and push changes to github, then use command 'git push heroku main' to deploy to Heroku;
+    - In Heroku, inside the app, go to the Deploy tab and set it to deploy to github, search for the project repository and click connect. Once connected set up automatic deploys (due to recent issues shared by the Heroku team automatic deploys have been temporarily disabled);
+    - Generate a secret key for the Heroku app and add it to the env.py file (which is included in .gitignore file to keep all the keys secret and safe);
+    - In settings.py set up debug to true only if there is a variable called development in the environment;
+
+    - Introduce sensitive data needed to be kept secret from the config Var tab in env.py and attach the database (Cloudinary url, Database url and Secret Key);
+    - Add necessary buildpacks: Python;
+    - Prepare environment and settings.py file by referencing env.py and link the database variable on Heroku;
+    - Migarte all the changes;
+    - Get all static and media files stored in Cloudinary by adding the cloudinary url in env.py and in Heroku, add Cloudinary to settings.py as well as telling Django, link the file to the templates in Heroku and allow Heroku as a host in Allowed_Hosts;
+    - In Gitpod create the media, static and templates directories;
+    - Add the project name in Procfile;
+    - Make deployment commit in the terminal;
+    - Manually deploy content through Heroku;
+    - For deployment method, GitHub was selected and confirmed we want to connect to GitHub;
+    - Connect Heroku to the repository for My Recipe Blog a;
+    - Set "Enable Automatic Deploys" to allow automatic deployments every time the code is pushed;
+    - Click on Deploy.
+    - For final deployment:
+        - In settings.py set Default = False;
+        - Below add X_FRAME_OPTIONS = 'SAMEORIGIN';
+        - Commit and push the changes in the terminal;
+        - In Heroku, in the settings tab remove the DISABLE_COLLECTSTATIC variable;
+        - In Heroku, go to the deploy tab and click on deploy branch.
 
 
 ## **Credits**
