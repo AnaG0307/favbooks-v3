@@ -99,28 +99,42 @@
 
 #### **Future Features**
 
-- **Events:**
-- **Reviews:**
-- **My Wishlist:**
+- **Events:** From the navigation bar the site user will be able to access through a link the different events (past and future) the bookshop has created either virtually or in the store. From their side, the admin user will be able to access a restricted link to admin users only from the Account menu to add, edit or delete those events organised by the bookshop.
+
+- **Reviews:** Site users will be able to see and add their own reviews to a particular book which will be visible from the book details page only. The reviews will appear from newest to oldest review added, and will also show the username of the site user, date and time the review was added.
+
+- **My Wishlist:** Site users will be able to access a personalised list of books called "Wishlist", the link to this page will be accessible from the Accounts menu and they will be able to see the list of books in the wishlist and basic details (cover image, title, author and synopsis at least). The site user will be able to add/remove books they wish to read in the future from the books details page (through a link underneath the rating) and also through the book cards when searching for books by category (this would allow a speedy process to the site user as they do not need to enter the book details page and they can save books while the scroll through the books by category), the site user will also be able to remove books from the Wishilist through the same wishlist page using a button.
+
+- **Subscriptions:** A link to the different subscriptions types will be available to the site user through the navigation bar, also another link to subscriptions will be available in the Accounts menu to the site user to manage their subscriptions (cancel a subscription or start one). Three different types of subscriptions will be available for the site user to adapt to the different needs and economic conditions of each user: annual, 6 months and monthly subscription.
 
 
 ### **Wireframes**
 Below are the initial wireframes for the site for both desktop screens and smaller devices:
 
-**Desktop screens**
+**Sitemap**
 
-![Desktop](...)
+![Sitemap](media/fb_sitemap.png)
 
-**Smaller screens**
 
-![Mobile](...)
+**Home Page**
 
+![Homepage](media/fb_homepage.png)
+
+
+**Home Page**
+
+![Category](media/fb_all_books_page.png)
+
+
+**Book Details Page**
+
+![BookDetails](media/fb_book_details.png)
 
 
 
 ## **Data Model**
 
-
+![Homepage](media/fb_erd.png)
 
 
 ## **Testing**
