@@ -121,7 +121,7 @@ Below are the initial wireframes for the site for both desktop screens and small
 ![Homepage](media/fb_homepage.png)
 
 
-**Home Page**
+**Category Page**
 
 ![Category](media/fb_all_books_page.png)
 
@@ -133,6 +133,11 @@ Below are the initial wireframes for the site for both desktop screens and small
 
 
 ## **Data Model**
+The Entity Relationalship Database (ERD) below was created to develop this project, unfortunately due to time constraint not all the features could be developed.
+
+The Book details are at the center of the ERD and they relate to the rest of the tables directly or indirectly. The site admin has CRUD (create, read, update and delete) access to all the books through the admin site as well as directly through the site itself, but the site user only has CRUD access to see the books created by the site admin.
+
+Some of the [Future Features](#Future-Features) have been described in the ERD as well.
 
 ![Homepage](media/fb_erd.png)
 
