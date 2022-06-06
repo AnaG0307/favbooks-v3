@@ -199,6 +199,9 @@ The project is been deployed to Heroku and AWS. Steps for deployment:
     - Generate a secret key for the Heroku app and add it to the env.py file (which is included in .gitignore file to keep all the keys secret and safe);
     - In settings.py set up debug to true only if there is a variable called development in the environment;
 
+- Deployment to AWS:
+    - 
+
     - Introduce sensitive data needed to be kept secret from the config Var tab in env.py and attach the database (Cloudinary url, Database url and Secret Key);
     - Add necessary buildpacks: Python;
     - Prepare environment and settings.py file by referencing env.py and link the database variable on Heroku;
