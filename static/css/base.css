@@ -9,8 +9,12 @@ body {
     height: 100%;
 }
 
-main {
-    padding-top: 130px !important;
+.main-padding {
+    padding-top: 130px;
+}
+
+.home-padding {
+    padding-top: 0px !important;
 }
 
 /* Credit -> https://css-tricks.com/a-clever-sticky-footer-technique/ */
@@ -24,6 +28,7 @@ body > footer {
 .index-bg {
     background: url('/media/homepage-image.jpg') no-repeat center center fixed;
     background-size: cover;
+    background-attachment: scroll;
     height: calc(100vh - 164px);
 }
 
@@ -42,7 +47,7 @@ body > footer {
 }
 
 .nav-bg {
-    background-color: #631918;
+    background-color: #6F1D1B;
     margin-right: 1.5em;
     padding: 0.5em;
 }
@@ -205,28 +210,44 @@ body > footer {
 
 /* ------------------ Media Queries */
 
-/* Media query, small devices */
+
+/* Media query for big devices */
+@media only screen and (min-width: 950px) {
+    body,
+    .main-padding{
+        padding-top: 170px !important;
+        padding-bottom: 10px;
+    }
+
+    header,
+    footer,
+    small,
+    p,
+    h4 {
+        font-size: large;
+    }
+}
 
 /* Media query for medium devices */
 @media only screen and (max-width: 950px) {
     body,
-    main {
+    .main-padding {
         padding-top: 57px !important;
     }
 }
 
 @media only screen and (min-width: 600px) {
     body,
-    main {
+    .main-padding {
         padding-top: 50px;
+        padding-bottom: 20px;
     }
 }
 
 /* Media query for extra small devices */
 @media only screen and (max-width: 600px) {
-    body,
-    main {
-        padding-top: 30px !important;
+    .main-padding {
+        padding-top: 100px !important;
     }
 
     header,
@@ -236,4 +257,14 @@ body > footer {
     h4 {
         font-size: small;
     }
+
+    .message-container {
+        position: fixed;
+        top: 65px;
+        right: 15px;
+        z-index: 9999;
+        background-color: whitesmoke;
+        width: 75%;
+    }
 }
+
