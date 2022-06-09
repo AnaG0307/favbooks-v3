@@ -5,7 +5,6 @@ html {
 
 body {
     font-family: 'Red Hat Mono', monospace;
-    padding-top: 364px;
     height: 100%;
 }
 
@@ -16,6 +15,7 @@ body {
 .home-padding {
     padding-top: 0px !important;
 }
+
 
 /* Credit -> https://css-tricks.com/a-clever-sticky-footer-technique/ */
 body > footer {
@@ -29,7 +29,7 @@ body > footer {
     background: url('/media/homepage-image.jpg') no-repeat center center fixed;
     background-size: cover;
     background-attachment: scroll;
-    height: calc(100vh - 164px);
+    height: 90vh !important;
 }
 
 .index-bg-2 {
@@ -213,7 +213,6 @@ body > footer {
 
 /* Media query for big devices */
 @media only screen and (min-width: 950px) {
-    body,
     .main-padding{
         padding-top: 170px !important;
         padding-bottom: 10px;
@@ -230,14 +229,12 @@ body > footer {
 
 /* Media query for medium devices */
 @media only screen and (max-width: 950px) {
-    body,
     .main-padding {
         padding-top: 57px !important;
     }
 }
 
 @media only screen and (min-width: 600px) {
-    body,
     .main-padding {
         padding-top: 50px;
         padding-bottom: 20px;
