@@ -214,12 +214,11 @@ body > footer {
 /* Media query for big devices */
 @media only screen and (min-width: 950px) {
     .main-padding{
-        padding-top: 170px !important;
+        padding-top: 230px !important;
         padding-bottom: 10px;
     }
 
     header,
-    footer,
     small,
     p,
     h4 {
@@ -230,7 +229,7 @@ body > footer {
 /* Media query for medium devices */
 @media only screen and (max-width: 950px) {
     .main-padding {
-        padding-top: 57px !important;
+        padding-top: 157px !important;
     }
 }
 
@@ -244,7 +243,7 @@ body > footer {
 /* Media query for extra small devices */
 @media only screen and (max-width: 600px) {
     .main-padding {
-        padding-top: 100px !important;
+        padding-top: 200px !important;
     }
 
     header,
