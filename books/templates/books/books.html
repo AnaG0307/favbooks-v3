@@ -43,7 +43,7 @@
                 <div class="col-12 col-md-6 order-md-first">
                     <p class="text-muted mt-3">
                         {% if search_term or current_sub_categories or current_sorting != 'None_None' %}
-                        <span class="small"><a href="{% url 'books' %}">Back to All Books</a> | </span>
+                        <span class="small"><a href="{% url 'books' %}" rel="nofollow">Back to All Books</a> | </span>
                         {% endif %}
                         {{ books|length }} Books{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                     </p>
@@ -55,11 +55,11 @@
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 my-3">
                     <div class="card h-100 my-auto">
                         {% if book.cover %}
-                        <a href="{% url 'book_detail' book.id %}">
+                        <a href="{% url 'book_detail' book.id %}" rel="nofollow">
                             <img src="{{ book.cover.url }}" alt="{{ book.title }}" class="card-img-top img-fluid">
                         </a>
                         {% else %}
-                        <a href="{% url 'book_detail' book.id %}">
+                        <a href="{% url 'book_detail' book.id %}" rel="nofollow">
                             <img src="{{ MEDIA_URL }}noimage.png" alt="{{ book.title }}"
                                 class="card-img-top img-fluid img-thumbnail">
                         </a>
@@ -74,7 +74,7 @@
                             {% if book.book_sub_category %}
                             <p class="small mt-3 mb-0">
                                 <a href="{% url 'books' %}?book_sub_category={{ book.book_sub_category.book_sub_category }}"
-                                    class="text-muted">
+                                    class="text-muted" rel="nofollow">
                                     <i class="fas fa-hashtag"></i>
                                     {{ book.book_sub_category.book_friendly_sub_category }}
                                 </a>
@@ -90,8 +90,8 @@
                             {% endif %}
                             {% if request.user.is_superuser %}
                             <small class="ml-3">
-                                <a href="{% url 'edit_book' book.id %}">Edit</a>
-                                <a class="text-danger" href="{% url 'delete_book' book.id %}">Delete</a>
+                                <a href="{% url 'edit_book' book.id %}" rel="nofollow">Edit</a>
+                                <a class="text-danger" href="{% url 'delete_book' book.id %}" rel="nofollow">Delete</a>
                             </small>
                             {% endif %}
                         </div>

@@ -30,8 +30,8 @@
                     {% endif %}
                 {% endfor %}
                 <div class="text-right">
-                    <a class="btn btt" href="{% url 'books' %}">Cancel</a>
-                    <a class="btn btt" href="{% url 'delete_book' book.id %}">Delete</a>
+                    <a class="btn btt" href="{% url 'books' %}" rel="nofollow">Cancel</a>
+                    <a class="btn btt" href="{% url 'delete_book' book.id %}" rel="nofollow">Delete</a>
                     <button class="btn btt" type="submit">Update Book</button>
                 </div>
             </form>

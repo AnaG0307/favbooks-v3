@@ -47,7 +47,7 @@
                                 {% endif %}
                             </td>
                             <td class="py-2">
-                                <a href="{% url 'book_detail' item.item_id %}">{{ item.product.title }}</a>
+                                <a href="{% url 'book_detail' item.item_id %}" rel="nofollow">{{ item.product.title }}</a>
                             </td>
                             <!-- Shows book price depending on the type -->
                             <td class="py-2">
@@ -124,13 +124,13 @@
                     </tr>
                     <tr>
                         <td colspan="5" class="text-right">
-                            <a href="{% url 'books' %}" class="btn btt">
+                            <a href="{% url 'books' %}" class="btn btt" rel="nofollow">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span>Keep Shopping</span>
                             </a>
-                            <a href="{% url 'checkout' %}" class="btn btt">
+                            <a href="{% url 'checkout' %}" class="btn btt" rel="nofollow">
                                 <span>Secure Checkout</span>
                                 <span><i class="fas fa-lock"></i></span>
                             </a>
@@ -140,7 +140,7 @@
             </div>
             {% else %}
             <p class="lead-mb-5">Your bag is empty.</p>
-            <a href="{% url 'books' %}" class="btn btt border">
+            <a href="{% url 'books' %}" class="btn btt border" rel="nofollow">
                 <span class="icon">
                     <i class="fas fa-chevron-left"></i>
                 </span>

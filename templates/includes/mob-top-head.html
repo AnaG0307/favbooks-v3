@@ -30,15 +30,15 @@
     <div class="dropdown-menu" aria-labelledby="user-options">
         {% if request.user.is_authenticated %}
         {% if request.user.is_superuser %}
-        <a href="{% url 'add_book' %}" class="dropdown-item">Books Management</a>
+        <a href="{% url 'add_book' %}" class="dropdown-item" rel="nofollow">Books Management</a>
         <hr class="dropdown-divider">
         {% endif %}
-        <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+        <a href="{% url 'profile' %}" class="dropdown-item" rel="nofollow">My Profile</a>
         <a href="" class="dropdown-item">My Wishlist</a>
-        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+        <a href="{% url 'account_logout' %}" class="dropdown-item" rel="nofollow">Logout</a>
         {% else %}
-        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-        <a href="{% url 'account_login' %}" class="dropdown-item">Sign In</a>
+        <a href="{% url 'account_signup' %}" class="dropdown-item" rel="nofollow">Register</a>
+        <a href="{% url 'account_login' %}" class="dropdown-item" rel="nofollow">Sign In</a>
         {% endif %}
     </div>
 </li>

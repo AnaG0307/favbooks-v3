@@ -76,7 +76,7 @@
         </div>
         <div id="topnav" class="row pt-lg-2 d-none d-lg-flex main-bg">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link" rel="nofollow">
                     <img src="{{ MEDIA_URL }}logo.png" class="logo" alt="">
                 </a>
             </div>
@@ -108,20 +108,20 @@
                         <div class="dropdown-menu" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
-                            <a href="{% url 'add_book' %}" class="dropdown-item">Books Management</a>
+                            <a href="{% url 'add_book' %}" class="dropdown-item" rel="nofollow">Books Management</a>
                             <hr class="dropdown-divider">
                             {% endif %}
-                            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                            <a href="{% url 'profile' %}" class="dropdown-item" rel="nofollow">My Profile</a>
                             <a href="" class="dropdown-item">My Wishlist</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                            <a href="{% url 'account_logout' %}" class="dropdown-item" rel="nofollow">Logout</a>
                             {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item">Sign In</a>
+                            <a href="{% url 'account_signup' %}" class="dropdown-item" rel="nofollow">Register</a>
+                            <a href="{% url 'account_login' %}" class="dropdown-item" rel="nofollow">Sign In</a>
                             {% endif %}
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a href="{% url 'view_bag' %}" class="text-white nav-link">
+                        <a href="{% url 'view_bag' %}" rel="nofollow" class="text-white nav-link">
                             <div class="text-center">
                                 <div><i class="fas fa-cart-plus fa-lg"></i></div>
                                 <p class="my-0">
