@@ -1,28 +1,28 @@
 <div class="collapse navbar-collapse nav-bg" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-white mr-4" href="{% url 'home' %}" rel="nofollow">
+            <a class="logo-font font-weight-bold nav-link text-white mr-4" href="{% url 'home' %}">
                 Home
             </a>
         </li>
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-white mr-4" href="{% url 'books' %}" id="all-books-link" rel="nofollow">
+            <a class="logo-font font-weight-bold nav-link text-white mr-4" href="{% url 'books' %}" id="all-books-link">
                 All Books
             </a>
         </li>
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-white mr-4" href="#" id="fiction-books-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" rel="nofollow">
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Fiction
             </a>
             <div class="dropdown-menu" aria-labelledby="fiction-books-link">
                 <a class="dropdown-item"
-                    href="{% url 'books' %}?book_sub_category=general_fiction,crime_thrillers,science_fiction" rel="nofollow">All
+                    href="{% url 'books' %}?book_sub_category=general_fiction,crime_thrillers,science_fiction">All
                     Fiction</a>
-                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=general_fiction" rel="nofollow">General Fiction</a>
-                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=crime_thrillers" rel="nofollow">Crime &amp;
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=general_fiction">General Fiction</a>
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=crime_thrillers">Crime &amp;
                     Thrillers</a>
-                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=science_fiction" rel="nofollow">Science Fiction</a>
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=science_fiction">Science Fiction</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -31,30 +31,30 @@
                 Non-Fiction
             </a>
             <div class="dropdown-menu" aria-labelledby="nonfiction-books-link">
-                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=food_drink,sports,crafts_hobbies" rel="nofollow">All
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=food_drink,sports,crafts_hobbies">All
                     Non-Fiction</a>
-                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=crafts_hobbies" rel="nofollow">Crafts &amp;
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=crafts_hobbies">Crafts &amp;
                     Hobbies</a>
-                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=sports" rel="nofollow">Sports</a>
-                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=food_drink" rel="nofollow">Food &amp; Drink</a>
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=sports">Sports</a>
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=food_drink">Food &amp; Drink</a>
             </div>
         </li>
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-white mr-4" href="#" id="children-books-link"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" rel="nofollow">
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Children
             </a>
             <div class="dropdown-menu" aria-labelledby="children-books-link">
-                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=baby_toddler,teen_young_age" rel="nofollow">All
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=baby_toddler,teen_young_age">All
                     Children</a>
-                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=baby_toddler" rel="nofollow">Baby &amp; Toddler</a>
-                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=teen_young_age" rel="nofollow">Teen &amp; Young
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=baby_toddler">Baby &amp; Toddler</a>
+                <a class="dropdown-item" href="{% url 'books' %}?book_sub_category=teen_young_age">Teen &amp; Young
                     Age</a>
             </div>
         </li>
         <li class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-white mr-4" href="{% url 'newsletter_signup' %}"
-                aria-haspopup="true" aria-expanded="false" rel="nofollow">
+                aria-haspopup="true" aria-expanded="false">
                 Newsletter
             </a>
         </li>

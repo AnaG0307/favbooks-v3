@@ -36,7 +36,7 @@
             {% for item in bag_items %}
             <div class="row">
                 <div class="col-2 mb-1">
-                    <a href="{% url 'book_detail' item.product.id %}" rel="nofollow">
+                    <a href="{% url 'book_detail' item.product.id %}">
                         {% if item.product.cover %}
                         <img class="w-100" src="{{ item.product.cover.url }}" alt="{{ product.name }}">
                         {% else %}
@@ -93,8 +93,8 @@
                             checked>
                         {% else %}
                         <label class="form-check-label" for="id-save-info">
-                            <a class="text-info" href="{% url 'account_signup' %}" rel="nofollow">Create an account</a> or
-                            <a class="text-info" href="{% url 'account_login' %}" rel="nofollow">login</a> to save this information
+                            <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or
+                            <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
                         </label>
                         {% endif %}
                     </div>
@@ -111,7 +111,7 @@
                 </fieldset>
 
                 <div class="submit-button text-right mt-5 mb-2">
-                    <a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded-0" rel="nofollow">
+                    <a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded-0">
                         <span class="font-weight-bold btt"><i class="fas fa-chevron-left"></i> Adjust Bag</span>
                     </a>
                     <button id="submit-button" class="btn btn-black rounded-0">

@@ -57,7 +57,7 @@ body > footer {
 }
 
 .logo {
-    width: 50%;
+    width: 50% !important;
 }
 
 /* ------------------- Footer */
@@ -223,6 +223,10 @@ body > footer {
     h4 {
         font-size: large;
     }
+
+    .logo {
+        width: 25% !important;
+    }
 }
 
 
@@ -239,6 +243,10 @@ body > footer {
     h4 {
         font-size: large;
     }
+
+    .logo {
+        width: 25% !important;
+    }
 }
 
 /* Media query for medium devices */
@@ -253,6 +261,7 @@ body > footer {
         padding-top: 50px;
         padding-bottom: 20px;
     }
+
 }
 
 /* Media query for extra small devices */

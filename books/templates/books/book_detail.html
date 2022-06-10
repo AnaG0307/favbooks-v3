@@ -16,7 +16,7 @@
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container mt-5 mb-3">
                 {% if book.cover %}
-                <a href="{{ book.cover.url }}" target="_blank" rel="nofollow">
+                <a href="{{ book.cover.url }}" target="_blank">
                     <img src="{{ book.cover.url }}" alt="{{ book.title }}" class="w-50 img-center img-fluid img-thumbnail">
                 </a>
                 {% else %}
@@ -44,8 +44,8 @@
                 <!-- Superuser edit/delete buttons -->
                 {% if request.user.is_superuser %}
                 <small class="ml-3">
-                    <a href="{% url 'edit_book' book.id %}" rel="nofollow">Edit</a>
-                    <a class="text-danger" href="{% url 'delete_book' book.id %}" rel="nofollow">Delete</a>
+                    <a href="{% url 'edit_book' book.id %}">Edit</a>
+                    <a class="text-danger" href="{% url 'delete_book' book.id %}">Delete</a>
                 </small>
                 {% endif %}
                 <!-- Change quantity and add to bag form -->
@@ -82,7 +82,7 @@
                         </div>
                         <!-- Keep shopping and add to bag buttons -->
                         <div class="col-12">
-                            <a href="{% url 'books' %}" class="btn btn-border btt" rel="nofollow">
+                            <a href="{% url 'books' %}" class="btn btn-border btt">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
