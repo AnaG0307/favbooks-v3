@@ -210,11 +210,26 @@ body > footer {
 
 /* ------------------ Media Queries */
 
+/* Media query for extra large devices */
+@media only screen and (min-width: 1200px) {
+    .main-padding{
+        padding-top: 530px !important;
+        padding-bottom: 10px;
+    }
 
-/* Media query for big devices */
+    header,
+    small,
+    p,
+    h4 {
+        font-size: large;
+    }
+}
+
+
+/* Media query for large devices */
 @media only screen and (min-width: 950px) {
     .main-padding{
-        padding-top: 230px !important;
+        padding-top: 330px !important;
         padding-bottom: 10px;
     }
 
