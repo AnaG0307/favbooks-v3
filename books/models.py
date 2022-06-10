@@ -86,6 +86,7 @@ class Book(models.Model):
     cover = models.ImageField(null=True, blank=True)
 
 
+# To develop in future implementations
 class Comment(models.Model):
     name = models.CharField(max_length=50)
     content = models.TextField()
