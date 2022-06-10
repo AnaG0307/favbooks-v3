@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /user_account/
+Disallow: /bag/
+Disallow: /checkout/
+Disallow: /checkout/order_confirmation/
+Disallow: /books/add/
+Disallow: /books/edit/
+Sitemap: https://favbooks-v3.herokuapp.com/sitemap.xml
