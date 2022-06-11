@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container mb-2 main-padding">
+    <div class="row">
+        <div class="col">
+            <h1 class="my-sm-2 my-md-3 my-lg-5 text-center font-weight-bold">The page you are looking for isn't available</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="my-5">
+                <h4>
+                    <a href="{% url 'books' %}" 
+                        class="btn btt btn-lg text-uppercase py-3">
+                            Return to shop
+                    </a>
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
