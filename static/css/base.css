@@ -213,15 +213,16 @@ body > footer {
 /* Media query for extra large devices */
 @media only screen and (min-width: 1200px) {
     .main-padding{
-        padding-top: 530px !important;
+        padding-top: 730px !important;
         padding-bottom: 10px;
     }
 
     header,
     small,
     p,
-    h4 {
-        font-size: large;
+    h4,
+    h3 {
+        font-size: xx-large;
     }
 
     .logo {
@@ -233,14 +234,15 @@ body > footer {
 /* Media query for large devices */
 @media only screen and (min-width: 950px) {
     .main-padding{
-        padding-top: 330px !important;
+        padding-top: 230px !important;
         padding-bottom: 10px;
     }
 
     header,
     small,
     p,
-    h4 {
+    h4,
+    h3 {
         font-size: large;
     }
 
