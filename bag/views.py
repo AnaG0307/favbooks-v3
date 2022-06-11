@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import (
+    render, redirect, reverse, HttpResponse, get_object_or_404
+    )
 from django.contrib import messages
 from books.models import Book
 
@@ -21,7 +23,8 @@ def add_to_bag(request, item_id):
         bag[item_id] += quantity
         messages.success(
             request,
-            f'Updated quantity of {product.title} by {product.author} to your bag'
+            f'Updated quantity of {product.title} by \
+            {product.author} to your bag'
             )
     else:
         bag[item_id] = quantity
@@ -45,7 +48,8 @@ def adjust_bag(request, item_id):
         bag[item_id] = quantity
         messages.success(
             request,
-            f'Updated quantity of {product.title} by {product.author} to {bag[item_id]}'
+            f'Updated quantity of {product.title} by \
+                {product.author} to {bag[item_id]}'
             )
     else:
         bag.pop(item_id)

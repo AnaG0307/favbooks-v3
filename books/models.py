@@ -2,7 +2,10 @@ from django.db import models
 
 
 class Category(models.Model):
-    """ Meta class to correct the "categorys" incorrect spelling in the admin site """
+    """
+    Meta class to correct the "categorys"
+    incorrect spelling in the admin site
+    """
 
     class Meta:
         verbose_name_plural = "Categories"
@@ -20,7 +23,10 @@ class Category(models.Model):
 
 
 class Sub_Category(models.Model):
-    """ Meta class to correct the "categorys" incorrect spelling in the admin site """
+    """
+    Meta class to correct the 'categorys'
+    incorrect spelling in the admin site
+    """
 
     class Meta:
         verbose_name_plural = "Sub_Categories"
@@ -52,19 +58,34 @@ class Type(models.Model):
 
 class Book(models.Model):
     book_category = models.ForeignKey(
-        'Category', null=True, blank=True, on_delete=models.SET_NULL
+        'Category',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL
         )
     book_sub_category = models.ForeignKey(
         'Sub_Category', null=True, blank=True, on_delete=models.SET_NULL
         )
     book_type1 = models.ForeignKey(
-        'Type', null=True, blank=True, on_delete=models.SET_NULL, related_name='type1'
+        'Type',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='type1'
         )
     book_type2 = models.ForeignKey(
-        'Type', null=True, blank=True, on_delete=models.SET_NULL, related_name='type2'
+        'Type',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='type2'
         )
     book_type3 = models.ForeignKey(
-        'Type', null=True, blank=True, on_delete=models.SET_NULL, related_name='type3'
+        'Type',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='type3'
         )
     sku = models.CharField(max_length=254, null=True, blank=True)
     title = models.CharField(max_length=254)

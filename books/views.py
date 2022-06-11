@@ -82,7 +82,8 @@ def book_detail(request, book_id):
 def add_book(request):
     """ Add a product to the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can access this page.')
+        messages.error(request, 'Sorry, only store owners \
+            can access this page.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -92,7 +93,8 @@ def add_book(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('book_detail', args=[book.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add product. Please ensure the \
+                form is valid.')
     else:
         form = BookForm()
 
@@ -108,7 +110,8 @@ def add_book(request):
 def edit_book(request, product_id):
     """ Edit a product in the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can access this page.')
+        messages.error(request, 'Sorry, only store owners can access \
+            this page.')
         return redirect(reverse('home'))
 
     book = get_object_or_404(Book, pk=product_id)
@@ -119,7 +122,8 @@ def edit_book(request, product_id):
             messages.success(request, 'Successfully updated book!')
             return redirect(reverse('book_detail', args=[book.id]))
         else:
-            messages.error(request, 'Failed to update book. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update book. Please ensure the \
+                form is valid.')
     else:
         form = BookForm(instance=book)
         messages.info(request, f'You are editing {book.title}')
@@ -137,7 +141,8 @@ def edit_book(request, product_id):
 def delete_book(request, product_id):
     """ Delete a book from the store """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can access this page.')
+        messages.error(request, 'Sorry, only store owners can access \
+            this page.')
         return redirect(reverse('home'))
 
     book = get_object_or_404(Book, pk=product_id)

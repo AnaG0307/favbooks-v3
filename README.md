@@ -1,6 +1,6 @@
 # **FavBOOKS**
 
-![App page screenshot](...)
+![App page screenshot](media/site.png)
 
 [View the app in Heroku here](https://favbooks-v3.herokuapp.com/)
 
@@ -157,6 +157,15 @@ Some of the [Future Features](#Future-Features) have been described in the ERD a
 
 
 ##### **Remaining errors**
+- The file settings.py in the favbooks-v3 folder has 4 error error codes E501 in lines 144, 147, 150 and 153 stating the lines are too long. I have left as they are because the referred lines are password validators and can't be broken.
+
+- The file webhooks.py in the app Checkout has an error code E501 in line 46 stating the line is too long. Error can't be fixed as the path in the dictionary can't be broken.
+
+- The file webhookhandler.py in the app Checkout has an error code E501 in lines 77 and 78 stating the lines are too long. Error can't be fixed as the variable value can't be broken.
+
+- The file widgets.py in the app Books has an error code E501 in lines 9 stating the line is too long. Error can't be fixed as the variable value can't be broken.
+
+- The file views.py in the app Books has an error code E501 in lines 54 stating the line is too long. Error can't be fixed as the variable value can't be broken.
 
 
 ## **Technologies Used**
