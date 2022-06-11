@@ -153,7 +153,8 @@ Some of the [Future Features](#Future-Features) have been described in the ERD a
 #### **Validator Testing**
 
 - Used [PEP8online.com](http://pep8online.com/) to validate Python code.
-- User [W3C](https://validator.w3.org/#validate_by_input) to validate HTML and CSS code
+- Used [W3C](https://validator.w3.org/#validate_by_input) to validate HTML and CSS code
+- Used [JSHint](https://jshint.com/) to validate JavaScript
 
 
 ##### **Remaining errors**
@@ -166,6 +167,10 @@ Some of the [Future Features](#Future-Features) have been described in the ERD a
 - The file widgets.py in the app Books has an error code E501 in lines 9 stating the line is too long. Error can't be fixed as the variable value can't be broken.
 
 - The file views.py in the app Books has an error code E501 in lines 54 stating the line is too long. Error can't be fixed as the variable value can't be broken.
+
+- Parse errors encountered for HTML code
+
+- 
 
 
 ## **Technologies Used**
