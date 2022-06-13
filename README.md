@@ -7,7 +7,7 @@
 ## **Table of Contents**
 
 1. [About](#About)
-2. [Marketing & SEO](#Marketing-SEO)
+2. [Marketing & SEO](#Marketing-&-SEO)
 3. [User Stories](#User-Stories)
 4. [Features](#Features)
 5. [Data Model](#Data-Model)
