@@ -7,8 +7,8 @@
 ## **Table of Contents**
 
 1. [About](#About)
-2. [User Stories](#User-Stories)
-3. [Marketing & SEO](#Marketing-SEO)
+2. [Marketing & SEO](#Marketing-SEO)
+3. [User Stories](#User-Stories)
 4. [Features](#Features)
 5. [Data Model](#Data-Model)
 6. [Testing](#Testing)
@@ -17,53 +17,9 @@
 9. [Credits](#Credits)
 
 
-
 ## **About**
 
 FavBOOKS is an imaginery bookshop in central London and its website provides the user the opportunity to find their next favourite book from the comfort of home. The books are divided in different general genres with different subgenres to allow the user find what they are looking for or to discover something new. Once a book is been found the user can purchase the selected book or books and have them delivered at home. The user is also able to subscribe the the newsletter to receive news about the books.
-
-
-## **User Stories**
-
-| User Story ID  | As a/an  | I want to be able to...  | So that I can... |
-|---|---|---|---|
-| Viewing Products & Navigation |
-| 1  | Site User | view a list of products | see what products I can purchase. |
-| 2  |  | see the details of a specific product | make a more informed decision before a purchase about the price, rating. |
-| 3  |  | see the details of a subscription | make a more informed decision before purchasing a subscription. |
-| 4  |  | quickly identify the different sections of the site (book genres,  events, etc.) | navigate through the areas of my interest and discover new ones. |
-| 5  |  | easily view what is on my cart | check all I need to purchase is correct. |
-| 6  |  | easily view the total amount on my cart | check I am not spending too much. |
-| Registration and User Accounts |
-| 7  | User/Shopper | register for an account | get a profile for the site and view my profile. |
-| 8  |  | login and logout | acces my personal information. |
-| 9  |  | recover my password if forgotten | recover access to my account. |
-| 10  |  | receive a registration confirmation email | verify my registration to the site was successfull. |
-| 11  |  | be able to personalise my user profile | modify my personal information when necessary. |
-| 12  |  | be able to access my user profile information | view my profile and what information is stored. |
-| Searching and Sort Products |
-| 13  | User/Shopper | sort the list of available products | easily identify best rated, best priced and categorycally sorted products. |
-| 14  |  | sort a specific category of products | Find the best-priced, best-rated product in a specific category or sort the products in that category by author. |
-| 15  |  | sort multiple categories of products at the same time | find the best-priced, best-rated product accross categories, such as "fantasy" or "Teen&Young Age". |
-| 16  |  | search a product by name or description | find a specific product I would like to purchase |
-| 17  |  | see my search results and how many products are matching | quickly decide wheter the product I want is available. |
-| Checkout |
-| 18  | Shopper | easily access my purchase history | be aware of my past purchases. |
-| 19  |  | easily select the type and quantity of a product when purchasing it | be sure I make no mistakes about the quantity and type of book (paperback/hardcover). |
-| 20  |  | be able to register/unregister for a monthly subscription | receive or stop receiving books every month. |
-| Admin & Management (CRUD) |
-| 21  | Admin User | Add new products (books&subscriptions) | offer new incoming products to my customers. |
-| 22  |  | modify product details (books&subscriptions) | update the product details.  |
-| 23  |  | delete products (books&subscriptions) | update the site when a product is not for selling anymore. |
-| About the Site |
-| 24  |  Site User | I am aware of the site Privacy Policy (GDPR compliant) | trust the site. |
-| 25  |  | I see pop up messages when I make an action to confirm transactions and changes throughout my activity | rest assured my transactions have been successfull. |
-| 26  |  | I can access the site's social media profiles | follow them if I want and stay up to date. |
-| Popup Messages |
-| 27  | Store owner/Admin | see a pop up message after submitting my purchase  | know if my transaction is been successfull or not.  |
-| 28  |  | see a pop up message when adding/deleting products to my bag | be aware if my product was succesfully added or not to my cart. |
-| 29  |  | see a pop up message when logging in/out of the site | be aware if I have logged in/out successfully or not. |
-| 30  |  | see a pop up message when I subscribe/unsubscribe from a monthly subscription | be aware the action was successfull or not. |
 
 
 ## **Marketing & SEO**
@@ -175,6 +131,49 @@ The lists below shows all the keywords that came up during brainstorimg, the str
     -	~~Nonfiction~~
     -	~~Classic novels~~
     -	~~Book genre trends~~
+
+
+## **User Stories**
+
+| User Story ID  | As a/an  | I want to be able to...  | So that I can... |
+|---|---|---|---|
+| Viewing Products & Navigation |
+| 1  | Site User | view a list of products | see what products I can purchase. |
+| 2  |  | see the details of a specific product | make a more informed decision before a purchase about the price, rating. |
+| 3  |  | see the details of a subscription | make a more informed decision before purchasing a subscription. |
+| 4  |  | quickly identify the different sections of the site (book genres,  events, etc.) | navigate through the areas of my interest and discover new ones. |
+| 5  |  | easily view what is on my cart | check all I need to purchase is correct. |
+| 6  |  | easily view the total amount on my cart | check I am not spending too much. |
+| Registration and User Accounts |
+| 7  | User/Shopper | register for an account | get a profile for the site and view my profile. |
+| 8  |  | login and logout | acces my personal information. |
+| 9  |  | recover my password if forgotten | recover access to my account. |
+| 10  |  | receive a registration confirmation email | verify my registration to the site was successfull. |
+| 11  |  | be able to personalise my user profile | modify my personal information when necessary. |
+| 12  |  | be able to access my user profile information | view my profile and what information is stored. |
+| Searching and Sort Products |
+| 13  | User/Shopper | sort the list of available products | easily identify best rated, best priced and categorycally sorted products. |
+| 14  |  | sort a specific category of products | Find the best-priced, best-rated product in a specific category or sort the products in that category by author. |
+| 15  |  | sort multiple categories of products at the same time | find the best-priced, best-rated product accross categories, such as "fantasy" or "Teen&Young Age". |
+| 16  |  | search a product by name or description | find a specific product I would like to purchase |
+| 17  |  | see my search results and how many products are matching | quickly decide wheter the product I want is available. |
+| Checkout |
+| 18  | Shopper | easily access my purchase history | be aware of my past purchases. |
+| 19  |  | easily select the type and quantity of a product when purchasing it | be sure I make no mistakes about the quantity and type of book (paperback/hardcover). |
+| 20  |  | be able to register/unregister for a monthly subscription | receive or stop receiving books every month. |
+| Admin & Management (CRUD) |
+| 21  | Admin User | Add new products (books&subscriptions) | offer new incoming products to my customers. |
+| 22  |  | modify product details (books&subscriptions) | update the product details.  |
+| 23  |  | delete products (books&subscriptions) | update the site when a product is not for selling anymore. |
+| About the Site |
+| 24  |  Site User | I am aware of the site Privacy Policy (GDPR compliant) | trust the site. |
+| 25  |  | I see pop up messages when I make an action to confirm transactions and changes throughout my activity | rest assured my transactions have been successfull. |
+| 26  |  | I can access the site's social media profiles | follow them if I want and stay up to date. |
+| Popup Messages |
+| 27  | Store owner/Admin | see a pop up message after submitting my purchase  | know if my transaction is been successfull or not.  |
+| 28  |  | see a pop up message when adding/deleting products to my bag | be aware if my product was succesfully added or not to my cart. |
+| 29  |  | see a pop up message when logging in/out of the site | be aware if I have logged in/out successfully or not. |
+| 30  |  | see a pop up message when I subscribe/unsubscribe from a monthly subscription | be aware the action was successfull or not. |
 
 
 ## **Features**
@@ -376,15 +375,13 @@ The project is been deployed to Heroku and AWS. Steps for deployment:
             - Create an exact same class but for media
         - In settings.py and set a variable that points to the new storage classes we just created and that the location it should save static files is a folder called 'static'. Do the same for media files;
         - Now we need to override and explicitly set the URLs for static and media files using our custom domain and the new locations.
-        - Add, commit and push the changes (as the issues with automatic deployment to Heroku are still happening we need to push to 'origin main' and 'heroku main' separately).
-        - 
-- Once the deployment to Heroku is successful, if we go to S3, we can see that we have a static folder in our bucket with all our static files in it. Basically, what is hapenning now, when our project is deployed to Heroku, it will run python3 manage.py collectstatic during the build process and will search through all the apps and project folders looking for static files. It will use the S3 custom domain setting with our custom storage classes that will tell the location where we want to save things. This means that when USE_AWS is set to TRUE, whenever collectstatic is run, static files will be collected into a static folder in our s3 bucket;
+        - Add, commit and push the changes (as the issues with automatic deployment to Heroku are still happening we need to push to 'origin main' and 'heroku main' separately). Once the deployment to Heroku is successful, if we go to S3, we can see that we have a static folder in our bucket with all our static files in it. Basically, what is hapenning now, when our project is deployed to Heroku, it will run python3 manage.py collectstatic during the build process and will search through all the apps and project folders looking for static files. It will use the S3 custom domain setting with our custom storage classes that will tell the location where we want to save things. This means that when USE_AWS is set to TRUE, whenever collectstatic is run, static files will be collected into a static folder in our s3 bucket;
+    - Go to S3 and create a new folder called 'media', inside this folder click 'upload', 'add files' and then select all the book cover images.
 
-
-
-        
-
-
+- Stripe:
+    - Add all the Stripe keys to the Heroku Config Variables;
+    - Create a new Stripe wehbhook endpoint using the new address: https://favbooks-v3.herokuapp.com/;
+    - Test the webhook is working correctly by creating an test order through our new deployed site in Heroku;
 
 
 ## **Credits**
