@@ -251,10 +251,30 @@ Some of the [Future Features](#Future-Features) have been described in the ERD a
 
 ## **Testing**
 
+Testing is been done manually and have gone through all the features the site provides for all types of screens, from small to desktop screens. All the features responding as expected with the exceptions explained below in Remaining Bugs.
+
+- **Login/logout/register:** the user can use all this features with no errors, pop up messages appearing as well.
+- **Search bar:** working and showing all the books containing the searched words, if search button is clicked a message stating what was the search word appears on top of the page.
+- **Navigation bar:** all the links to the different categories (including their dropdown menus) and the newsletter link are working correctly and showing the expected list of books.
+- **Book details:** All the details entered for a book are present and all the links are clickable and none are broken. The site user can see all book details, click on 'quantity', 'add to bag' or 'keep shopping' only; while the admin user has the extra access to 'edit' and 'delete' links (which are fully functional).
+- **Book Management:** From My Account dropdown menu the superuser can add books, the form is working as expected and images are added with no issues. The 'Add' and 'Cancel' buttons are working as well.
+- **Footer:** all the links to social media working correctly and as expected, no broken links.
+- **My account:** The dropdown menu works as expected and no broken links. When clicking the menu responds to the different types of users (amdin functions appear when superuser is logged in and not present for site users) and if the user is logged in or not.
+- **Bag:** The feature is working as expected as well, link to the selected books are working correctly, the quantity can be amended as well with no issues (quantity doesn't go beyond 99 or below 1), 'Update' and 'Remove' buttons wroking as well as 'Keep Shopping' and 'Secure Checkout'.
+- **Checkout:** Page loading successfully, delivery information also adds correctly to the delivery form as well as good functioning of 'Adjust Barg' and 'Complete Order' buttons. The summary of selected items to buy show correctly including the book cover, name, author, quantity selected, subtotal, total, delivery amount and grand total.
+- **Newsletter:** Subscribing for the newsletter feature working correctly, when subscribing with a new email and confirmation email is sent to the entered address and if an existing email address is added an informational pop up message appears informing so.
+- **My profile:** Both site user and superuser can enter access their profile information through 'My Account' dropdown menu. The default delivery information can be updated with no issues, and the order history is available, the links to each order details is accessible (no broken links) and after checking an order information the user can go back to their profile and order history.
+- **Pop Up Messages:** All pop up messages working correctly and appearing when expected:
+    - Confirmation messages when logging in/out and registering, when adding an item to the bag, when siging up for the newsletter and when making a purchase.
+    - Information messages: when an information to the user is required, i.e. when an email address is already subscribed to receive the newsletter.
+    - Warning messages: when something goes wrong and the user must know what happened, i.e. when there is an issue with a purchase and it couldn't be processed.
 
 
 #### **Remaining Bugs**
 
+The only remaining bug detected is on the padding top of the 'main' section, which inlcudes all the content the site offers. Due to the different screen sizes, the very top of the 'div' hides behind the navigation bar (only the title in most part of the occasions) and it only happens for desktop size screens. The issue is been addressed by creating a new class and adding the extra top padding necessary for each screen type. This works well but for some reason, from time to time (so not always or in a consistent way) the title hides behind the navigation bar. I have modified the padding top size numerous times but now and then it occurs, but when loading the page again it disappears.
+
+No more bugs have been found.
 
 
 #### **Validator Testing**
@@ -293,6 +313,7 @@ Some of the [Future Features](#Future-Features) have been described in the ERD a
 - [Stackoverflow](https://stackoverflow.com/)
 - [Bootstrap](https://getbootstrap.com/)
 - [Coolors](https://coolors.co/)
+- [Unsplash](https://unsplash.com/)
 
 
 ## **Deployment**
