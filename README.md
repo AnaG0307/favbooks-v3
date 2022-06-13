@@ -8,18 +8,19 @@
 
 1. [About](#About)
 2. [User Stories](#User-Stories)
-3. [Features](#Features)
-4. [Data Model](#Data-Model)
-5. [Testing](#Testing)
-6. [Technologies Used](#Technologies-Used)
-7. [Deployment](#Deployment)
-8. [Credits](#Credits)
+3. [Marketing & SEO](#Marketing-SEO)
+4. [Features](#Features)
+5. [Data Model](#Data-Model)
+6. [Testing](#Testing)
+7. [Technologies Used](#Technologies-Used)
+8. [Deployment](#Deployment)
+9. [Credits](#Credits)
 
 
 
 ## **About**
 
-(Add site description)
+FavBOOKS is an imaginery bookshop in central London and its website provides the user the opportunity to find their next favourite book from the comfort of home. The books are divided in different general genres with different subgenres to allow the user find what they are looking for or to discover something new. Once a book is been found the user can purchase the selected book or books and have them delivered at home. The user is also able to subscribe the the newsletter to receive news about the books.
 
 
 ## **User Stories**
@@ -65,6 +66,117 @@
 | 30  |  | see a pop up message when I subscribe/unsubscribe from a monthly subscription | be aware the action was successfull or not. |
 
 
+## **Marketing & SEO**
+
+#### **Marketing**
+The following questions were answered previous to the implementation stage to ensure that the needs of the user were met. During the implementation stage the points below described were implemented or will be implemented in future features.
+
+- **What do you users need?**
+    - Find the books they are looking for and be able to buy them.
+    - Find new recommendations.
+    - Find feedback from other readers to be able to make a more informed choice.
+    - Meet a community that enjoys literature and meets from time to time and brings together writers and readers.
+    - Find a space where they can be creative and expand their cultural knowledge.
+    - Cultural programme.
+    - Podcast.
+    - Stay informed: Newsletter subscription with news and events.
+
+- **What information and feature can I provide to meet those needs?**
+Find the books they are looking for and be able to buy them: 
+    - Through a list of all the books that can be found at the bookshop and be able to filter them according to their preferences.
+    - Search bar
+    - Click and collect service
+    - Delivery
+    - Find new recommendations: through a monthly subscription that chooses for the reader five books based on their preferences.
+    - Find feedback: all registered users can leave a comment and rate the books they have read.
+    - Stay informed: Newsletter subscription with news and events organised at the bookshop.
+
+
+- **How can I make the information easy to understand?**
+Clear and well structured sections and easy to understand language based on the SEO keywords
+
+- **How can I demonstrate expertise, authoritativeness, and trustworthiness in your content?**
+    - High-quality design and images.
+    - Registered users are not bombarded with spam emails.
+    - Comments from other users on books are regulated and there are terms and conditions.
+    - Links to other high-quality pages.
+
+- **How can I help users discover other relevant parts of your web application?**
+Through a navbar where they can easily see and access the different sections, they can also change from one section to another without having to click back and/or get lost in the process.
+
+
+#### **SEO**
+The lists below shows all the keywords that came up during brainstorimg, the striked words are the ones that will not be used. The rest have been inomplemented or will be implemented when developing future features.
+
+1-	General Topics
+-	Books
+-	Book Gifts
+-	Book writer/author
+-	Book Collection
+-	Book Languages
+-	Book Genre
+ 
+
+2-	Keywords for each topic
+-	Books:
+    -	Hardback (title)
+    -	Paperback (title)
+    -	Books to read
+    -	What book to read?
+
+-	Book Gifts:
+    -	Best books to gift
+    -	Book lovers’ gift
+    -	~~Book gift for kids/toddlers/~~
+    -	~~Book gift for him/her~~
+    -	~~Book gift for children/friends/Christmas/Summer/…~~
+    -	~~How do I send a book as a gift?~~
+
+-	Book writer/author:
+    -	Best-selling author 2021
+    -	Best new books 2021
+    -	Best author/writer/novelist of all times
+    -	Best male/female authors
+    -	Famous male/female authors
+    -	English/Spanish/… story writers
+    -	~~Best Author of 2022~~
+
+-	Book Collection:
+    -	Vintage books
+    -	~~Rare collection books~~
+    -	~~Unique books~~
+    -	~~Beautiful books~~
+    -	~~Original books~~
+    -	~~Book collection for adults/kids/toddlers~~
+
+-	Book Languages:
+    -	Best (language) novels
+    -	Best (language) books for beginners/intermediate/advanced learners
+    -	~~(Book title) in (language)~~
+    -	~~Books in (language)~~
+    -	~~What language has the best books?~~
+    -	~~Best (language) books for toddlers~~
+
+-	Book Genre: 
+    -	Best crime books
+    -	Mystery novels
+    -	Fiction books
+    -	Horror books
+    -	Children books to read
+    -	Great illustrated classics
+    -	Poetry books
+    -	(author) poems
+    -	Books about love
+    -	Literary nonfiction
+    -	Good nonfiction books
+    -	Contemporary literature
+    -	Graphic novels
+    -	~~Genres of books for kids/adults~~
+    -	~~Nonfiction~~
+    -	~~Classic novels~~
+    -	~~Book genre trends~~
+
+
 ## **Features**
 
 #### **Existing Features**
@@ -89,10 +201,6 @@
 
 
 - **Newsletter:** all site users can sign up to receive a newsletter from FavBOOKS. This is accessible from the main navigation bar and if an address is already signed up an informational pop up message will inform the user of it.
-
-
-- **Admin Site:** 
-
 
 - **Pop Up Messages:** throughout the site, depending on the actions of the users different pop up messages will appear all along to inform the user of the actions taken. There are different levels of messages: information, success and error. For example, when adding a book to the shopping bag a message will appear informing so, when purchasing a product and everything worked correctly a success message will appear and in case something went wrong an error message will show and explain what went wrong. This ensures the users have extra information and do not unnecessarily repeat processes which might cause major issues (like for example when doing a purchase it would help avoiding an unnecesary double charge).
 
@@ -154,7 +262,7 @@ Some of the [Future Features](#Future-Features) have been described in the ERD a
 
 - Used [PEP8online.com](http://pep8online.com/) to validate Python code.
 - Used [W3C](https://validator.w3.org/#validate_by_input) to validate HTML and CSS code
-- Used [JSHint](https://jshint.com/) to validate JavaScript
+- Used [JSHint](https://jshint.com/) to validate JavaScript code
 
 
 ##### **Remaining errors**
@@ -168,9 +276,7 @@ Some of the [Future Features](#Future-Features) have been described in the ERD a
 
 - The file views.py in the app Books has an error code E501 in lines 54 stating the line is too long. Error can't be fixed as the variable value can't be broken.
 
-- Parse errors encountered for HTML code
-
-- 
+- Parse errors encountered for HTML code in several files but could not find a solution for it as I believe it is due to the file loading and creating the error. On the file itself the code seems to be correct. I have searched a solution through the internet and asked through the different course channels but no solution found.
 
 
 ## **Technologies Used**
