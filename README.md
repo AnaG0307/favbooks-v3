@@ -319,28 +319,72 @@ The project is been deployed to Heroku and AWS. Steps for deployment:
     - Generate a secret key for the Heroku app and add it to the env.py file (which is included in .gitignore file to keep all the keys secret and safe);
     - In settings.py set up debug to true only if there is a variable called development in the environment;
 
-- Deployment to AWS:
-    - 
+- Deployment to AWS S3:
+    - Navigate to https://aws.amazon.com/ and create an account;
+    - Once logged in, from the AWS Management Console page, frind the S3 service in the 'Find Services' search bar to create a new bucket where our files will be stored;
+    - Create a bucket: 
+        - With a matching name with your app to keep things organised;
+        - Select your closest region;
+        - Uncheck 'block all public access' and acknowledge that the bucket will be public; 
+        - Under Bucket Ownership section select 'ACLs enabled';
+        - Select Create Bucket;
+    - Inside our new bucket:
+        - In the properties tab turn on static website hosting to create a new endpoint accessible from the internet;
+        - In the permissions tab we will make 3 changes: 
+            - Paste in new CORS Configuration:
+                                        [
+                        {
+                        "AllowedHeaders": [
+                        "Authorization"
+                        ],
+                        "AllowedMethods": [
+                        "GET"
+                        ],
+                        "AllowedOrigins": [
+                        "*"
+                        ],
+                        "ExposeHeaders": []
+                        }
+                        ]
+            - In the policy tab click on policy generator and create a new policy and copy it in the policy editor and before saving add /* at the end of the resource key to allow access to all resources in the bucket;
+            - In the Access Control List tab click edit and enable List for Everyone (public access) and accept the warning box;
+    - Now that the bucket is ready, we need to create a user to access it, we will create through the service called IAM (Identity Access Management):
+        - Access IAM through the Services menu;
+        - Click User Groups on the side menu and click Create New Group and call it manage-favbooks-v3 (to match our website again and have consistency) and click on Create Group;
+        - On the side menu clik on Policies and then click on Create Policies;
+        - In the JSON tab select 'import managed policy' which will let us import the 'S3 Full Access Policy' that AWS has pre-built for full access to S3. But because we only want to allow full access to our bucket we need to get the bucket ARN from the bucket policy page in S3 and paste it under Resource as a list. We will paste twice, the first item is the ARN as it is and the second item with /* at the end to add another rule for all files and folders in the bucket;
+        - Click review policy, give it a name and description and click Create Policy;
+        - To attach the policy to the group we created click on User Groups, select manage-favbooks-v3, click Attach Policy, search policy created, select it and click Attach Policy;
+        - Now we need to create a user to put in the group: click Users in the sidebar menu;
+        - Create the user favbooks-v3-staticfiles-user, select Programmatic Access and select Next;
+        - From the list provided select manage-favbooks-v3 and click Create User;
+        - Click on 'Download .csv' which will contain the users access key and secret access keyn that we will use to authenticate them from our Jango app. It is very important you download and save this CSV file as it won't be downloadable again after this process.
+    - Configure Django to connect to S3 uing the keys we just created:
+        - In the Gitpod terminal install Boto3 and Django-Storages and freeze them into requirements.txt;
+        - In settings.py file att 'storages' to our installed apps to let django know to use it;
+        - In settings.py file, under the Static Files section create an IF statement to check if there is an environment variable called USE_AWS in the environment;
+        - In the IF statement define the AWS_STORAGE_BUCKET_NAME, AWS_S3_REGION_NAME, access key and secreat access key we will get from the environment to keep them secure;
+        - In Heroku, in the Config Vars section of the Settings tab:
+            - Add the AWS keys;
+            - Set USE_AWS to True;
+            - Remove the DISABLE_COLLECTSTATIC variable;
+        - In settings.py in gitpod set up the bucket name;
+        - Create a new file called custom_storages.py:
+            - Import settings from django and s3boto3 storage class from django storages;
+            - Create a new class called static_storages that inherits from django s3boto3;
+            - Tell the class that we want to store static files in a location from the settings that we'll define in a moment;
+            - Create an exact same class but for media
+        - In settings.py and set a variable that points to the new storage classes we just created and that the location it should save static files is a folder called 'static'. Do the same for media files;
+        - Now we need to override and explicitly set the URLs for static and media files using our custom domain and the new locations.
+        - Add, commit and push the changes (as the issues with automatic deployment to Heroku are still happening we need to push to 'origin main' and 'heroku main' separately).
+        - 
+- Once the deployment to Heroku is successful, if we go to S3, we can see that we have a static folder in our bucket with all our static files in it. Basically, what is hapenning now, when our project is deployed to Heroku, it will run python3 manage.py collectstatic during the build process and will search through all the apps and project folders looking for static files. It will use the S3 custom domain setting with our custom storage classes that will tell the location where we want to save things. This means that when USE_AWS is set to TRUE, whenever collectstatic is run, static files will be collected into a static folder in our s3 bucket;
 
-    - Introduce sensitive data needed to be kept secret from the config Var tab in env.py and attach the database (Cloudinary url, Database url and Secret Key);
-    - Add necessary buildpacks: Python;
-    - Prepare environment and settings.py file by referencing env.py and link the database variable on Heroku;
-    - Migarte all the changes;
-    - Get all static and media files stored in Cloudinary by adding the cloudinary url in env.py and in Heroku, add Cloudinary to settings.py as well as telling Django, link the file to the templates in Heroku and allow Heroku as a host in Allowed_Hosts;
-    - In Gitpod create the media, static and templates directories;
-    - Add the project name in Procfile;
-    - Make deployment commit in the terminal;
-    - Manually deploy content through Heroku;
-    - For deployment method, GitHub was selected and confirmed we want to connect to GitHub;
-    - Connect Heroku to the repository for My Recipe Blog a;
-    - Set "Enable Automatic Deploys" to allow automatic deployments every time the code is pushed;
-    - Click on Deploy.
-    - For final deployment:
-        - In settings.py set Default = False;
-        - Below add X_FRAME_OPTIONS = 'SAMEORIGIN';
-        - Commit and push the changes in the terminal;
-        - In Heroku, in the settings tab remove the DISABLE_COLLECTSTATIC variable;
-        - In Heroku, go to the deploy tab and click on deploy branch.
+
+
+        
+
+
 
 
 ## **Credits**
