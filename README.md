@@ -7,7 +7,7 @@
 ## **Table of Contents**
 
 1. [About](#About)
-2. [Marketing & SEO](#Marketing-&-SEO)
+2. [Marketing and SEO](#Marketing-and-SEO)
 3. [User Stories](#User-Stories)
 4. [Features](#Features)
 5. [Data Model](#Data-Model)
@@ -19,15 +19,15 @@
 
 ## **About**
 
-FavBOOKS is an imaginery bookshop in central London and its website provides the user the opportunity to find their next favourite book from the comfort of home. The books are divided in different general genres with different subgenres to allow the user find what they are looking for or to discover something new. Once a book is been found the user can purchase the selected book or books and have them delivered at home. The user is also able to subscribe the the newsletter to receive news about the books.
+FavBOOKS is an imaginery bookshop in central London and its website provides the user the opportunity to find their next favourite book from the comfort of home. The books are divided in different general genres with different subgenres to allow the user find what they are looking for or to discover something new. Once a book is been found the user can purchase the selected book or books and have them delivered at home. The user is also able to subscribe the the newsletter to receive news about the bookshop.
 
 
-## **Marketing & SEO**
+## **Marketing and SEO**
 
 #### **Marketing**
 The following questions were answered previous to the implementation stage to ensure that the needs of the user were met. During the implementation stage the points below described were implemented or will be implemented in future features.
 
-- **What do you users need?**
+- **What do your users need?**
     - Find the books they are looking for and be able to buy them.
     - Find new recommendations.
     - Find feedback from other readers to be able to make a more informed choice.
@@ -179,13 +179,13 @@ The lists below shows all the keywords that came up during brainstorimg, the str
 ## **Features**
 
 #### **Existing Features**
-- **Navigation Bar:** the navigation bar is available through all the pages on the site to ensure the site users can access any page they want at any time. In it the user can find a link to all books, different book actegories, sogn up for the newsletter and the home page. The site user and admin user can also login, logout, resgiter and access their shopping bag.
+- **Navigation Bar:** the navigation bar is available through all the pages on the site to ensure the site users can access any page they want at any time. In it the user can find a link to all books, different book categories, sign up for the newsletter and the home page. The site user and admin user can also login, logout, resgiter and access their shopping bag.
 
 
 - **Footer:**  the footer is available through all the pages on the site as well, from there the site users can access the different social media pages, find the physical bookshop address and opening times.
 
 
--**Home Page:** the homepage is been kept pretty simple, the site user can see an image of the site as thr main background to create the effect they are already inside the bookshop. At its center there is the "Shop Now" link that takes the site user to see all the books available in the shop.
+-**Home Page:** the homepage is been kept pretty simple, the site user can see an image of the site as the main background to create the effect they are already inside the bookshop. At its center there is the "Shop Now" link that takes the site user to see all the books available in the shop.
 
 
 - **Login/Logout/Register:** situated on the top right corner this feature allows all user to register and create an account to access all the features of the site as well as to log in and out. There are two different levels of user, the admin user and site user. The admin user has extra access that allow them to add, update and remove books from the inline store.
@@ -242,7 +242,7 @@ Below are the initial wireframes for the site for both desktop screens and small
 ## **Data Model**
 The Entity Relationalship Database (ERD) below was created to develop this project, unfortunately due to time constraint not all the features could be developed.
 
-The Book details are at the center of the ERD and they relate to the rest of the tables directly or indirectly. The site admin has CRUD (create, read, update and delete) access to all the books through the admin site as well as directly through the site itself, but the site user only has CRUD access to see the books created by the site admin.
+The Book details are at the center of the ERD and they relate to the rest of the tables directly or indirectly. The site admin has CRUD (create, read, update and delete) access to all the books through the admin site as well as directly through the site itself, but the site user only has view access to see the books created by the site admin.
 
 Some of the [Future Features](#Future-Features) have been described in the ERD as well.
 
@@ -253,26 +253,37 @@ Some of the [Future Features](#Future-Features) have been described in the ERD a
 
 Testing is been done manually and have gone through all the features the site provides for all types of screens, from small to desktop screens. All the features responding as expected with the exceptions explained below in Remaining Bugs.
 
-- **Login/logout/register:** the user can use all this features with no errors, pop up messages appearing as well.
-- **Search bar:** working and showing all the books containing the searched words, if search button is clicked a message stating what was the search word appears on top of the page.
-- **Navigation bar:** all the links to the different categories (including their dropdown menus) and the newsletter link are working correctly and showing the expected list of books.
+- **Login/logout/register:** The user can use all these features with no errors, pop up messages appearing as well.
+
+- **Search bar:** Working and showing all the books containing the searched words, if search button is clicked a message stating what was the search word appears on top of the page.
+
+- **Navigation bar:** All the links to the different categories (including their dropdown menus) and the newsletter link are working correctly and showing the expected list of books.
+
 - **Book details:** All the details entered for a book are present and all the links are clickable and none are broken. The site user can see all book details, click on 'quantity', 'add to bag' or 'keep shopping' only; while the admin user has the extra access to 'edit' and 'delete' links (which are fully functional).
-- **Book Management:** From My Account dropdown menu the superuser can add books, the form is working as expected and images are added with no issues. The 'Add' and 'Cancel' buttons are working as well.
-- **Footer:** all the links to social media working correctly and as expected, no broken links.
-- **My account:** The dropdown menu works as expected and no broken links. When clicking the menu responds to the different types of users (amdin functions appear when superuser is logged in and not present for site users) and if the user is logged in or not.
-- **Bag:** The feature is working as expected as well, link to the selected books are working correctly, the quantity can be amended as well with no issues (quantity doesn't go beyond 99 or below 1), 'Update' and 'Remove' buttons wroking as well as 'Keep Shopping' and 'Secure Checkout'.
-- **Checkout:** Page loading successfully, delivery information also adds correctly to the delivery form as well as good functioning of 'Adjust Barg' and 'Complete Order' buttons. The summary of selected items to buy show correctly including the book cover, name, author, quantity selected, subtotal, total, delivery amount and grand total.
+
+- **Book Management:** From 'My Account' dropdown menu the superuser can add books, the form is working as expected and images are added with no issues. The 'Add' and 'Cancel' buttons are working as well.
+
+- **Footer:** All the links to social media working correctly and as expected, no broken links.
+
+- **My account:** The dropdown menu works as expected and no broken links. When clicking the menu responds to the different types of users (admin functions appear when superuser is logged in and not present for site users) and if the user is logged in or not.
+
+- **Bag:** The feature is working as expected as well, link to the selected books are working correctly, the quantity can be amended as well with no issues (quantity doesn't go beyond 99 or below 1), 'Update' and 'Remove' buttons working as well as 'Keep Shopping' and 'Secure Checkout'.
+
+- **Checkout:** Page loading successfully, delivery information also adds correctly to the delivery form as well as good functioning of 'Adjust Bag' and 'Complete Order' buttons. The summary of selected items to buy show correctly including the book cover, name, author, quantity selected, subtotal, total, delivery amount and grand total.
+
 - **Newsletter:** Subscribing for the newsletter feature working correctly, when subscribing with a new email and confirmation email is sent to the entered address and if an existing email address is added an informational pop up message appears informing so.
+
 - **My profile:** Both site user and superuser can enter access their profile information through 'My Account' dropdown menu. The default delivery information can be updated with no issues, and the order history is available, the links to each order details is accessible (no broken links) and after checking an order information the user can go back to their profile and order history.
+
 - **Pop Up Messages:** All pop up messages working correctly and appearing when expected:
-    - Confirmation messages when logging in/out and registering, when adding an item to the bag, when siging up for the newsletter and when making a purchase.
+    - Confirmation messages when logging in/out and registering, when adding an item to the bag, when signing up for the newsletter and when making a purchase.
     - Information messages: when an information to the user is required, i.e. when an email address is already subscribed to receive the newsletter.
     - Warning messages: when something goes wrong and the user must know what happened, i.e. when there is an issue with a purchase and it couldn't be processed.
 
 
 #### **Remaining Bugs**
 
-The only remaining bug detected is on the padding top of the 'main' section, which inlcudes all the content the site offers. Due to the different screen sizes, the very top of the 'div' hides behind the navigation bar (only the title in most part of the occasions) and it only happens for desktop size screens. The issue is been addressed by creating a new class and adding the extra top padding necessary for each screen type. This works well but for some reason, from time to time (so not always or in a consistent way) the title hides behind the navigation bar. I have modified the padding top size numerous times but now and then it occurs, but when loading the page again it disappears.
+The only remaining bug detected is on the padding top of the 'main' section, which inlcudes all the content the site offers. Due to the different screen sizes, the very top of the 'div' hides behind the navigation bar (only the title in most part of the occasions) and it only happens for desktop size screens. The issue is been addressed by creating a new class and adding the extra top padding necessary for each screen type. This works well but for some reason, from time to time (so not always or in a consistent way), the title hides behind the navigation bar. I have modified the padding top size numerous times but now and then it occurs, but when loading the page again it disappears.
 
 No more bugs have been found.
 
