@@ -25,6 +25,8 @@ FavBOOKS is an imaginery bookshop in central London and its website provides the
 ## **Marketing and SEO**
 
 #### **Marketing**
+FavBOOKS is a business to customer e-commerce platform with a physical shop in central London as well. The site is built and designed to sell books to the user and inform customers about any news throught the newsletter.
+
 The following questions were answered previous to the implementation stage to ensure that the needs of the user were met. During the implementation stage the points below described were implemented or will be implemented in future features.
 
 - **What do your users need?**
@@ -59,6 +61,11 @@ Clear and well structured sections and easy to understand language based on the 
 
 - **How can I help users discover other relevant parts of your web application?**
 Through a navbar where they can easily see and access the different sections, they can also change from one section to another without having to click back and/or get lost in the process.
+
+- **Facebook Page:**
+To further enhance sales there is also a FavBOOKS Facebook page, that will display information about new books or events: 
+
+![Facebook](media/FB-screenshot1.png)
 
 
 #### **SEO**
