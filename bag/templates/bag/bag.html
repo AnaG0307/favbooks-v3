@@ -161,7 +161,7 @@
     // Update book quantity
     $('.update-link').click(function(e) {
         var form = $(this).prev('.update-form');
-        form.submit();
+        form[0].requestSubmit();
     })
 
     // Remove book and reload page
