@@ -307,7 +307,7 @@ No more bugs have been found.
 
 ![w3error1](media/general/settings-errors.png)
 
-- The page https://favbooks-v3.herokuapp.com/newsletter/newsletter_signup/ shows 6 errors in W3C validator but this is related to the form created in form.py in the "newsletter app" so I have researched and couldn't find a solution. Also the error relates to stray start tag <tr> <th> and <td> in hone hand and in the other hand stray end tag <tr> <th> and <td>, which are actually matching.
+- The page https://favbooks-v3.herokuapp.com/newsletter/newsletter_signup/ shows 6 errors in W3C validator but this is related to the form created in form.py in the "newsletter app" so I have researched and couldn't find a solution. Also the error relates to stray start tag <tr> <th> and <td> in one hand and in the other hand stray end tag <tr> <th> and <td>, which are actually matching.
 
 ![w3error2](media/general/validator-error.png)
 
