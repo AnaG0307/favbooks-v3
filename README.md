@@ -312,9 +312,6 @@ No more bugs have been found.
 ![w3error2](media/general/validator-error.png)
 
 
-<!-- - $ -->
-
-
 ## **Technologies Used**
 
 - [Gitpod](https://gitpod.io/)
