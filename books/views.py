@@ -51,7 +51,9 @@ def all_books(request):
                 messages.error(request, "No search criteria entered!")
                 return redirect(reverse('books'))
 
-            queries = Q(title__icontains=query) | Q(synopsis__icontains=query) | Q(author__icontains=query)
+            queries = Q(title__icontains=query) |\
+                Q(synopsis__icontains=query) |\
+                Q(author__icontains=query)
             books = books.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
