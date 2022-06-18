@@ -1,6 +1,6 @@
 # **FavBOOKS**
 
-![App page screenshot](media/site.png)
+![App page screenshot](media/general/site.png)
 
 [View the app in Heroku here](https://favbooks-v3.herokuapp.com/)
 
@@ -65,7 +65,7 @@ Through a navbar where they can easily see and access the different sections, th
 - **Facebook Page:**
 To further enhance sales there is also a FavBOOKS Facebook page, that will display information about new books or events: 
 
-![Facebook](media/FB-screenshot1.png)
+![Facebook](media/general/FB-screenshot1.png)
 
 
 #### **SEO**
@@ -227,22 +227,22 @@ Below are the initial wireframes for the site for both desktop screens and small
 
 **Sitemap**
 
-![Sitemap](media/fb_sitemap.png)
+![Sitemap](media/general/fb_sitemap.png)
 
 
 **Home Page**
 
-![Homepage](media/fb_homepage.png)
+![Homepage](media/general/fb_homepage.png)
 
 
 **Category Page**
 
-![Category](media/fb_all_books_page.png)
+![Category](media/general/fb_all_books_page.png)
 
 
 **Book Details Page**
 
-![BookDetails](media/fb_book_details.png)
+![BookDetails](media/general/fb_book_details.png)
 
 
 
@@ -253,7 +253,7 @@ The Book details are at the center of the ERD and they relate to the rest of the
 
 Some of the [Future Features](#Future-Features) have been described in the ERD as well.
 
-![Homepage](media/fb_erd.png)
+![Homepage](media/general/fb_erd.png)
 
 
 ## **Testing**
@@ -305,15 +305,14 @@ No more bugs have been found.
 ##### **Remaining errors**
 - The file settings.py in the favbooks-v3 folder has 4 error error codes E501 in lines 144, 147, 150 and 153 stating the lines are too long. I have left as they are because the referred lines are password validators and can't be broken.
 
-- The file webhooks.py in the app Checkout has an error code E501 in line 46 stating the line is too long. Error can't be fixed as the path in the dictionary can't be broken.
+![w3error1](media/general/settings-errors.png)
 
-- The file webhookhandler.py in the app Checkout has an error code E501 in lines 77 and 78 stating the lines are too long. Error can't be fixed as the variable value can't be broken.
+- The page https://favbooks-v3.herokuapp.com/newsletter/newsletter_signup/ shows 6 errors in W3C validator but this is related to the form created in form.py in the "newsletter app" so I have researched and couldn't find a solution. Also the error relates to stray start tag <tr> <th> and <td> in hone hand and in the other hand stray end tag <tr> <th> and <td>, which are actually matching.
 
-- The file widgets.py in the app Books has an error code E501 in lines 9 stating the line is too long. Error can't be fixed as the variable value can't be broken.
+![w3error2](media/general/validator-error.png)
 
-- The file views.py in the app Books has an error code E501 in lines 54 stating the line is too long. Error can't be fixed as the variable value can't be broken.
 
-- Parse errors encountered for HTML code in several files but could not find a solution for it as I believe it is due to the file loading and creating the error. On the file itself the code seems to be correct. I have searched a solution through the internet and asked through the different course channels but no solution found.
+<!-- - $ -->
 
 
 ## **Technologies Used**
@@ -348,18 +347,17 @@ The project is been deployed to Heroku and AWS. Steps for deployment:
     - Import all the books, categories and subcategories using the command 'python3 manage.py load data name';
     - Create a super user using command 'python3 manage.py createsuperuser' and follow terminal instructions;
     - Create an if statement in settings.py to allow the system to take the database from os.environ if it exists otherwise it will use the default configuration.
-    - Install gunicorn in the terminal and freeze to requirements.txt file;
     - Create a Procfile to tell Heroku to create a web dyno;
     - Temporarily disable collect_static using command 'heroku config:set DISABLE_COLLECT_STATIC=1';
     - In settings.py add the hostname of the heroku app and a localhost so that gitpod will keep working;
-    - Add, commit and push changes to github, then use command 'git push heroku main' to deploy to Heroku;
+    - Deploy to Heroku;
     - In Heroku, inside the app, go to the Deploy tab and set it to deploy to github, search for the project repository and click connect. Once connected set up automatic deploys (due to recent issues shared by the Heroku team automatic deploys have been temporarily disabled);
     - Generate a secret key for the Heroku app and add it to the env.py file (which is included in .gitignore file to keep all the keys secret and safe);
     - In settings.py set up debug to true only if there is a variable called development in the environment;
 
 - Deployment to AWS S3:
     - Navigate to https://aws.amazon.com/ and create an account;
-    - Once logged in, from the AWS Management Console page, frind the S3 service in the 'Find Services' search bar to create a new bucket where our files will be stored;
+    - Once logged in, from the AWS Management Console page, find the S3 service in the 'Find Services' search bar to create a new bucket where our files will be stored;
     - Create a bucket: 
         - With a matching name with your app to keep things organised;
         - Select your closest region;
@@ -398,8 +396,6 @@ The project is been deployed to Heroku and AWS. Steps for deployment:
         - From the list provided select manage-favbooks-v3 and click Create User;
         - Click on 'Download .csv' which will contain the users access key and secret access keyn that we will use to authenticate them from our Jango app. It is very important you download and save this CSV file as it won't be downloadable again after this process.
     - Configure Django to connect to S3 uing the keys we just created:
-        - In the Gitpod terminal install Boto3 and Django-Storages and freeze them into requirements.txt;
-        - In settings.py file att 'storages' to our installed apps to let django know to use it;
         - In settings.py file, under the Static Files section create an IF statement to check if there is an environment variable called USE_AWS in the environment;
         - In the IF statement define the AWS_STORAGE_BUCKET_NAME, AWS_S3_REGION_NAME, access key and secreat access key we will get from the environment to keep them secure;
         - In Heroku, in the Config Vars section of the Settings tab:
@@ -411,16 +407,16 @@ The project is been deployed to Heroku and AWS. Steps for deployment:
             - Import settings from django and s3boto3 storage class from django storages;
             - Create a new class called static_storages that inherits from django s3boto3;
             - Tell the class that we want to store static files in a location from the settings that we'll define in a moment;
-            - Create an exact same class but for media
+            - Create an exact same class but for media;
         - In settings.py and set a variable that points to the new storage classes we just created and that the location it should save static files is a folder called 'static'. Do the same for media files;
         - Now we need to override and explicitly set the URLs for static and media files using our custom domain and the new locations.
-        - Add, commit and push the changes (as the issues with automatic deployment to Heroku are still happening we need to push to 'origin main' and 'heroku main' separately). Once the deployment to Heroku is successful, if we go to S3, we can see that we have a static folder in our bucket with all our static files in it. Basically, what is hapenning now, when our project is deployed to Heroku, it will run python3 manage.py collectstatic during the build process and will search through all the apps and project folders looking for static files. It will use the S3 custom domain setting with our custom storage classes that will tell the location where we want to save things. This means that when USE_AWS is set to TRUE, whenever collectstatic is run, static files will be collected into a static folder in our s3 bucket;
+        - Deploy to Heroku. Once the deployment to Heroku is successful, if we go to S3, we can see that we have a static folder in our bucket with all our static files in it. Basically, what is hapenning now, when our project is deployed to Heroku, it will run python3 manage.py collectstatic during the build process and will search through all the apps and project folders looking for static files. It will use the S3 custom domain setting with our custom storage classes that will tell the location where we want to save things. This means that when USE_AWS is set to TRUE, whenever collectstatic is run, static files will be collected into a static folder in our s3 bucket;
     - Go to S3 and create a new folder called 'media', inside this folder click 'upload', 'add files' and then select all the book cover images.
 
 - Stripe:
     - Add all the Stripe keys to the Heroku Config Variables;
     - Create a new Stripe wehbhook endpoint using the new address: https://favbooks-v3.herokuapp.com/;
-    - Test the webhook is working correctly by creating an test order through our new deployed site in Heroku;
+    - Test the webhook is working correctly by creating and test order through our new deployed site in Heroku;
 
 
 ## **Credits**
