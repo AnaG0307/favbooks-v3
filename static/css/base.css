@@ -290,3 +290,14 @@ body > footer {
     }
 }
 
+/* Media query for extra extra small devices */
+@media only screen and (max-width: 375px) {
+    .index-bg-2 {
+        max-width: 30%;
+    }
+
+    .main-padding {
+        padding-top: 250px !important;
+    }
+}
+
