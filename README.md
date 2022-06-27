@@ -418,7 +418,7 @@ The project is been deployed to Heroku and AWS. Steps for deployment:
 
 ## **Credits**
 
-I would like to thanks both my parents and my two borthers for their support no matter what and for cheering me in every single step of the way.
+I would like to thanks both my parents and my two brothers for their support no matter what and for cheering me in every single step of the way.
 
 A special thank you to Chris Quinn as well, my mentor throughout all my projects at Code Institute. I have learned a lot from him and made me feel reassured when I was feeling things were not going well. I can't thank him enough!
 
