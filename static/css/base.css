@@ -8,6 +8,10 @@ body {
     height: 100%;
 }
 
+form {
+    display: inline-block;
+}
+
 .main-padding {
     padding-top: 130px;
 }
@@ -184,13 +188,6 @@ body > footer {
     background-color: #dc3545;
     border-color: #dc3545;
     border-radius: 0;
-}
-
-
-/* ------------------ Newsletter Form */
-
-.news-form {
-    display: inline-block !important;
 }
 
 /* ------------------ Boostrap Toasts */
