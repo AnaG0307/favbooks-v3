@@ -190,7 +190,7 @@ body > footer {
 /* ------------------ Newsletter Form */
 
 .news-form {
-    display: inline-block;
+    display: inline-block !important;
 }
 
 /* ------------------ Boostrap Toasts */
