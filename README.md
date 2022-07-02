@@ -298,18 +298,22 @@ No more bugs have been found.
 #### **Validator Testing**
 
 - Used [PEP8online.com](http://pep8online.com/) to validate Python code.
+
+![pep8](media/general/pep8.png)
+
 - Used [W3C](https://validator.w3.org/#validate_by_input) to validate HTML and CSS code
+
+![w3c](media/general/w3c.png)
+
 - Used [JSHint](https://jshint.com/) to validate JavaScript code
+
+![jshint](media/general/js.png)
+
 
 
 ##### **Remaining errors**
-- The file settings.py in the favbooks-v3 folder has 4 error error codes E501 in lines 144, 147, 150 and 153 stating the lines are too long. I have left as they are because the referred lines are password validators and can't be broken.
 
-![w3error1](media/general/settings-errors.png)
-
-- The page https://favbooks-v3.herokuapp.com/newsletter/newsletter_signup/ shows 6 errors in W3C validator but this is related to the form created in form.py in the "newsletter app" so I have researched and couldn't find a solution. Also the error relates to stray start tag <tr> <th> and <td> in one hand and in the other hand stray end tag <tr> <th> and <td>, which are actually matching.
-
-![w3error2](media/general/validator-error.png)
+There are no remaining errors
 
 
 ## **Technologies Used**
