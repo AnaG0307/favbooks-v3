@@ -19,13 +19,13 @@
 
 ## **About**
 
-FavBOOKS is an imaginery bookshop in central London and its website provides the user the opportunity to find their next favourite book from the comfort of home. The books are divided in different general genres with different subgenres to allow the user find what they are looking for or to discover something new. Once a book is been found the user can purchase the selected book or books and have them delivered at home. The user is also able to subscribe the the newsletter to receive news about the bookshop.
+FavBOOKS is an imaginary bookshop in central London and its website provides the user the opportunity to find their next favourite book from the comfort of home. The books are divided in different general genres with different subgenres to allow the user find what they are looking for or to discover something new. Once a book is been found the user can purchase the selected book or books and have them delivered at home. The user is also able to subscribe the newsletter to receive news about the bookshop.
 
 
 ## **Marketing and SEO**
 
 #### **Marketing**
-FavBOOKS is a business to customer e-commerce platform with a physical shop in central London as well. The site is built and designed to sell books to the user and inform customers about any news throught the newsletter.
+FavBOOKS is a business to customer e-commerce platform with a physical shop in central London as well. The site is built and designed to sell books to the user and inform customers about any news through the newsletter.
 
 The following questions were answered previous to the implementation stage to ensure that the needs of the user were met. During the implementation stage the points below described were implemented or will be implemented in future features.
 
@@ -69,7 +69,7 @@ To further enhance sales there is also a FavBOOKS Facebook page, that will displ
 
 
 #### **SEO**
-The lists below shows all the keywords that came up during brainstorimg, the striked words are the ones that will not be used. The rest have been inomplemented or will be implemented when developing future features.
+The lists below show all the keywords that came up during brainstorming, the strike words are the ones that will not be used. The rest have been implemented or will be implemented when developing future features.
 
 1-	General Topics
 -	Books
@@ -153,17 +153,17 @@ The lists below shows all the keywords that came up during brainstorimg, the str
 | 6  |  | easily view the total amount on my cart | check I am not spending too much. |
 | Registration and User Accounts |
 | 7  | User/Shopper | register for an account | get a profile for the site and view my profile. |
-| 8  |  | login and logout | acces my personal information. |
+| 8  |  | login and logout | access my personal information. |
 | 9  |  | recover my password if forgotten | recover access to my account. |
-| 10  |  | receive a registration confirmation email | verify my registration to the site was successfull. |
+| 10  |  | receive a registration confirmation email | verify my registration to the site was successful. |
 | 11  |  | be able to personalise my user profile | modify my personal information when necessary. |
 | 12  |  | be able to access my user profile information | view my profile and what information is stored. |
 | Searching and Sort Products |
-| 13  | User/Shopper | sort the list of available products | easily identify best rated, best priced and categorycally sorted products. |
+| 13  | User/Shopper | sort the list of available products | easily identify best rated, best priced and categorically sorted products. |
 | 14  |  | sort a specific category of products | Find the best-priced, best-rated product in a specific category or sort the products in that category by author. |
-| 15  |  | sort multiple categories of products at the same time | find the best-priced, best-rated product accross categories, such as "fantasy" or "Teen&Young Age". |
+| 15  |  | sort multiple categories of products at the same time | find the best-priced, best-rated product across categories, such as "fantasy" or "Teen&Young Age". |
 | 16  |  | search a product by name or description | find a specific product I would like to purchase |
-| 17  |  | see my search results and how many products are matching | quickly decide wheter the product I want is available. |
+| 17  |  | see my search results and how many products are matching | quickly decide whether the product I want is available. |
 | Checkout |
 | 18  | Shopper | easily access my purchase history | be aware of my past purchases. |
 | 19  |  | easily select the type and quantity of a product when purchasing it | be sure I make no mistakes about the quantity and type of book (paperback/hardcover). |
@@ -174,25 +174,25 @@ The lists below shows all the keywords that came up during brainstorimg, the str
 | 23  |  | delete products (books&subscriptions) | update the site when a product is not for selling anymore. |
 | About the Site |
 | 24  |  Site User | I am aware of the site Privacy Policy (GDPR compliant) | trust the site. |
-| 25  |  | I see pop up messages when I make an action to confirm transactions and changes throughout my activity | rest assured my transactions have been successfull. |
+| 25  |  | I see pop up messages when I make an action to confirm transactions and changes throughout my activity | rest assured my transactions have been successful. |
 | 26  |  | I can access the site's social media profiles | follow them if I want and stay up to date. |
 | Popup Messages |
-| 27  | Store owner/Admin | see a pop up message after submitting my purchase  | know if my transaction is been successfull or not.  |
+| 27  | Store owner/Admin | see a pop up message after submitting my purchase  | know if my transaction is been successful or not.  |
 | 28  |  | see a pop up message when adding/deleting products to my bag | be aware if my product was succesfully added or not to my cart. |
 | 29  |  | see a pop up message when logging in/out of the site | be aware if I have logged in/out successfully or not. |
-| 30  |  | see a pop up message when I subscribe/unsubscribe from a monthly subscription | be aware the action was successfull or not. |
+| 30  |  | see a pop up message when I subscribe/unsubscribe from a monthly subscription | be aware the action was successful or not. |
 
 
 ## **Features**
 
 #### **Existing Features**
-- **Navigation Bar:** the navigation bar is available through all the pages on the site to ensure the site users can access any page they want at any time. In it the user can find a link to all books, different book categories, sign up for the newsletter and the home page. The site user and admin user can also login, logout, resgiter and access their shopping bag.
+- **Navigation Bar:** the navigation bar is available through all the pages on the site to ensure the site users can access any page they want at any time. In it the user can find a link to all books, different book categories, sign up for the newsletter and the home page. The site user and admin user can also login, logout, register and access their shopping bag.
 
 
 - **Footer:**  the footer is available through all the pages on the site as well, from there the site users can access the different social media pages, find the physical bookshop address and opening times.
 
 
--**Home Page:** the homepage is been kept pretty simple, the site user can see an image of the site as the main background to create the effect they are already inside the bookshop. At its center there is the "Shop Now" link that takes the site user to see all the books available in the shop.
+-**Home Page:** the homepage is been kept pretty simple, the site user can see an image of the site as the main background to create the effect they are already inside the bookshop. At its centre there is the "Shop Now" link that takes the site user to see all the books available in the shop.
 
 
 - **Login/Logout/Register:** situated on the top right corner this feature allows all user to register and create an account to access all the features of the site as well as to log in and out. There are two different levels of user, the admin user and site user. The admin user has extra access that allow them to add, update and remove books from the inline store.
@@ -208,7 +208,7 @@ The lists below shows all the keywords that came up during brainstorimg, the str
 
 - **Newsletter:** all site users can sign up to receive a newsletter from FavBOOKS. This is accessible from the main navigation bar and if an address is already signed up an informational pop up message will inform the user of it.
 
-- **Pop Up Messages:** throughout the site, depending on the actions of the users different pop up messages will appear all along to inform the user of the actions taken. There are different levels of messages: information, success and error. For example, when adding a book to the shopping bag a message will appear informing so, when purchasing a product and everything worked correctly a success message will appear and in case something went wrong an error message will show and explain what went wrong. This ensures the users have extra information and do not unnecessarily repeat processes which might cause major issues (like for example when doing a purchase it would help avoiding an unnecesary double charge).
+- **Pop Up Messages:** throughout the site, depending on the actions of the users different pop up messages will appear all along to inform the user of the actions taken. There are different levels of messages: information, success and error. For example, when adding a book to the shopping bag a message will appear informing so, when purchasing a product and everything correctly worked a success message will appear and in case something went wrong an error message will show and explain what went wrong. This ensures the users have extra information and do not unnecessarily repeat processes which might cause major issues (like for example when doing a purchase, it would help avoiding an unnecessary double charge).
 
 
 #### **Future Features**
@@ -217,7 +217,7 @@ The lists below shows all the keywords that came up during brainstorimg, the str
 
 - **Reviews:** Site users will be able to see and add their own reviews to a particular book which will be visible from the book details page only. The reviews will appear from newest to oldest review added, and will also show the username of the site user, date and time the review was added.
 
-- **My Wishlist:** Site users will be able to access a personalised list of books called "Wishlist", the link to this page will be accessible from the Accounts menu and they will be able to see the list of books in the wishlist and basic details (cover image, title, author and synopsis at least). The site user will be able to add/remove books they wish to read in the future from the books details page (through a link underneath the rating) and also through the book cards when searching for books by category (this would allow a speedy process to the site user as they do not need to enter the book details page and they can save books while the scroll through the books by category), the site user will also be able to remove books from the Wishilist through the same wishlist page using a button.
+- **My Wish List:** Site users will be able to access a personalised list of books called "Wishlist", the link to this page will be accessible from the Accounts menu and they will be able to see the list of books in the wish list and basic details (cover image, title, author and synopsis at least). The site user will be able to add/remove books they wish to read in the future from the books details page (through a link underneath the rating) and also through the book cards when searching for books by category (this would allow a speedy process to the site user as they do not need to enter the book details page and they can save books while the scroll through the books by category), the site user will also be able to remove books from the wish list through the same wish list page using a button.
 
 - **Subscriptions:** A link to the different subscriptions types will be available to the site user through the navigation bar, also another link to subscriptions will be available in the Accounts menu to the site user to manage their subscriptions (cancel a subscription or start one). Three different types of subscriptions will be available for the site user to adapt to the different needs and economic conditions of each user: annual, 6 months and monthly subscription.
 
@@ -247,9 +247,9 @@ Below are the initial wireframes for the site for both desktop screens and small
 
 
 ## **Data Model**
-The Entity Relationalship Database (ERD) below was created to develop this project, unfortunately due to time constraint not all the features could be developed.
+The Entity Relationship Database (ERD) below was created to develop this project, unfortunately due to time constraint not all the features could be developed.
 
-The Book details are at the center of the ERD and they relate to the rest of the tables directly or indirectly. The site admin has CRUD (create, read, update and delete) access to all the books through the admin site as well as directly through the site itself, but the site user only has view access to see the books created by the site admin.
+The Book details are at the centre of the ERD and they relate to the rest of the tables directly or indirectly. The site admin has CRUD (create, read, update and delete) access to all the books through the admin site as well as directly through the site itself, but the site user only has view access to see the books created by the site admin.
 
 Some of the [Future Features](#Future-Features) have been described in the ERD as well.
 
@@ -290,7 +290,7 @@ Testing is been done manually and have gone through all the features the site pr
 
 #### **Remaining Bugs**
 
-The only remaining bug detected is on the padding top of the 'main' section, which inlcudes all the content the site offers. Due to the different screen sizes, the very top of the 'div' hides behind the navigation bar (only the title in most part of the occasions) and it only happens for desktop size screens. The issue is been addressed by creating a new class and adding the extra top padding necessary for each screen type. This works well but for some reason, from time to time (so not always or in a consistent way), the title hides behind the navigation bar. I have modified the padding top size numerous times but now and then it occurs, but when loading the page again it disappears.
+The only remaining bug detected is on the padding top of the 'main' section, which includes all the content the site offers. Due to the different screen sizes, the very top of the 'div' hides behind the navigation bar (only the title in most part of the occasions) and it only happens for desktop size screens. The issue is been addressed by creating a new class and adding the extra top padding necessary for each screen type. This works well but for some reason, from time to time (so not always or in a consistent way), the title hides behind the navigation bar. I have modified the padding top size numerous times but now and then it occurs, but when loading the page again it disappears.
 
 No more bugs have been found.
 
@@ -341,7 +341,7 @@ The project is been deployed to Heroku and AWS. Steps for deployment:
 - Deployment to Heroku:
     - Create an account in Heroku;
     - Create a new app in Heroku: choose a unique name and region;
-    - On the resourcs tab provide a new Postgres database (used free plan for this project);
+    - On the resources tab provide a new Postgres database (used free plan for this project);
     - Go back to gitpod and install dj_database_url and psycopg2 and freeze the requirements in requirements.txt file to ensure Heroku installs our apps requirements when we deploy;
     - In settings.py import dj_database, comment out the default database configuration, replace it with a call to dj_database_url.parse and give it the database URL from Heroku (which can be found in the settings tab);
     - Migrate all the changes;
@@ -388,17 +388,17 @@ The project is been deployed to Heroku and AWS. Steps for deployment:
     - Now that the bucket is ready, we need to create a user to access it, we will create through the service called IAM (Identity Access Management):
         - Access IAM through the Services menu;
         - Click User Groups on the side menu and click Create New Group and call it manage-favbooks-v3 (to match our website again and have consistency) and click on Create Group;
-        - On the side menu clik on Policies and then click on Create Policies;
+        - On the side menu click on Policies and then click on Create Policies;
         - In the JSON tab select 'import managed policy' which will let us import the 'S3 Full Access Policy' that AWS has pre-built for full access to S3. But because we only want to allow full access to our bucket we need to get the bucket ARN from the bucket policy page in S3 and paste it under Resource as a list. We will paste twice, the first item is the ARN as it is and the second item with /* at the end to add another rule for all files and folders in the bucket;
         - Click review policy, give it a name and description and click Create Policy;
         - To attach the policy to the group we created click on User Groups, select manage-favbooks-v3, click Attach Policy, search policy created, select it and click Attach Policy;
         - Now we need to create a user to put in the group: click Users in the sidebar menu;
         - Create the user favbooks-v3-staticfiles-user, select Programmatic Access and select Next;
         - From the list provided select manage-favbooks-v3 and click Create User;
-        - Click on 'Download .csv' which will contain the users access key and secret access keyn that we will use to authenticate them from our Jango app. It is very important you download and save this CSV file as it won't be downloadable again after this process.
-    - Configure Django to connect to S3 uing the keys we just created:
+        - Click on 'Download .csv' which will contain the users access key and secret access key that we will use to authenticate them from our Django app. It is very important you download and save this CSV file as it won't be downloadable again after this process.
+    - Configure Django to connect to S3 using the keys we just created:
         - In settings.py file, under the Static Files section create an IF statement to check if there is an environment variable called USE_AWS in the environment;
-        - In the IF statement define the AWS_STORAGE_BUCKET_NAME, AWS_S3_REGION_NAME, access key and secreat access key we will get from the environment to keep them secure;
+        - In the IF statement define the AWS_STORAGE_BUCKET_NAME, AWS_S3_REGION_NAME, access key and secret access key we will get from the environment to keep them secure;
         - In Heroku, in the Config Vars section of the Settings tab:
             - Add the AWS keys;
             - Set USE_AWS to True;
@@ -411,12 +411,12 @@ The project is been deployed to Heroku and AWS. Steps for deployment:
             - Create an exact same class but for media;
         - In settings.py and set a variable that points to the new storage classes we just created and that the location it should save static files is a folder called 'static'. Do the same for media files;
         - Now we need to override and explicitly set the URLs for static and media files using our custom domain and the new locations.
-        - Deploy to Heroku. Once the deployment to Heroku is successful, if we go to S3, we can see that we have a static folder in our bucket with all our static files in it. Basically, what is hapenning now, when our project is deployed to Heroku, it will run python3 manage.py collectstatic during the build process and will search through all the apps and project folders looking for static files. It will use the S3 custom domain setting with our custom storage classes that will tell the location where we want to save things. This means that when USE_AWS is set to TRUE, whenever collectstatic is run, static files will be collected into a static folder in our s3 bucket;
+        - Deploy to Heroku. Once the deployment to Heroku is successful, if we go to S3, we can see that we have a static folder in our bucket with all our static files in it. Basically, what is happenning now, when our project is deployed to Heroku, it will run python3 manage.py collectstatic during the build process and will search through all the apps and project folders looking for static files. It will use the S3 custom domain setting with our custom storage classes that will tell the location where we want to save things. This means that when USE_AWS is set to TRUE, whenever collectstatic is run, static files will be collected into a static folder in our s3 bucket;
     - Go to S3 and create a new folder called 'media', inside this folder click 'upload', 'add files' and then select all the book cover images.
 
 - Stripe:
     - Add all the Stripe keys to the Heroku Config Variables;
-    - Create a new Stripe wehbhook endpoint using the new address: https://favbooks-v3.herokuapp.com/;
+    - Create a new Stripe webhook endpoint using the new address: https://favbooks-v3.herokuapp.com/;
     - Test the webhook is working correctly by creating and test order through our new deployed site in Heroku;
 
 
