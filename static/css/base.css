@@ -186,6 +186,13 @@ body > footer {
     border-radius: 0;
 }
 
+
+/* ------------------ Newsletter Form */
+
+.news-form {
+    display: inline-block;
+}
+
 /* ------------------ Boostrap Toasts */
 .custom-toast {
     overflow: visible;
